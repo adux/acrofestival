@@ -6058,7 +6058,6 @@ button[type="submit"] .loading {
   display: block;
   width: 56px;
   height: 82px;
-  background: transparent url('../images/icon/yt_play_big_56x82.png') center no-repeat;
   cursor: pointer;
   z-index: 999;
 }
@@ -6118,7 +6117,6 @@ button[type="submit"] .loading {
   left: 0;
   bottom: 0;
   display: block;
-  background: transparent url('../images/icon/yt_controls_40x40.png') no-repeat;
 }
 .ytp-player-background .controls-container .yt-play-toggle:before {
   opacity: 1;
