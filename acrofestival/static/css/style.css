@@ -2421,7 +2421,7 @@ input.header.header-color .navigation-header .buy-btn,
 div.bg-low-poly,
 footer.bg-low-poly,
 section.bg-low-poly {
-  background-image: url("../images/background/low_poly_background.jpg");
+  background-image: url("../images/backgrounds/low_poly_background.jpg");
   background-repeat: no-repeat;
   background-position: center top;
 }
@@ -6035,7 +6035,7 @@ button[type="submit"] .loading {
   background-position: center !important;
 }
 .ytp-player-background.no-video-bg {
-  background: transparent url('../images/background/low_poly_background.jpg') top center no-repeat;
+  background: transparent url('../images/backgrounds/low_poly_background.jpg') top center no-repeat;
 }
 .ytp-player-background.no-video-bg .video-conrols {
   display: none;
