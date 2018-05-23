@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,300italic,400italic,500italic&subset=latin,latin-ext);
 @import url(https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700);
-@import "../css/lib/font-lineicons.css";
-@import "../css/lib/toastr.min.css";
-@import "../css/lib/bootstrap.min.css";
+@import "../css/library/font-lineicons.css";
+@import "../css/library/toastr.min.css";
+@import "../css/library/bootstrap.min.css";
 /* ================================================
 // ************************************************
 //
