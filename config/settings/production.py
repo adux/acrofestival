@@ -200,7 +200,6 @@ RAVEN_CONFIG = {
     'dsn': SENTRY_DSN
 }
 
-
 # LOGGING
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#logging
