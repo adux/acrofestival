@@ -240,7 +240,7 @@ texinfo_documents = [
         "acrofestival Documentation",
         """Adrian Garate""",
         "acrofestival",
-        """Urban Acro Festival Zürich""",
+        """Awesome Project""",
         "Miscellaneous",
     )
 ]
