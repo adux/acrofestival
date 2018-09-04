@@ -2,11 +2,11 @@ from django.db import models
 # Create your models here.
 class Booking(models.Model):
     Status = (
-        ('IN','Informed'), 
-        ('CA','Canceled'), 
-        ('PA','Payed'), 
-        ('PE','Pending'), 
-        ('SW','Switched') 
+        ('IN','Informed'),
+        ('CA','Canceled'),
+        ('PA','Payed'),
+        ('PE','Pending'),
+        ('SW','Switched')
     )
     name            = models.CharField(max_length=120)
     address         = models.CharField(max_length=120)

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Francois+One|Play');
+
+html, body {
+    height: 100%;
+}
+
+.xop-container div {
+    background-color: #000;
+	flex-direction: column;
+	justify-content: center;
+    display: flex;
+}
+.xop-container {
+	display: flex;
+    text-align: center;
+    height: 100%;
+    padding-top: 0px;
+}
+.xop-left {
+	background: url('../images/frontpage/winteracro.jpg');
+	background-size: cover;
+	background-position: center;
+	flex: 1;
+	padding: 1rem;
+	transition: all .2s ease-in-out;
+    text-transform: uppercase;
+    filter: hue-rotate(360deg);
+}
+.xop-right {
+	background: url("../images/frontpage/urbanacro.jpg");
+	background-size: cover;
+	background-position: center;
+	flex: 1;
+	padding: 1rem;
+	transition: all .3s ease-in-out;
+    text-transform: uppercase;
+    filter: hue-rotate(360deg);
+}
+.xop-left:hover, .xop-right:hover {
+	transform: scale(0.96);
+    filter: hue-rotate(0deg);
+}
+.xop-container h1 {
+    color: #f3d216;
+    text-decoration: none;
+   # text-shadow:
+        -1px -1px 0px #000,
+         0px -1px 0px #000,
+         1px -1px 0px #000,
+        -1px  0px 0px #000,
+         1px  0px 0px #000,
+        -1px  1px 0px #000,
+         0px  1px 0px #000,
+         1px  1px 0px #000;
+	letter-spacing: 2px;
+    font-family: 'Francois One', sans-serif;
+	font-size: 4rem;
+}
+
+.xop-container a {
+        text-decoration: none;
+}
+.xop-container a:hover {
+        transition: all 0.2s;
+        transform: scale(0.8);
+}
+.xop-button {
+	border-radius: 2px;
+	color: #000;
+	background-color: #f3d216;
+	padding: 10px 6px;
+	margin: 0 1%;
+	text-align: center;
+    font-family: 'Play', sans-serif;
+	text-decoration: none;
+    letter-spacing: 1px;
+	display: inline-block;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.5s;
+	width: 150px;
+}
+ 
+.xop-button:hover {
+	background: #fff;
+	color: #333;
+}
+
+@media only screen and (max-width: 600px) {
+  .xop-container {
+    flex-direction: column;
+  }
+
+}

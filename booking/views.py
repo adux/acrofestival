@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import BookingForm
 from .models import Booking
 
+
 # Create your views here.
 def booking_view(request):
     if request.method == "POST":
