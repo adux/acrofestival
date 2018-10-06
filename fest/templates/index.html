@@ -33,7 +33,7 @@
                             </p>
                         <ul class="actions">
                                 <li>
-                                        <a style="background:#f3d216;" href="{% url "winterform"%}"
+                                        <a style="box-shadow:0px 0px; background:#f3d216;" href="{% url "winterform"%}"
                                                 class="button">Register
                                         </a>
                                 </li>
@@ -119,36 +119,68 @@
             <section id="schedule" class="main special">
                 <header class="major">
                     <h2>Schedule</h2>
-                    <p> A general time plan for the event</p>
+                    <p> Some changes are to be expected, but it's our best aproximation at this time :)</p>
                 </header>
-                <h2> Thursday </h2>
-                <ul class="statistics">
-                     <li class="style1">
-                        <span class="icon fa-home"></span>
-                        <strong>14:00</strong> House Opening
+                    <h2>Friday</h2>
+                    <ul class="statistics">
+                        {% for obj in fri %}
+                        <li class="{{obj.style}}">
+                                <span class="{{obj.icon}}"></span>
+                                <strong>{{obj.time}}</strong> {{obj.title}}
                     </li>
-                    <li class="style1">
-                        <span class="icon fa-flag-checkered"></span>
-                        <strong>16:30</strong> Hall opening
+                    {% endfor %}
+                    </ul>
+                    <h2>Saturday</h2>
+                    <ul class="statistics">
+                        {% for obj in sat %}
+                        <li class="{{obj.style}}">
+                                <span class="{{obj.icon}}"></span>
+                                <strong>{{obj.time}}</strong> {{obj.title}}
                     </li>
-                    <li class="style1">
-                        <span class="icon fa-fire"></span>
-                        <strong>17:00</strong> Warm up
+                    {% endfor %}
+                    </ul>
+                    <h2>Sunday</h2>
+                    <ul class="statistics">
+                        {% for obj in sun %}
+                        <li class="{{obj.style}}">
+                                <span class="{{obj.icon}}"></span>
+                                <strong>{{obj.time}}</strong> {{obj.title}}
                     </li>
-                    <li class="style1">
-                        <span class="icon fa-cogs"></span>
-                        <strong>17:30</strong> Round 1 workshops
+                    {% endfor %}
+                    </ul>
+                    <h2>Monday</h2>
+                    <ul class="statistics">
+                        {% for obj in mon %}
+                        <li class="{{obj.style}}">
+                                <span class="{{obj.icon}}"></span>
+                                <strong>{{obj.time}}</strong> {{obj.title}}
                     </li>
-                    <li class="style1">
-                        <span class="icon fa-cutlery"></span>
-                        <strong>19:00</strong> Dinner
+                    {% endfor %}
+                    </ul>
+                    <h2>Tuesday</h2>
+                    <ul class="statistics">
+                    {% for obj in tue %}
+                    <li class="{{obj.style}}">
+                                <span class="{{obj.icon}}"></span>
+                                <strong>{{obj.time}}</strong> {{obj.title}}
                     </li>
-                </ul>
+                    {% endfor %}
+                    </ul>
+                    <h2>Wednesday</h2>
+                    <ul class="statistics">
+                    {% for obj in wed %}
+                        <li class="{{obj.style}}">
+                            <span class="{{obj.icon}}"></span>
+                            <strong>{{obj.time}}</strong> {{obj.title}}
+                    </li>
+                    {% endfor %}
+                    </ul>
+                    <!--
                 <footer class="major">
                     <ul class="actions">
-                        <li><a href="generic.html" class="button">Learn More</a></li>
+                        <li><a href="generic.html" class="button">Learn Mo</a></li>
                     </ul>
-                </footer>
+                </footer>-->
             </section>
     </div>
     {% include 'snippets/footer.html' %}
