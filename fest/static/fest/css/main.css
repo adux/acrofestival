@@ -1,4 +1,4 @@
-@import "https://use.fontawesome.com/1391c0be18.css";
+/*@import "https://use.fontawesome.com/1391c0be18.css";*/
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400";
 @import "https://fonts.googleapis.com/css?family=Amatic+SC:400,700";
 /*
@@ -2098,9 +2098,9 @@
 		.select-wrapper:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
+			font-family: 'Font Awesome 5 Free';
 			font-style: normal;
-			font-weight: normal;
+			font-weight: 900;
 			text-transform: none !important;
 		}
 
@@ -2162,9 +2162,9 @@
 			input[type="radio"] + label:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
+				font-family: 'Font Awesome 5 Free';
 				font-style: normal;
-				font-weight: normal;
+				font-weight: 900;
 				text-transform: none !important;
 			}
 
@@ -2301,9 +2301,9 @@
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
+			font-family: 'Font Awesome 5 Free';
 			font-style: normal;
-			font-weight: normal;
+			font-weight: 900;
 			text-transform: none !important;
 		}
 

@@ -26,9 +26,10 @@ Icons = (
     ('icon fa-home', 'Home'),
     ('icon fa-flag-checkered', 'Flag'),
     ('icon fa-fire', 'Fire'),
-    ('icon fa-cutlery', 'Cutlery'),
+    ('icon fa-utensils', 'Cutlery'),
     ('icon fa-cogs', 'Cogs'),
     ('icon fa-om', 'Om'),
+    ('icon fa-snowflake', 'Snow'),
     ('icon fa-magic', 'Magic'),
 )
 
