@@ -7,8 +7,8 @@
     <header id="header" class="alt">
             <span class="logo"><img src="{% static "fest/images/logo_vek.svg"%}" alt="" /></span>
         <h1>2nd Winter Acro Festival</h1>
-        <p>22. - 27. of February 2019</br>
-        Register <a href="fest/form/">HERE</a></p>
+        <p>22. - 27. February 2019</br>
+        Register <a href="{% url "winterform"%}">HERE</a></p>
     </header>
     {% include 'snippets/navhome.html' %}
 <!-- Main -->
@@ -52,9 +52,9 @@
                         <span class="icon major style1 fa-bed"></span>
                         <h3>Accommodation</h3>
                         <p>
-                        This year the dorms are 4 min. walk from the hall - No LamaAirlines, sorry :( -. Important is
-                        that you bring your own sleeping bags! *Accommodation is not included in single day tickets.
-                        More <u>important details</u>:</br></br>
+                        This year the dorm is 4 min. walk from the hall - No LamaAirlines, sorry :( -. Important is
+                        that you bring your own sleeping bag! *Accommodation is not included in single day tickets.
+                        More important details:</br></br>
                         <a class="button" href="{% url 'winterlocation'%}#accommodation">CLICK HERE</a>
                         </p>
                     </li>
@@ -62,8 +62,8 @@
                         <span class="icon major style3 fa-utensils"></span>
                         <h3>Food</h3>
                         <p>
-                        Food plays an important roll in this Festival. Main dishes, healthy snacks and fruits are all
-                        Bio, mostly local, vegan and cooked with love.</br>* <u>Please note that there will be some help
+                        Food plays an important roll in this festival. Main dishes, healthy snacks and fruits are all
+                        bio, mostly local, vegan and cooked with love.</br>* <u>Please note that there will be some help
                         asked from everyone arround small kitchen tasks.</u></br></br>
                         <a class="button" href="">COOKING TEAM</a>
                         </p>
@@ -73,7 +73,7 @@
                         <h3>Workshops</h3>
                         <p>
                         There'll be 11 rounds of acro workshops and space for a constant jam. Experience in acro is
-                        important for your own enojoyment.</br>* <u>There will be no beginner workshops</u>.</br></br>
+                        important for your own enjoyment.</br>* <u>There will be no beginner workshops</u>.</br></br>
                         <a class="button" href="#workshops">TEACHERS</a>
                         </p>
                     </li>
