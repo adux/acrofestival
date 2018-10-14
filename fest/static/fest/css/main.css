@@ -2978,6 +2978,7 @@
 				width: 20em;
 				max-width: 100%;
 				margin: 0 auto 2em auto;
+                height: unset ;
 			}
 
 				.statistics li:first-child {
