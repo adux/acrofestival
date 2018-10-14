@@ -3787,7 +3787,7 @@ readers do not read off random characters that represent icons */
 .fab {
   font-family: 'Font Awesome 5 Brands'; }
 @font-face {
-  font-family: 'Font Awesome 5 Free';
+  font-family: 'Font Awesome 5 Brands';
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/fa-regular-400.eot");
