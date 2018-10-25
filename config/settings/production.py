@@ -205,3 +205,6 @@ RAVEN_CONFIG = {
 }
 # Your stuff...
 # ------------------------------------------------------------------------------
+
+INSTALLED_APPS += "analytical"
+GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-118797477-2'

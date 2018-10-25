@@ -1,6 +1,7 @@
-{% load static i18n %}<!DOCTYPE html>
+{% load static i18n %}{% load analytical %}<!DOCTYPE html>
 <html lang="en">
   <head>
+    {% analytical_head_top %}
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{% block title %}AcroFestival{% endblock title %}</title>
@@ -36,9 +37,11 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/frontpage.css'%}" />
     {% endblock %}
+    {% analytical_head_bottom %}
   </head>
 
   <body>
+        {% analytical_body_top %}
       {% if messages %}
           {% for message in messages %}
               <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
@@ -81,15 +84,6 @@
         <script type="text/javascript" src="{% static 'js/ventcamp.js'%}"></script>
     
     {% endblock javascript %}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118797477-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-118797477-2');
-    </script>
-
+i   {% analytical_body_bottom %}
   </body>
 </html>
