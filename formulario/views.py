@@ -25,7 +25,7 @@ def fest_createview(request):
             sender = 'notmonkeys@acrofestival.ch'
             to = [instance.email]
             send_mail(subject, message, sender, to)
-
+            instance.save()
         if form.errors:
             print(form.errors)
     template_name = 'homeform.html'
