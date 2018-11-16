@@ -6,7 +6,6 @@ from django.views import defaults as default_views
 from booking.views import booking_view
 from formulario.views import (
     fest_createview,
-    festprueba_createview,
     )
 from fest.views import (
     fest_homeview,
