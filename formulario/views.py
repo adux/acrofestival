@@ -22,7 +22,7 @@ def fest_createview(request):
             subject = 'Winter Acro 2019'
             message = "Hoi Zäme\r\n\r\nThanks for registering for the Winter Acro Festival 2019!\r\n\r\nLamas are little rebels, they are not good at doing automatic jobs. Definitly not as good as monkeys. Fly better though...\r\n\r\nAnyway, in the next 72 hours you will receive an email concerning your registration status! Thanks for your patience.\r\n\r\n\r\nBig Hug\r\nThe Lamas"
             sender = 'notmonkeys@acrofestival.ch'
-            to = obj.email
+            to = [obj.email]
             send_mail(subject, message, sender, to)
             form.save()
         if form.errors:
