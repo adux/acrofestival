@@ -26,6 +26,7 @@ def fest_createview(request):
             to = [instance.email]
             send_mail(subject, message, sender, to)
             instance.save()
+            form.save()
         if form.errors:
             print(form.errors)
     template_name = 'homeform.html'
