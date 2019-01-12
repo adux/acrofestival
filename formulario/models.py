@@ -4,9 +4,10 @@ from django.db import models
 Status = [
     ('IN','Informed'),
     ('CA','Canceled'),
-    ('PA','Payed'),
+    ('PA','Paid'),
     ('PE','Pending'),
-    ('SW','Switched')
+    ('SW','Switched'),
+    ('WL','Waiting List')
 ]
 
 class Fest(models.Model):
