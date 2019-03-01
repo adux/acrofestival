@@ -5,10 +5,11 @@ from django.contrib import admin
 
 from .models import Fest
 
+
 class FestAdmin(admin.ModelAdmin):
-    list_display = ('datetime', 'name', 'email','numero', 'address', 'option', 'allergies', 'status', 'pay_till',
-                    'pay_date')
-    list_filter = ('datetime', 'option','status')
+    list_display = ('datetime', 'name', 'email', 'numero', 'address', 'option', 'allergies', 'status',
+                    'pay_till', 'pay_date', 'amount')
+    list_filter = ('datetime', 'option', 'status')
     search_fields = ('name', 'email')
 
 
