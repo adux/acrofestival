@@ -3,11 +3,8 @@ from django.urls import include, path
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.views import defaults as default_views
-from booking.views import booking_view
-from formulario.views import (
-    fest_createview,
-    )
-from fest.views import (
+from booking.views import (urbanacro_view, winteracroform_view)
+from winteracro.views import (
     fest_homeview,
     fest_locationview,
     fest_pricesview,
@@ -16,13 +13,10 @@ from fest.views import (
 
 urlpatterns = [
     path("", frontpage_view, name="home"),
-    # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
-    # User management
-    # Your stuff: custom urls includes go here
-    path("urbanacro/", booking_view, name="urbanacro"),
+    path("urbanacro/", urbanacro_view, name="urbanacro"),
     path("winteracro/", fest_homeview, name="winteracro"),
-    path("winteracro/form/", fest_createview, name="winterform"),
+    path("winteracro/form/", winteracroform_view, name="winterform"),
     path("winteracro/location/", fest_locationview, name="winterlocation"),
     path("winteracro/prices/", fest_pricesview, name="winterprices"),
 ] + static(

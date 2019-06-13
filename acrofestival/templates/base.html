@@ -11,8 +11,8 @@
     <meta name="keywords" content="Acroyoga, Acrofestival, Acrobatic, Akrobatik, Acro Zürich, Acroyoga Zürich, Acrolama Festival">
     <meta property="og:url" content="https://www.acrofestival.ch" />
     <meta property="og:title" content="Urban Acro Festival Züri" />
-    <meta property="og:image" content="{% static 'images/logo_acrofestival.png'%}">
-    <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}">
+    <meta property="og:image" content="{% static 'ubranacro/images/logo_acrofestival.png'%}">
+    <link rel="icon" href="{% static 'urbanacro/images/favicons/favicon.ico' %}">
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.jpg">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -30,12 +30,12 @@
     <!-- Optional theme -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
     <!-- This file stores project-specific CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/custom-animations.css'%}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/library/bootstrap.min.css'%}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/library/toastr.min.css'%}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/library/font-awesome.min.css'%}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/frontpage.css'%}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'urbanacro/css/custom-animations.css'%}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'urbanacro/css/library/bootstrap.min.css'%}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'urbanacro/css/library/toastr.min.css'%}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'urbanacro/css/library/font-awesome.min.css'%}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'urbanacro/css/style.css'%}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'urbanacro/css/frontpage.css'%}" />
     {% endblock %}
     {% analytical_head_bottom %}
   </head>
@@ -58,10 +58,10 @@
     <!-- Placed at the end of the document so the pages load faster -->
     {% block javascript %}
         <!--[if lt IE 9]>
-        <script type="text/javascript" src="{% static 'js/jquery-1.11.3.min.js'%}"></script>
+        <script type="text/javascript" src="{% static 'urbanacro/js/jquery-1.11.3.min.js'%}"></script>
         <![endif]-->
         <!--[if (gte IE 9) | (!IE)]><!-->
-        <script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js'%}"></script>
+        <script type="text/javascript" src="{% static 'urbanacro/js/jquery-2.1.4.min.js'%}"></script>
         <!--<![endif]-->
 
       <!-- Required by Bootstrap v4 beta -->
@@ -70,17 +70,17 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
       <!-- Your stuff: Third-party javascript libraries go here -->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHwHR0NjhFjRP6_g4ExH8ErQgVJQu8oZ0&v=3&libraries=places"></script>
-        <script type="text/javascript" src="{% static 'js/bootstrap.min.js'%}"></script>
-        <script type="text/javascript" src="{% static 'js/jquery.validate.min.js'%}"></script>
-        <script type="text/javascript" src="{% static 'js/toastr.min.js'%}"></script>
-        <script type="text/javascript" src="{% static 'js/jquery.waypoints.min.js'%}"></script>
-        <script type="text/javascript" src="{% static 'js/jquery.appear.js'%}"></script>
-        <script type="text/javascript" src="{% static 'js/jquery.plugin.js'%}"></script>
-        <script type="text/javascript" src="{% static 'js/jquery.countTo.js'%}"></script>
-        <script type="text/javascript" src="{% static 'js/masonry.pkgd.min.js'%}"></script>
-        <script type="text/javascript" src="{% static 'js/modal-box.js'%}"></script>
+        <script type="text/javascript" src="{% static 'urbanacro/js/bootstrap.min.js'%}"></script>
+        <script type="text/javascript" src="{% static 'urbanacro/js/jquery.validate.min.js'%}"></script>
+        <script type="text/javascript" src="{% static 'urbanacro/js/toastr.min.js'%}"></script>
+        <script type="text/javascript" src="{% static 'urbanacro/js/jquery.waypoints.min.js'%}"></script>
+        <script type="text/javascript" src="{% static 'urbanacro/js/jquery.appear.js'%}"></script>
+        <script type="text/javascript" src="{% static 'urbanacro/js/jquery.plugin.js'%}"></script>
+        <script type="text/javascript" src="{% static 'urbanacro/js/jquery.countTo.js'%}"></script>
+        <script type="text/javascript" src="{% static 'urbanacro/js/masonry.pkgd.min.js'%}"></script>
+        <script type="text/javascript" src="{% static 'urbanacro/js/modal-box.js'%}"></script>
       <!-- place project specific Javascript in this file -->
-        <script type="text/javascript" src="{% static 'js/ventcamp.js'%}"></script>
+        <script type="text/javascript" src="{% static 'urbanacro/js/ventcamp.js'%}"></script>
 
     {% endblock javascript %}
    {% analytical_body_bottom %}
