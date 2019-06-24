@@ -1,7 +1,3 @@
-"""
-Base settings to build other settings files upon.
-"""
-
 import environ
 
 ROOT_DIR = environ.Path(__file__) - 3  # (acrofestival/config/settings/base.py - 3 = acrofestival/)
@@ -22,7 +18,7 @@ DEBUG = env.bool('DJANGO_DEBUG', False)
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # though not all of them may be available with every OS.
 # In Windows, this must be set to your system time zone.
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Zurich'
 # https://docs.djangoproject.com/en/dev/ref/settings/#language-code
 LANGUAGE_CODE = 'en-us'
 # https://docs.djangoproject.com/en/dev/ref/settings/#site-id
@@ -66,7 +62,7 @@ THIRD_PARTY_APPS = [
     'crispy_forms',
     'allauth',
     'allauth.account',
-    'allauth.socialaccount',
+    # 'allauth.socialaccount',
     'rest_framework',
 ]
 LOCAL_APPS = [

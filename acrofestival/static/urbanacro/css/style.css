@@ -5685,6 +5685,7 @@ button[type="submit"] .loading {
 .speaker .photo-wrapper img {
   display: block;
   max-width: 100%;
+  max-height: 200px;
 }
 .speaker .name {
   font-size: 13px;
