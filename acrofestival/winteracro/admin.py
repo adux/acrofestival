@@ -6,7 +6,7 @@ from .models import Workshop, Entrie, Day
 
 
 class WorkshopAdmin(admin.ModelAdmin):
-    list_display = ('date', 'teachers', 'time')
+    list_display = ("date", "teachers", "time")
 
 
 class DayEntrieInline(admin.StackedInline):
@@ -17,9 +17,7 @@ class DayEntrieInline(admin.StackedInline):
 
 
 class DayAdmin(admin.ModelAdmin):
-    inlines = [
-        DayEntrieInline,
-    ]
+    inlines = [DayEntrieInline]
 
 
 admin.site.register(Day, DayAdmin)

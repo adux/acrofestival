@@ -7,25 +7,46 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Booking',
+            name="Booking",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=120)),
-                ('address', models.CharField(max_length=120)),
-                ('numero', models.CharField(max_length=30)),
-                ('email', models.CharField(max_length=50)),
-                ('option', models.CharField(max_length=20)),
-                ('comment', models.CharField(max_length=300)),
-                ('date', models.DateField(auto_now_add=True)),
-                ('datetime', models.DateTimeField(auto_now_add=True)),
-                ('status', models.CharField(blank=True, choices=[('IN', 'Informed'), ('CA', 'Canceled'), ('PA', 'Payed'), ('PE', 'Pending'), ('SW', 'Switched')], max_length=15, null=True)),
-                ('pay_till', models.DateField(blank=True, null=True)),
-                ('note', models.CharField(blank=True, max_length=1000, null=True)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=120)),
+                ("address", models.CharField(max_length=120)),
+                ("numero", models.CharField(max_length=30)),
+                ("email", models.CharField(max_length=50)),
+                ("option", models.CharField(max_length=20)),
+                ("comment", models.CharField(max_length=300)),
+                ("date", models.DateField(auto_now_add=True)),
+                ("datetime", models.DateTimeField(auto_now_add=True)),
+                (
+                    "status",
+                    models.CharField(
+                        blank=True,
+                        choices=[
+                            ("IN", "Informed"),
+                            ("CA", "Canceled"),
+                            ("PA", "Payed"),
+                            ("PE", "Pending"),
+                            ("SW", "Switched"),
+                        ],
+                        max_length=15,
+                        null=True,
+                    ),
+                ),
+                ("pay_till", models.DateField(blank=True, null=True)),
+                ("note", models.CharField(blank=True, max_length=1000, null=True)),
             ],
-        ),
+        )
     ]

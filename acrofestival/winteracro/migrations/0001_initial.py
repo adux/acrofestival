@@ -8,37 +8,95 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Day',
+            name="Day",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('day', models.CharField(max_length=20)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("day", models.CharField(max_length=20)),
             ],
         ),
         migrations.CreateModel(
-            name='Entrie',
+            name="Entrie",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('style', models.CharField(choices=[('style1', 'Style 1'), ('style2', 'Style 2'), ('style3', 'Style 3'), ('style4', 'Style 4'), ('style5', 'Style 5')], max_length=8)),
-                ('icon', models.CharField(choices=[('icon fas fa-home', 'Home'), ('icon fas fa-flag-checkered', 'Flag'), ('icon fas fa-fire', 'Fire'), ('icon fas fa-utensils', 'Cutlery'), ('icon fas fa-cogs', 'Cogs'), ('icon fas fa-om', 'Om'), ('icon fas fa-snowflake', 'Snow'), ('icon fas fa-magic', 'Magic')], max_length=25)),
-                ('time', models.CharField(max_length=5)),
-                ('title', models.CharField(max_length=30)),
-                ('when', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='winteracro.Day')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "style",
+                    models.CharField(
+                        choices=[
+                            ("style1", "Style 1"),
+                            ("style2", "Style 2"),
+                            ("style3", "Style 3"),
+                            ("style4", "Style 4"),
+                            ("style5", "Style 5"),
+                        ],
+                        max_length=8,
+                    ),
+                ),
+                (
+                    "icon",
+                    models.CharField(
+                        choices=[
+                            ("icon fas fa-home", "Home"),
+                            ("icon fas fa-flag-checkered", "Flag"),
+                            ("icon fas fa-fire", "Fire"),
+                            ("icon fas fa-utensils", "Cutlery"),
+                            ("icon fas fa-cogs", "Cogs"),
+                            ("icon fas fa-om", "Om"),
+                            ("icon fas fa-snowflake", "Snow"),
+                            ("icon fas fa-magic", "Magic"),
+                        ],
+                        max_length=25,
+                    ),
+                ),
+                ("time", models.CharField(max_length=5)),
+                ("title", models.CharField(max_length=30)),
+                (
+                    "when",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="winteracro.Day"
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='Workshop',
+            name="Workshop",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('date', models.DateField()),
-                ('time', models.CharField(max_length=10)),
-                ('teachers', models.TextField(blank=True, max_length=120, null=True)),
-                ('workshop', models.TextField(blank=True, max_length=300, null=True)),
-                ('prerequisites', models.TextField(blank=True, max_length=300, null=True)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("date", models.DateField()),
+                ("time", models.CharField(max_length=10)),
+                ("teachers", models.TextField(blank=True, max_length=120, null=True)),
+                ("workshop", models.TextField(blank=True, max_length=300, null=True)),
+                (
+                    "prerequisites",
+                    models.TextField(blank=True, max_length=300, null=True),
+                ),
             ],
         ),
     ]

@@ -1,18 +1,30 @@
 from django.contrib import admin
 from .models import WinterAcroBooking, UrbanAcroBooking
+
 # Register your models here.
 
 
 class UrbanAcroBookingAdmin(admin.ModelAdmin):
-    list_display = ('date', 'name', 'email', 'option', 'comment', 'status', 'pay_till')
-    list_filter = ('status', 'pay_till')
+    list_display = ("date", "name", "email", "option", "comment", "status", "pay_till")
+    list_filter = ("status", "pay_till")
 
 
 class WinterAcroBookingAdmin(admin.ModelAdmin):
-    list_display = ('datetime', 'name', 'email', 'numero', 'address', 'option', 'allergies', 'status',
-                    'pay_till', 'pay_date', 'amount')
-    list_filter = ('datetime', 'option', 'status')
-    search_fields = ('name', 'email')
+    list_display = (
+        "datetime",
+        "name",
+        "email",
+        "numero",
+        "address",
+        "option",
+        "allergies",
+        "status",
+        "pay_till",
+        "pay_date",
+        "amount",
+    )
+    list_filter = ("datetime", "option", "status")
+    search_fields = ("name", "email")
 
 
 admin.site.register(UrbanAcroBooking, UrbanAcroBookingAdmin)

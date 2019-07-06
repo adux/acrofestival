@@ -11,26 +11,26 @@ class Workshop(models.Model):
     prerequisites = models.TextField(max_length=300, blank=True, null=True)
 
     def day(self):
-        return self.date.strftime('%A')
+        return self.date.strftime("%A")
 
 
 Styles = (
-    ('style1', 'Style 1'),
-    ('style2', 'Style 2'),
-    ('style3', 'Style 3'),
-    ('style4', 'Style 4'),
-    ('style5', 'Style 5'),
+    ("style1", "Style 1"),
+    ("style2", "Style 2"),
+    ("style3", "Style 3"),
+    ("style4", "Style 4"),
+    ("style5", "Style 5"),
 )
 
 Icons = (
-    ('icon fas fa-home', 'Home'),
-    ('icon fas fa-flag-checkered', 'Flag'),
-    ('icon fas fa-fire', 'Fire'),
-    ('icon fas fa-utensils', 'Cutlery'),
-    ('icon fas fa-cogs', 'Cogs'),
-    ('icon fas fa-om', 'Om'),
-    ('icon fas fa-snowflake', 'Snow'),
-    ('icon fas fa-magic', 'Magic'),
+    ("icon fas fa-home", "Home"),
+    ("icon fas fa-flag-checkered", "Flag"),
+    ("icon fas fa-fire", "Fire"),
+    ("icon fas fa-utensils", "Cutlery"),
+    ("icon fas fa-cogs", "Cogs"),
+    ("icon fas fa-om", "Om"),
+    ("icon fas fa-snowflake", "Snow"),
+    ("icon fas fa-magic", "Magic"),
 )
 
 
