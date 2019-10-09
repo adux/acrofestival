@@ -6,7 +6,7 @@
     <header id="header" class="alt">
             <span class="logo"><img src="{% static "winteracro/images/logo_vek.svg"%}" alt="" /></span>
         <h1>2nd Winter Acro Festival{% tinycontent_simple 'winter_general_title' %}</h1>
-        <p>22. - 27. February 2019{% tinycontent_simple 'winter_general_date' %}</br>
+        <p>{% tinycontent_simple 'winter_general_date' %}</br>
         Register <a href="{% url "winterform"%}">HERE</a></p>
     </header>
     {% include 'pages/winteracro/snippets/navhome.html' %}
@@ -21,15 +21,6 @@
                         </header>
                             <p>
                             {% tinycontent_simple 'winter_home_intro'%}
-                            Welcome!</br> We'd like to invite you to the 2nd version of the Winter Acro Festival in
-                            Lenk, Switzerland. It's going to take place from:</br>
-                            <u>22 till 27 of February 2019</u></br>
-                            With the experience of 2018 we made some upgrades:
-                            For starters we have <u>6 days of festival, 11 rounds of acro workshops</u>
-                            and handpicked teachers, but more about them later :).
-                            There are some additional handstands, yoga and thai massage classes planned ;).
-                            Since we're in the mountains we'll add some <u>snow activities</u>. To close,
-                            this year - after hard training - we have saunas you can enjoy in the evening.</br>
                             </p>
                         <ul class="actions">
                                 <li>
@@ -52,9 +43,6 @@
                         <span class="icon major style1 fas fa-bed"></span>
                         <h3>Accommodation</h3>
                         <p>{% tinycontent_simple 'winter_home_accomodation' %}
-                        This year the dorm is 4 min. walk from the hall - No LamaAirlines, sorry :( -. Important is
-                        that you bring your own sleeping bag! *Accommodation is not included in single day tickets.
-                        More important details:</br></br>
                         <a class="button" href="{% url 'winterlocation'%}#accommodation">CLICK HERE</a>
                         </p>
                     </li>
@@ -62,17 +50,12 @@
                         <span class="icon major style3 fas fa-utensils"></span>
                         <h3>Food</h3>
                         <p>{% tinycontent_simple 'winter_home_food' %}
-                        Food plays an important role in this festival. Main dishes, healthy snacks and fruits are all
-                        organic, mostly local, vegan and cooked with love.</br>* <u>Please note that there will be some help
-                        asked from everyone arround small kitchen tasks.</u></br></br>
                         </p>
                         </li>
                     <li>
                         <span class="icon major style5 fas fa-cogs"></span>
                         <h3>Workshops</h3>
                         <p>{% tinycontent_simple 'winter_home_workshops' %}
-                        There'll be 11 rounds of acro workshops and space for a constant jam. Experience in acro is
-                        important for your own enjoyment.</br>* <u>There will be no beginner workshops</u>.</br></br>
                         <a class="button" href="#workshops">TEACHERS</a>
                         </p>
                     </li>
@@ -80,19 +63,12 @@
                         <span class="icon major style3 fas fa-snowflake"></span>
                         <h3>Special events</h3>
                         <p>{% tinycontent_simple 'winter_home_specialevent' %}
-                        Monday morning we will organized a <u>snow event up on the mountain</u> at the ski resort
-                        (If the weather is good <i class="fa fa-hand-o-left" aria-hidden="true"></i>). Bring warm
-                        clothes for Outdoor acro. Free afternoon for ski, snowboard or free floor at the hall.</br>
-                        There's <u>sauna to relax and an open stage</u> to share your talents.</br>*As an <u>EXTRA</u>,
-                        we could organise a day ski ticket for you.
                         </p>
                     </li>
                     <li>
                         <span class="icon major style2 fas fa-map-marker"></span>
                         <h3>Location</h3>
                         <p>{% tinycontent_simple 'winter_home_location' %}
-                        This Festival takes place in Lenk im Simmental, Switzerland. A complete description on how to
-                        get there can be found in the following link:</br></br>
                         <a class="button" href="{% url 'winterlocation'%}#location">CLICK HERE</a>
                         </p>
                         </li>
@@ -100,9 +76,6 @@
                         <span class="icon major style1 fas fa-money-bill-wave"></span>
                         <h3>Prices</h3>
                         <p>{% tinycontent_simple 'winter_home_prices' %}
-                        We have tickets based on the amount of days you stay at the festival. All include:</br>
-                        accomodation, food, workshops and mountain lift ticket.</br>
-                        <u>Single day tickets don't include breakfast</u>. Conditions and prices:</br></br>
                         <a class="button" href="{% url 'winterprices'%}">CLICK HERE</a>
                         </p>
                 </ul>
@@ -226,17 +199,9 @@
             <section id="schedule" class="main special">
                 <header class="major">
                     <h2>Schedule</h2>
-                    <p>{% tinycontent_simple 'winter_home_schedule' %} Some changes are to be expected, but it's our best approximation at this time :)</p>
+                    <p>{% tinycontent_simple 'winter_home_schedule' %}
+                    </p>
                 </header>
-                    <h2>Friday</h2>
-                    <ul class="statistics">
-                        {% for obj in fri %}
-                        <li class="{{obj.style}}">
-                                <span class="fas {{obj.icon}}"></span>
-                                <strong>{{obj.time}}</strong> {{obj.title}}
-                    </li>
-                    {% endfor %}
-                    </ul>
                     <h2>Saturday</h2>
                     <ul class="statistics">
                         {% for obj in sat %}
@@ -279,6 +244,15 @@
                         <li class="{{obj.style}}">
                             <span class="fas {{obj.icon}}"></span>
                             <strong>{{obj.time}}</strong> {{obj.title}}
+                    </li>
+                    {% endfor %}
+                    </ul>
+                    <h2>Friday</h2>
+                    <ul class="statistics">
+                        {% for obj in fri %}
+                        <li class="{{obj.style}}">
+                                <span class="fas {{obj.icon}}"></span>
+                                <strong>{{obj.time}}</strong> {{obj.title}}
                     </li>
                     {% endfor %}
                     </ul>
