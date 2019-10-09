@@ -1,12 +1,11 @@
 {% extends 'base.html'%}
-{% block content %}
-{% load static %}
+{% block content %}{% load static %}{% load tinycontent_tags %}
 <section class="xop-container">
 	<div class="xop-left">
 		<article>
         <a href="{% url 'winteracro'%}">
-			<h1>Winter Acro Festival</h1>
-            <h1 style="font-size:2rem;">22. - 27. Feb. 2019</h1>
+            <h1>{% tinycontent_simple 'winter_general_title' %}</h1>
+            <h1 style="font-size:2rem;">{% tinycontent_simple 'winter_general_date' %}</h1>
             <a href="{% url 'winteracro'%}" class="xop-button">Enter</a>
         </a>
 		</article>
