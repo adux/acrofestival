@@ -17,7 +17,7 @@ urlpatterns = [
     path("urbanacro/", urbanacro_view, name="urbanacro"),
     path("winteracro/", fest_homeview, name="winteracro"),
     path("winteracro/form/", winteracroform_view, name="winterform"),
-    path("winteracro/location/", fest_locationview, name="winterlocation"),
+    path("winteracro/location", fest_locationview, name="winterlocation"),
     path("winteracro/prices/", fest_pricesview, name="winterprices"),
 ] + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
