@@ -2,7 +2,6 @@ from django.db import models
 
 # Create your models here.
 
-
 class Workshop(models.Model):
     date = models.DateField(auto_now=False, auto_now_add=False)
     time = models.CharField(max_length=10)
