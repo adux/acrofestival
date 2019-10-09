@@ -5,7 +5,7 @@
 <!-- Header -->
     <header id="header" class="alt">
             <span class="logo"><img src="{% static "winteracro/images/logo_vek.svg"%}" alt="" /></span>
-        <h1>2nd Winter Acro Festival{% tinycontent_simple 'winter_general_title' %}</h1>
+        <h1>{% tinycontent_simple 'winter_general_title' %}</h1>
         <p>{% tinycontent_simple 'winter_general_date' %}</br>
         Register <a href="{% url "winterform"%}">HERE</a></p>
     </header>
