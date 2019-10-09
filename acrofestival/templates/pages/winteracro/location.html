@@ -1,90 +1,97 @@
 {% extends "pages/winteracro/basefest.html" %}
 {% block content %}{% load static %}{% load tinycontent_tags %}
 <!-- Wrapper -->
-            <div id="wrapper">
-                <!-- Header -->
-                    <header id="header">
-                        <h1>Lenk im Simmental</h1>
-                        <p>How to get there and where will we sleep</p>
-                    </header>
-                    {% include 'snippets/navnothome.html' %}
-                <!-- Main -->
-                    <div id="main">
-                        <!-- Content -->
-                            <section id="accommodation" class="main">
-                                    <span class="image main">
-                                            <img src="{% static "winteracro/images/pic04.jpg"%}" alt="lenk accomodation for the winter acro festival" />
-                                    </span>
-                                    <h1>Accommodation</h1>
-                                    <h2>Mountain lodge camp</h2>
-                                    <p>
-                                    <span class="image right">
-                                            <img src="{% static "winteracro/images/pic05.jpg" %}" alt="winter acromodation for the acrolama winter acro festival" />
-                                    </span>
-                                    Our camp is centrally located at Lenk village and just 2 minutes’ walk from the
-                                    train station and 5 minuets walk away from the hall. So no LamaAirlines needed this
-                                    year.</br>
-                                    <h3>Dorms</h3>
-                                    We have 4 dormitories with each between 16 - 20 sleeping spots.</br>
-                                    There are mattress and pillows but please bring your own sleeping bag.</br></br>
-                                    Direction</br>
-                                    Mountain lodge backpacker camp</br>
-                                    Gutenbrunnenstrasse</br>
-                                    3775 Lenk</br></br>
-                                    <a class="button" style="box-shadow:0px; background:#f3d216;"
-                                            href='https://goo.gl/maps/aTmnGQ3eY2P2'>
-                                            Google Maps CLICK HERE
-                                    </a>
-                                    </br></br>
-                                    </p>
-                                    <h3>Some other extra infos:</h3>
-                                    <p>We'll place the sauna near to the camp.</br>
-                                    There are parking places for cars and mini buses.</br>
-                                    We recommend you to come by train.</br>
-                                    Bring some house shoes for the hall and house.</br>
-                                    All the meals are in the hall. Some snacks and coffee will be provided.</br>
-                            </section>
-                            <section id="location" class="main">
-                                <h1>Transportation</h1>
-                                <h2>By train:</h2>
-                                <p>The wonderful destination of Lenk lays at the end of a beautiful and varied train
-                                ride from either Bern or Montreux.</br>
-                                There's only one train change from Bern to Lenk.</br>
-                                The Lötschberger train takes you hourly from Bern directly to Zweisimmen,
-                                where you’ll change trains to catch the 20 minute regional train to Lenk.</p>
-                                <h3>Approximate travel times by train</h3>
-                                <ul>
-                                    <li>Zurich – Berne – Lenk: 2h 30 min</li>
-                                    <li>Basel – Berne – Lenk: 2h 15 min</li>
-                                    <li>Geneva – Lausanne – Montreux – Lenk: 3h 30 min</li>
-                                    <li>Berne/Belp – Lenk: 1h 45 min</li>
-                                </ul>
-                                <h3>Tickets</h3>
-                                <p> Tickets can be bought in the Swiss Main Trains system
-                                <a href="https://www.sbb.ch/">SBB</a></br>
-                                Prices are very relative to how soon you buy the tickets and time of train.
-                                As a obvious general recommendation <u>book with time!</u></p>
-                                <h2>By car:</h2>
-                                <p> Traveling on the A6 motorway Bern-Thun, take the Wimmis/Zweisimmen exit through
-                                the Simmenfluh Tunnel, on the other side of which begins your journey up the Simme
-                                River Valley. The main road in the valley, the Simmentalstrasse.</br>
-                                Coming from Bulle and the Canton of Freiburg, one can reach Lenk via Charmey by
-                                traveling over the Jaunpass into the Simmental (Boltigen) or by
-                                traveling via Château d’Oex-Saanen-Zweisimmen.</p>
-                                <h3>Approximate travel times by car</h3>
-                                <ul>
-                                    <li>Berne – Lenk: 1h 15min</li>
-                                    <li>Basel – Lenk: 2h</li>
-                                    <li>Geneva – Lenk: 2h 15min</li>
-                                    <li>Zurich – Lenk: 2h 30min</li>
-                                </ul>
-                                <footer class="major">
-                                    <ul class="actions">
-                                            <li><a href="{% url "winteracro"%}" class="button">Back</a></li>
-                                    </ul>
-                                </footer>
-                            </section>
-                    </div>
-                    {% include 'snippets/footer.html' %}
-            </div>
+<div id="wrapper">
+    <!-- Header -->
+    <header id="header">
+        <h1>Lenk im Simmental</h1>
+        <p>How to get there and where will we sleep</p>
+    </header>
+    {% include 'wintercro/snippets/navnothome.html' %}
+    <!-- Main -->
+    <div id="main">
+        <!-- Content -->
+        <section id="accommodation" class="main">
+            <span class="image main">
+                <img src="{% static "winteracro/images/pic04.jpg"%}" alt="lenk accomodation for the winter acro festival" />
+            </span>
+            <h1>Accommodation</h1>
+            <h2>Mountain lodge camp</h2>
+            <p>
+            <span class="image right">
+                    <img src="{% static "winteracro/images/pic05.jpg" %}" alt="winter acromodation for the acrolama winter acro festival" />
+            </span>
+            {% tinycontent_simple 'winter_accomodation_description' %}
+            Our camp is centrally located at Lenk village and just 2 minutes’ walk from the
+            train station and 5 minuets walk away from the hall. So no LamaAirlines needed this
+            year.</br>
+            <h3>Dorms</h3>
+            {% tinycontent_simple 'winter_accomodation_dorms' %}
+            We have 4 dormitories with each between 16 - 20 sleeping spots.</br>
+            There are mattress and pillows but please bring your own sleeping bag.</br></br>
+            <h3>Upgrade</h3>
+            {% tinycontent_simple 'winter_accomodation_upgrade' %}
+            <h3>Address</h3>
+            {% tinycontent_simple 'winter_accomodation_address' %}
+            Mountain lodge backpacker camp</br>
+            Gutenbrunnenstrasse</br>
+            3775 Lenk</br></br>
+            {% tinycontent_simple 'winter_accomodation_address_url' %}
+            <a class="button" style="box-shadow:0px; background:#f3d216;"
+                    href='https://goo.gl/maps/aTmnGQ3eY2P2'>
+                    Google Maps CLICK HERE
+            </a>
+            </br></br>
+            </p>
+            <h3>Some other extra infos:</h3>
+            {% tinycontent_simple 'winter_accomodation_extra' %}
+            <p>We'll place the sauna near to the camp.</br>
+            There are parking places for cars and mini buses.</br>
+            We recommend you to come by train.</br>
+            Bring some house shoes for the hall and house.</br>
+            All the meals are in the hall. Some snacks and coffee will be provided.</br>
+        </section>
+        <section id="location" class="main">
+            <h1>Transportation</h1>
+            <h2>By train:</h2>
+            <p>The wonderful destination of Lenk lays at the end of a beautiful and varied train
+            ride from either Bern or Montreux.</br>
+            There's only one train change from Bern to Lenk.</br>
+            The Lötschberger train takes you hourly from Bern directly to Zweisimmen,
+            where you’ll change trains to catch the 20 minute regional train to Lenk.</p>
+            <h3>Approximate travel times by train</h3>
+            <ul>
+                <li>Zurich – Berne – Lenk: 2h 30 min</li>
+                <li>Basel – Berne – Lenk: 2h 15 min</li>
+                <li>Geneva – Lausanne – Montreux – Lenk: 3h 30 min</li>
+                <li>Berne/Belp – Lenk: 1h 45 min</li>
+            </ul>
+            <h3>Tickets</h3>
+            <p> Tickets can be bought in the Swiss Main Trains system
+            <a href="https://www.sbb.ch/">SBB</a></br>
+            Prices are very relative to how soon you buy the tickets and time of train.
+            As a obvious general recommendation <u>book with time!</u></p>
+            <h2>By car:</h2>
+            <p> Traveling on the A6 motorway Bern-Thun, take the Wimmis/Zweisimmen exit through
+            the Simmenfluh Tunnel, on the other side of which begins your journey up the Simme
+            River Valley. The main road in the valley, the Simmentalstrasse.</br>
+            Coming from Bulle and the Canton of Freiburg, one can reach Lenk via Charmey by
+            traveling over the Jaunpass into the Simmental (Boltigen) or by
+            traveling via Château d’Oex-Saanen-Zweisimmen.</p>
+            <h3>Approximate travel times by car</h3>
+            <ul>
+                <li>Berne – Lenk: 1h 15min</li>
+                <li>Basel – Lenk: 2h</li>
+                <li>Geneva – Lenk: 2h 15min</li>
+                <li>Zurich – Lenk: 2h 30min</li>
+            </ul>
+            <footer class="major">
+                <ul class="actions">
+                        <li><a href="{% url "winteracro"%}" class="button">Back</a></li>
+                </ul>
+            </footer>
+        </section>
+    </div>
+    {% include 'snippets/footer.html' %}
+</div>
 {% endblock %}
