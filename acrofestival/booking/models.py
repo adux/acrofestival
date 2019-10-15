@@ -14,7 +14,7 @@ Status = [
 class UrbanAcroBooking(models.Model):
     name = models.CharField(max_length=120)
     address = models.CharField(max_length=120)
-    numero = models.CharField(max_length=30)
+    phone = models.CharField(max_length=30)
     email = models.CharField(max_length=50)
     option = models.CharField(max_length=20, null=True, blank=True)
     comment = models.CharField(max_length=300, null=True, blank=True)
@@ -30,10 +30,11 @@ class UrbanAcroBooking(models.Model):
 class WinterAcroBooking(models.Model):
     name = models.CharField(max_length=120)
     address = models.CharField(max_length=250)
-    numero = models.CharField(max_length=20)
+    phone = models.CharField(max_length=20)
     email = models.CharField(max_length=250)
     option = models.CharField(max_length=5)
     allergies = models.CharField(max_length=300)
+    donation = models.CharField(max_length=3)
     amount = models.CharField(max_length=10, null=True, blank=True)
     pay_till = models.DateField(
         auto_now_add=False, auto_now=False, null=True, blank=True

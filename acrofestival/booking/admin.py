@@ -5,7 +5,15 @@ from .models import WinterAcroBooking, UrbanAcroBooking
 
 
 class UrbanAcroBookingAdmin(admin.ModelAdmin):
-    list_display = ("date", "name", "email", "option", "comment", "status", "pay_till")
+    list_display = (
+        "date",
+        "name",
+        "email",
+        "phone",
+        "option",
+        "comment",
+        "status",
+        "pay_till")
     list_filter = ("status", "pay_till")
 
 
@@ -14,7 +22,7 @@ class WinterAcroBookingAdmin(admin.ModelAdmin):
         "datetime",
         "name",
         "email",
-        "numero",
+        "phone",
         "address",
         "option",
         "allergies",

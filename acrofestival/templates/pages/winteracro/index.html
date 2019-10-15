@@ -20,7 +20,7 @@
                             <h2>What's it all about</h2>
                         </header>
                             <p>
-                            {% tinycontent_simple 'winter_home_intro'%}
+                            {% tinycontent_simple 'winter_home_intro' %}
                             </p>
                         <ul class="actions">
                                 <li>
@@ -36,16 +36,9 @@
         <!-- First Section -->
             <section id="info" class="main special">
                 <header class="major">
-                    <h2>General Information</h2>
+                    <h2>Infos</h2>
                 </header>
                 <ul class="features">
-                    <li>
-                        <span class="icon major style1 fas fa-bed"></span>
-                        <h3>Accommodation</h3>
-                        <p>{% tinycontent_simple 'winter_home_accomodation' %}
-                        <a class="button" href="{% url 'winterlocation'%}#accommodation">CLICK HERE</a>
-                        </p>
-                    </li>
                     <li>
                         <span class="icon major style3 fas fa-utensils"></span>
                         <h3>Food</h3>
@@ -60,9 +53,80 @@
                         </p>
                     </li>
                     <li>
-                        <span class="icon major style3 fas fa-snowflake"></span>
-                        <h3>Special events</h3>
+                        <span class="icon major style6 fas fa-snowflake"></span>
+                        <h3>Snow Event</h3>
                         <p>{% tinycontent_simple 'winter_home_specialevent' %}
+                        </p>
+                    </li>
+                    <li>
+                        <span class="icon major style1 fas fa-fire"></span>
+                        <h3>Sauna</h3>
+                        <p>{% tinycontent_simple 'winter_home_sauna' %}
+                        </p>
+                        </li>
+                    <li>
+                        <span class="icon major style7 fas fa-magic"></span>
+                        <h3>Show</h3>
+                        <p>{% tinycontent_simple 'winter_home_show' %}
+                        </p>
+                    </li>
+                </ul>
+                <footer class="major">
+                    <ul class="actions">
+                            <li>
+                            <a style="box-shadow: 0px 0px; background:#f3d216;" href="{% url "winterform"%}"
+                                    class="button">Read Enough? Register HERE
+                            </a>
+                            </li>
+                    </ul>
+                </footer>
+            </section>
+            <section id="infopics" class="main">
+                    <div class="box alt">
+                            <div class="row gtr-uniform">
+                                    <div class="col-4">
+                                        <span class="image fit">
+                                            <img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_3high.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" />
+                                        </span>
+                                    </div>
+                                    <div class="col-4">
+                                        <span class="image fit">
+                                            <img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_kiss.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" />
+                                        </span>
+                                    </div>
+                                    <div class="col-4">
+                                        <span class="image fit">
+                                            <img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_snow2.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" />
+                                        </span>
+                                    </div>
+                                    <div class="col-4">
+                                        <span class="image fit">
+                                            <img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_snow.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" />
+                                        </span>
+                                    </div>
+                                    <div class="col-4">
+                                        <span class="image fit">
+                                            <img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_sauna.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" />
+                                        </span>
+                                    </div>
+                                    <div class="col-4">
+                                        <span class="image fit">
+                                            <img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_hall.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" />
+                                        </span>
+                                    </div>
+                            </div>
+                    </div>
+            </section>
+            <section id="info" class="main special">
+                <header class="major">
+                    <h2>General Information</h2>
+                </header>
+                <ul class="features">
+                    <li>
+                        <span class="icon major style1 fas fa-bed"></span>
+                        <h3>Accommodation</h3>
+                        <p>{% tinycontent_simple 'winter_home_accomodation' %}
+                        <a class="button" href="{% url 'winterlocation'%}#accommodation">CLICK HERE</a>
                         </p>
                     </li>
                     <li>
@@ -81,120 +145,134 @@
                 </ul>
                 <footer class="major">
                     <ul class="actions">
-                            <li>
-                            <a style="box-shadow: 0px 0px; background:#f3d216;" href="{% url "winterform"%}"
-                                    class="button">Read Enough? Register HERE
-                            </a>
-                            </li>
+                        <li>
+                        <a style="box-shadow: 0px 0px; background:#f3d216;" href="{% url "winterform"%}"
+                                class="button">Read Enough? Register HERE
+                        </a>
+                        </li>
                     </ul>
                 </footer>
             </section>
             <section id="teachers" class="main">
                     <header class="major">
-                                    <h2>Teachers 2019</h2>
+                        <h2>{% tinycontent_simple 'winter_general_title' %} - Teachers</h2>
                                     </header>
                     <div class="box alt">
-                            <div class="row gtr-uniform">
-                                    <p><h2>Celine & Alfonso - AcroWings</h2></p>
-                                    <p>
-                                    <span class="image left">
-                                            <img src="{% static "winteracro/images/teachers2019/acrowings.jpg"%}" alt="Acrowings
-                                            in the Winter Acro Fest 2019 for the Second time teaching
-                                            Acrobatics Icarians and more">
-                                    </span>
-                                    With these two beauties we go way back to the begginings of our carriers. Amazing
-                                    friends and teachers!! We're very happy to have them back.<br>
-                                    Alfonso has such a encouraging energy. You cannot stop him doing acro!<br>
-                                    Celine, well... if her smilie doesn't captivate you, just wait to see her fly Icarians
-                                    and whips. Jaw dropping.<br>
-                                    They will be sharing their whips and Icarian moves in this Winter Festival 2019.
-                                    </p>
-                                    <p><h2>Trudi & Wybren</h2></p>
-                                    <p>
-                                    <span class="image right">
-                                            <img src="{% static "winteracro/images/teachers2019/wybremandtrudi.jpg"%}" alt="Wybrem and Trudi
-                                            in the Winter Acro Fest 2019 - Skining Codarts and more">
-                                    </span>
-                                    I'll be honest, first encounter was a bit intimidating. But then you go full FKK at
-                                    some random acro conventions and you realise we're all in the same rail here (sort of).<br>
-                                    It's endless what you could learn from this couple of amazing acrobats!<br>
-                                    Wybren is teacher at the Codarts Circus School in Rotterdam and with Trudi they have
-                                    given many of our favourite technical workshops. Very happy to have them on board!
-                                    </p>
-                                    <p><h2>Peter</h2></p>
-                                    <p>
-                                    <span class="image left">
-                                            <img src="{% static "winteracro/images/teachers2019/peter.jpg"%}" alt="Peter and Julie
-                                            in the Winter Acro Fest 2019 for the Second time teaching
-                                            Acrobatics Icarians and more">
-                                    </span>
-                                    We where on our way to give a workshop in Copenhagen and while stalking the local
-                                    teachers we came across some pretty nice flows. Later that day we finally met
-                                    the authors: Peter and Julie. So lovely and beautiful people!! and what a multi poli
-                                    hiper mover Peter is. Very happy he accepted our invitation!
-                                    </p>
-                                    <p><h2>Fer & Fifi</h2></p>
-                                    <p>
-                                    <span class="image right">
-                                            <img src="{% static "winteracro/images/teachers2019/feryfifi.jpg"%}" alt="Fer and Fifi
-                                            in the Winter Acro Fest 2019 for the Second time teaching
-                                            Acrobatics Icarians and more">
-                                    </span>
-                                    We met this duo just recently at the 7th Barcelona Mano a Mano Convention and liked
-                                    their way of teaching so much that we had to invite them.<br>
-                                    Experts in acrobatics and many other Circus arts, they are going to share a piece
-                                    of their knowledge with us! Thanks for accepting our invitation and happy to see you soon !
-                                    </p>
-                                    <p><h2>Paul</h2></p>
-                                    <p>
-                                    <span class="image left">
-                                            <img src="{% static "winteracro/images/teachers2019/paul.jpg"%}" alt="Paul
-                                            in the Winter Acro Fest 2019 for the Second time teaching
-                                            Acrobatics Icarians and more">
-                                    </span>
-                                    First time I read about Paul, they discribed him as the swiss knife of acrobatics.
-                                    Soon enough we learned to know why: basing, flying and is basiclly a encyclopedia of
-                                    creative tricks. He's coming to share hes many curious tricks and humor for the
-                                    first time in the Swiss alps.
-                                    </p>
-                                    <p><h2>Daniel Marty</h2></p>
-                                    <p>
-                                    <span class="image right">
-                                            <img src="{% static "winteracro/images/teachers2019/daniel.jpg"%}" alt="Daniel Marty
-                                            in the Winter Acro Fest 2019 for the Second time teaching
-                                            Acrobatics Icarians and more">
-                                    </span>
-                                    For being "just his hobby" Daniel has investes A LOT of time in acro, and
-                                    another bunch in developing the Basel and Swiss acro community. Mostly traveling
-                                    arround from one big event to another, he hardly misses the local events. Very
-                                    happy to have him sharing all that collected knowleadge at the Winter Acro Festival
-                                    this 2019!
-                                    </p>
-                                    <p><h2>Kerstin and Uwe - Cameo Acrobatix</h2></p>
-                                    <p>
-                                    <span class="image left">
-                                            <img src="{% static "winteracro/images/teachers2019/cameoacrobatix.jpg"%}" alt="Cameo Acrobatix
-                                            in the Winter Acro Fest 2019 for the Second time teaching
-                                            Acrobatics Icarians and more">
-                                    </span>
-                                    It's been very nice to see how this friends have grown so fast and good in their Acro paths. Touring
-                                    with their acro company all arround europe, giving very nice workshops. Very happy to have them on Board!
-                                    We picked them up in Berlin and Graz to bring them direct to Lenk yuhuiii!
-                                    </p>-->
-                                    <p><h2>Bruno</h2></p>
-                                    <p>
-                                    <span class="image right">
-                                            <img src="{% static "winteracro/images/teachers2019/bruno.jpg"%}" alt="Acrowings
-                                            in the Winter Acro Fest 2019 for the Second time teaching
-                                            Acrobatics Icarians and more">
-                                    </span>
-                                    I had to laugh only from remembering Bruno at the French acro convention, what a
-                                    blast you'll have with this guy! Improvisation and staging are he's strengths and
-                                    passion. But it's hard to find the words to describe such a clown, you just have
-                                    to meet him. Happy to have you with us my friend!
-                                    </p>
-                            </div>
-                    </div>
+                        <div class="row gtr-uniform">
+                            <p><h2></h2></p>
+                            <p>
+                            <span class="image left">
+                                    <img src="{% static "winteracro/images/teachers2019/acrowings.jpg"%}" alt="Acrowings
+                                    in the Winter Acro Fest 2019 for the Second time teaching
+                                    Acrobatics Icarians and more">
+                            </span>
+                            With these two beauties we go way back to the begginings of our carriers. Amazing
+                            friends and teachers!! We're very happy to have them back.<br>
+                            Alfonso has such a encouraging energy. You cannot stop him doing acro!<br>
+                            Celine, well... if her smilie doesn't captivate you, just wait to see her fly Icarians
+                            and whips. Jaw dropping.<br>
+                            They will be sharing their whips and Icarian moves in this Winter Festival 2019.
+                            </p>
+                            <!-- <p><h2>Celine & Alfonso - AcroWings</h2></p>-->
+                            <!-- <p>-->
+                            <!-- <span class="image left">-->
+                            <!--         <img src="{% static "winteracro/images/teachers2019/acrowings.jpg"%}" alt="Acrowings-->
+                            <!--         in the Winter Acro Fest 2019 for the Second time teaching-->
+                            <!--         Acrobatics Icarians and more">-->
+                            <!-- </span>-->
+                            <!-- With these two beauties we go way back to the begginings of our carriers. Amazing-->
+                            <!-- friends and teachers!! We're very happy to have them back.<br>-->
+                            <!-- Alfonso has such a encouraging energy. You cannot stop him doing acro!<br>-->
+                            <!-- Celine, well... if her smilie doesn't captivate you, just wait to see her fly Icarians-->
+                            <!-- and whips. Jaw dropping.<br>-->
+                            <!-- They will be sharing their whips and Icarian moves in this Winter Festival 2019.-->
+                            <!-- </p>-->
+                            <!-- <p><h2>Trudi & Wybren</h2></p>-->
+                            <!-- <p>-->
+                            <!-- <span class="image right">-->
+                            <!--         <img src="{% static "winteracro/images/teachers2019/wybremandtrudi.jpg"%}" alt="Wybrem and Trudi-->
+                            <!--         in the Winter Acro Fest 2019 - Skining Codarts and more">-->
+                            <!-- </span>-->
+                            <!-- I'll be honest, first encounter was a bit intimidating. But then you go full FKK at-->
+                            <!-- some random acro conventions and you realise we're all in the same rail here (sort of).<br>-->
+                            <!-- It's endless what you could learn from this couple of amazing acrobats!<br>-->
+                            <!-- Wybren is teacher at the Codarts Circus School in Rotterdam and with Trudi they have-->
+                            <!-- given many of our favourite technical workshops. Very happy to have them on board!-->
+                            <!-- </p>-->
+                            <!-- <p><h2>Peter</h2></p>-->
+                            <!-- <p>-->
+                            <!-- <span class="image left">-->
+                            <!--         <img src="{% static "winteracro/images/teachers2019/peter.jpg"%}" alt="Peter and Julie-->
+                            <!--         in the Winter Acro Fest 2019 for the Second time teaching-->
+                            <!--         Acrobatics Icarians and more">-->
+                            <!-- </span>-->
+                            <!-- We where on our way to give a workshop in Copenhagen and while stalking the local-->
+                            <!-- teachers we came across some pretty nice flows. Later that day we finally met-->
+                            <!-- the authors: Peter and Julie. So lovely and beautiful people!! and what a multi poli-->
+                            <!-- hiper mover Peter is. Very happy he accepted our invitation!-->
+                            <!-- </p>-->
+                            <!-- <p><h2>Fer & Fifi</h2></p>-->
+                            <!-- <p>-->
+                            <!-- <span class="image right">-->
+                            <!--         <img src="{% static "winteracro/images/teachers2019/feryfifi.jpg"%}" alt="Fer and Fifi-->
+                            <!--         in the Winter Acro Fest 2019 for the Second time teaching-->
+                            <!--         Acrobatics Icarians and more">-->
+                            <!-- </span>-->
+                            <!-- We met this duo just recently at the 7th Barcelona Mano a Mano Convention and liked-->
+                            <!-- their way of teaching so much that we had to invite them.<br>-->
+                            <!-- Experts in acrobatics and many other Circus arts, they are going to share a piece-->
+                            <!-- of their knowledge with us! Thanks for accepting our invitation and happy to see you soon !-->
+                            <!-- </p>-->
+                            <!-- <p><h2>Paul</h2></p>-->
+                            <!-- <p>-->
+                            <!-- <span class="image left">-->
+                            <!--         <img src="{% static "winteracro/images/teachers2019/paul.jpg"%}" alt="Paul-->
+                            <!--         in the Winter Acro Fest 2019 for the Second time teaching-->
+                            <!--         Acrobatics Icarians and more">-->
+                            <!-- </span>-->
+                            <!-- First time I read about Paul, they discribed him as the swiss knife of acrobatics.-->
+                            <!-- Soon enough we learned to know why: basing, flying and is basiclly a encyclopedia of-->
+                            <!-- creative tricks. He's coming to share hes many curious tricks and humor for the-->
+                            <!-- first time in the Swiss alps.-->
+                            <!-- </p>-->
+                            <!-- <p><h2>Daniel Marty</h2></p>-->
+                            <!-- <p>-->
+                            <!-- <span class="image right">-->
+                            <!--         <img src="{% static "winteracro/images/teachers2019/daniel.jpg"%}" alt="Daniel Marty-->
+                            <!--         in the Winter Acro Fest 2019 for the Second time teaching-->
+                            <!--         Acrobatics Icarians and more">-->
+                            <!-- </span>-->
+                            <!-- For being "just his hobby" Daniel has investes A LOT of time in acro, and-->
+                            <!-- another bunch in developing the Basel and Swiss acro community. Mostly traveling-->
+                            <!-- arround from one big event to another, he hardly misses the local events. Very-->
+                            <!-- happy to have him sharing all that collected knowleadge at the Winter Acro Festival-->
+                            <!-- this 2019!-->
+                            <!-- </p>-->
+                            <!-- <p><h2>Kerstin and Uwe - Cameo Acrobatix</h2></p>-->
+                            <!-- <p>-->
+                            <!-- <span class="image left">-->
+                            <!--         <img src="{% static "winteracro/images/teachers2019/cameoacrobatix.jpg"%}" alt="Cameo Acrobatix-->
+                            <!--         in the Winter Acro Fest 2019 for the Second time teaching-->
+                            <!--         Acrobatics Icarians and more">-->
+                            <!-- </span>-->
+                            <!-- It's been very nice to see how this friends have grown so fast and good in their Acro paths. Touring-->
+                            <!-- with their acro company all arround europe, giving very nice workshops. Very happy to have them on Board!-->
+                            <!-- We picked them up in Berlin and Graz to bring them direct to Lenk yuhuiii!-->
+                            <!-- </p>--1>-->
+                            <!-- <p><h2>Bruno</h2></p>-->
+                            <!-- <p>-->
+                            <!-- <span class="image right">-->
+                            <!--         <img src="{% static "winteracro/images/teachers2019/bruno.jpg"%}" alt="Acrowings-->
+                            <!--         in the Winter Acro Fest 2019 for the Second time teaching-->
+                            <!--         Acrobatics Icarians and more">-->
+                            <!-- </span>-->
+                            <!-- I had to laugh only from remembering Bruno at the French acro convention, what a-->
+                            <!-- blast you'll have with this guy! Improvisation and staging are he's strengths and-->
+                            <!-- passion. But it's hard to find the words to describe such a clown, you just have-->
+                            <!-- to meet him. Happy to have you with us my friend!-->
+                            <!-- </p>-->
+                        </div>
+                </div>
             </section>
             <section id="schedule" class="main special">
                 <header class="major">
@@ -247,6 +325,15 @@
                     </li>
                     {% endfor %}
                     </ul>
+                    <h2>Thursday</h2>
+                    <ul class="statistics">
+                        {% for obj in thu %}
+                        <li class="{{obj.style}}">
+                                <span class="fas {{obj.icon}}"></span>
+                                <strong>{{obj.time}}</strong> {{obj.title}}
+                    </li>
+                    {% endfor %}
+                    </ul>
                     <h2>Friday</h2>
                     <ul class="statistics">
                         {% for obj in fri %}
@@ -263,7 +350,6 @@
                     </ul>
                 </footer>-->
             </section>
-
             <section id="media" class="main">
                     <header class="major">
                     <h2>Photos 2018</h2>

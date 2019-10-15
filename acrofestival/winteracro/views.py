@@ -10,6 +10,7 @@ def fest_homeview(request):
     qs_mon = Entrie.objects.filter(when__day="Monday").order_by("time")
     qs_tue = Entrie.objects.filter(when__day="Tuesday").order_by("time")
     qs_wed = Entrie.objects.filter(when__day="Wednesday").order_by("time")
+    qs_thu = Entrie.objects.filter(when__day="Thursday").order_by("time")
     context = {
         "fri": qs_fri,
         "sat": qs_sat,
@@ -17,6 +18,7 @@ def fest_homeview(request):
         "mon": qs_mon,
         "tue": qs_tue,
         "wed": qs_wed,
+        "thu": qs_thu,
     }
     return render(request, template_name, context)
 
