@@ -50,7 +50,7 @@ def winteracroform_view(request):
             message = (
                 "Hoi "
                 + obj.name
-                + "\r\n\r\nThanks for registering for the Winter Acro Festival 2020!\r\n\r\nAn entire operation has began. A herd of lamas is inspecting carefully your registration. No worries, you're in good hands.\r\n\r\nWe'll get back to you as soon as possible. If your nervous about the results and can't sleep: count lamas, it helps.\r\n\r\n\r\nBig Hug\r\nThe Lamas"
+                + "\r\n\r\nThanks for registering for the Winter Acro Festival 2020!\r\n\r\nAn entire operation has begun. A herd of lamas is inspecting carefully your registration. No worries, you're in good hands.\r\n\r\nWe'll get back to you as soon as possible. If you are nervous about the results and can't sleep: count lamas, it helps.\r\n\r\n\r\nBig Hug\r\nThe Lamas"
             )
             sender = "noreply@acrofestival.ch"
             to = [obj.email]
