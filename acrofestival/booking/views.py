@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.core.mail import send_mail
 from .forms import UrbanAcroForm, WinterAcroForm
@@ -7,7 +8,9 @@ from .models import UrbanAcroBooking, WinterAcroBooking
 # Create your views here.
 def urbanacro_view(request):
     if request.method == "POST":
+
         form = UrbanAcroForm(request.POST)
+
         if form.is_valid():
             obj = UrbanAcroBooking.objects.create(
                 name=form.cleaned_data.get("name"),
@@ -26,17 +29,24 @@ def urbanacro_view(request):
             sender = "notmonkeys@acrofestival.ch"
             to = [obj.email]
             send_mail(subject, message, sender, to)
+
         if form.errors:
             print(form.errors)
+
     template_name = "pages/urbanacro/home.html"
     context = {}
+
     return render(request, template_name, context)
 
 
 def winteracroform_view(request):
+
     if request.method == "POST":
+
         form = WinterAcroForm(request.POST)
+
         if form.is_valid():
+
             obj = WinterAcroBooking.objects.create(
                 name=form.cleaned_data.get("name"),
                 address=form.cleaned_data.get("address"),
@@ -46,6 +56,8 @@ def winteracroform_view(request):
                 allergies=form.cleaned_data.get("allergies"),
                 donation=form.cleaned_data.get("donation"),
             )
+
+            # Email section
             subject = "Winter Acro Festival 2020"
             message = (
                 "Hoi "
@@ -55,6 +67,9 @@ def winteracroform_view(request):
             sender = "noreply@acrofestival.ch"
             to = [obj.email]
             send_mail(subject, message, sender, to)
+            # End Email section
+
+            return HttpResponseRedirect('/')
         if form.errors:
             print(form.errors)
     template_name = "pages/formulario/homeform.html"
