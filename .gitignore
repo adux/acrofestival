@@ -62,8 +62,6 @@ target/
 # pyenv
 .python-version
 
-
-
 # Environments
 .venv
 venv/
@@ -157,10 +155,6 @@ typings/
 !.vscode/launch.json
 !.vscode/extensions.json
 
-
-
-
-
 ### Windows template
 # Windows thumbnail cache files
 Thumbs.db
@@ -184,7 +178,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
 
 ### macOS template
 # General
@@ -283,4 +276,5 @@ pip-selfcheck.json
 MailHog
 acrofestival/media/
 .env
+Pipfile
 .envs/*
