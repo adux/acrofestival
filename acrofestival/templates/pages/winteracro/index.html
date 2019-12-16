@@ -211,7 +211,7 @@
                             </p>
                             <p><h2>Peter</h2></p>
                             <p>
-                            <span class="image right">
+                            <span class="image left">
                                     <img src="{% static "winteracro/images/teachers2019/peter.jpg"%}" alt="Peter and Julie
                                     in the Winter Acro Fest 2019 for the Second time teaching
                                     Acrobatics Icarians and more">
@@ -228,13 +228,13 @@
                             </span>
                             Many conventions have been shared but finally we hope to have them at the Winter Acro 2020. Amazing show this two have! And we love their workshops too: Technical, clean, elegant!!
                             </p>
-                            <p><h2>Analogue Acrobatics</h2></p>
-                            <p>
-                            <span class="image right">
-                                <img src="{% static "winteracro/images/teachers2019/benandelli.jpg"%}" alt="duo kaleidos at the 3th version of the winter acro 2020 in lenk">
-                            </span>
-                            We just love this two! Last year they couldn't make it cause they where on tour with Cirkör, hope we have the pleasure this year.
-                            </p>
+                            <!-- <p><h2>Analogue Acrobatics</h2></p> -->
+                            <!-- <p> -->
+                            <!-- <span class="image right"> -->
+                            <!--     <img src="{% static "winteracro/images/teachers2019/benandelli.jpg"%}" alt="duo kaleidos at the 3th version of the winter acro 2020 in lenk"> -->
+                            <!-- </span> -->
+                            <!-- We just love this two! Last year they couldn't make it cause they where on tour with Cirkör, hope we have the pleasure this year. -->
+                            <!-- </p> -->
                             <!-- <p><h2>Fer & Fifi</h2></p> -->
                             <!-- <p>-->
                             <!-- <span class="image right">-->
@@ -275,82 +275,83 @@
                             </div>
                     </div>
             </section>
-            <!--<section id="schedule" class="main special">-->
-            <!--    <header class="major">-->
-            <!--        <h2>Schedule</h2>-->
-            <!--        <p>{% tinycontent_simple 'winter_home_schedule' %}-->
-            <!--        </p>-->
-            <!--    </header>-->
-            <!--        <h2>Saturday</h2>-->
-            <!--        <ul class="statistics">-->
-            <!--            {% for obj in sat %}-->
-            <!--            <li class="{{obj.style}}">-->
-            <!--                    <span class="fas {{obj.icon}}"></span>-->
-            <!--                    <strong>{{obj.time}}</strong> {{obj.title}}-->
-            <!--        </li>-->
-            <!--        {% endfor %}-->
-            <!--        </ul>-->
-            <!--        <h2>Sunday</h2>-->
-            <!--        <ul class="statistics">-->
-            <!--            {% for obj in sun %}-->
-            <!--            <li class="{{obj.style}}">-->
-            <!--                    <span class="fas {{obj.icon}}"></span>-->
-            <!--                    <strong>{{obj.time}}</strong> {{obj.title}}-->
-            <!--        </li>-->
-            <!--        {% endfor %}-->
-            <!--        </ul>-->
-            <!--        <h2>Monday</h2>-->
-            <!--        <ul class="statistics">-->
-            <!--            {% for obj in mon %}-->
-            <!--            <li class="{{obj.style}}">-->
-            <!--                    <span class="fas {{obj.icon}}"></span>-->
-            <!--                    <strong>{{obj.time}}</strong> {{obj.title}}-->
-            <!--        </li>-->
-            <!--        {% endfor %}-->
-            <!--        </ul>-->
-            <!--        <h2>Tuesday</h2>-->
-            <!--        <ul class="statistics">-->
-            <!--        {% for obj in tue %}-->
-            <!--        <li class="{{obj.style}}">-->
-            <!--                    <span class="fas {{obj.icon}}"></span>-->
-            <!--                    <strong>{{obj.time}}</strong> {{obj.title}}-->
-            <!--        </li>-->
-            <!--        {% endfor %}-->
-            <!--        </ul>-->
-            <!--        <h2>Wednesday</h2>-->
-            <!--        <ul class="statistics">-->
-            <!--        {% for obj in wed %}-->
-            <!--            <li class="{{obj.style}}">-->
-            <!--                <span class="fas {{obj.icon}}"></span>-->
-            <!--                <strong>{{obj.time}}</strong> {{obj.title}}-->
-            <!--        </li>-->
-            <!--        {% endfor %}-->
-            <!--        </ul>-->
-            <!--        <h2>Thursday</h2>-->
-            <!--        <ul class="statistics">-->
-            <!--            {% for obj in thu %}-->
-            <!--            <li class="{{obj.style}}">-->
-            <!--                    <span class="fas {{obj.icon}}"></span>-->
-            <!--                    <strong>{{obj.time}}</strong> {{obj.title}}-->
-            <!--        </li>-->
-            <!--        {% endfor %}-->
-            <!--        </ul>-->
-            <!--        <h2>Friday</h2>-->
-            <!--        <ul class="statistics">-->
-            <!--            {% for obj in fri %}-->
-            <!--            <li class="{{obj.style}}">-->
-            <!--                    <span class="fas {{obj.icon}}"></span>-->
-            <!--                    <strong>{{obj.time}}</strong> {{obj.title}}-->
-            <!--        </li>-->
-            <!--        {% endfor %}-->
-            <!--        </ul>-->
-            <!--        <1!---->
-            <!--    <footer class="major">-->
-            <!--        <ul class="actions">-->
-            <!--            <li><a href="generic.html" class="button">Learn Mo</a></li>-->
-            <!--        </ul>-->
-            <!--    </footer>--1>-->
-            <!--</section>-->
+            <!---Schedule -->
+            <section id="schedule" class="main special">
+                <header class="major">
+                    <h2>Schedule</h2>
+                    <p>{% tinycontent_simple 'winter_home_schedule' %}
+                    </p>
+                </header>
+                    <h2>Saturday</h2>
+                    <ul class="statistics">
+                        {% for obj in sat %}
+                        <li class="{{obj.style}}">
+                                <span class="fas {{obj.icon}}"></span>
+                                <strong>{{obj.time}}</strong> {{obj.title}}
+                    </li>
+                    {% endfor %}
+                    </ul>
+                    <h2>Sunday</h2>
+                    <ul class="statistics">
+                        {% for obj in sun %}
+                        <li class="{{obj.style}}">
+                                <span class="fas {{obj.icon}}"></span>
+                                <strong>{{obj.time}}</strong> {{obj.title}}
+                    </li>
+                    {% endfor %}
+                    </ul>
+                    <h2>Monday</h2>
+                    <ul class="statistics">
+                        {% for obj in mon %}
+                        <li class="{{obj.style}}">
+                                <span class="fas {{obj.icon}}"></span>
+                                <strong>{{obj.time}}</strong> {{obj.title}}
+                    </li>
+                    {% endfor %}
+                    </ul>
+                    <h2>Tuesday</h2>
+                    <ul class="statistics">
+                    {% for obj in tue %}
+                    <li class="{{obj.style}}">
+                                <span class="fas {{obj.icon}}"></span>
+                                <strong>{{obj.time}}</strong> {{obj.title}}
+                    </li>
+                    {% endfor %}
+                    </ul>
+                    <h2>Wednesday</h2>
+                    <ul class="statistics">
+                    {% for obj in wed %}
+                        <li class="{{obj.style}}">
+                            <span class="fas {{obj.icon}}"></span>
+                            <strong>{{obj.time}}</strong> {{obj.title}}
+                    </li>
+                    {% endfor %}
+                    </ul>
+                    <h2>Thursday</h2>
+                    <ul class="statistics">
+                        {% for obj in thu %}
+                        <li class="{{obj.style}}">
+                                <span class="fas {{obj.icon}}"></span>
+                                <strong>{{obj.time}}</strong> {{obj.title}}
+                    </li>
+                    {% endfor %}
+                    </ul>
+                    <h2>Friday</h2>
+                    <ul class="statistics">
+                        {% for obj in fri %}
+                        <li class="{{obj.style}}">
+                                <span class="fas {{obj.icon}}"></span>
+                                <strong>{{obj.time}}</strong> {{obj.title}}
+                    </li>
+                    {% endfor %}
+                    </ul>
+                    <1!--
+                <footer class="major">
+                    <ul class="actions">
+                        <li><a href="generic.html" class="button">Learn Mo</a></li>
+                    </ul>
+                </footer>--1>
+            </section>
             <section id="donation" class="main">
                 <div class="spotlight">
                     <div class="content">

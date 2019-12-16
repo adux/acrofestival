@@ -22,14 +22,14 @@ Styles = (
 )
 
 Icons = (
-    ("icon fas fa-home", "Home"),
-    ("icon fas fa-flag-checkered", "Flag"),
-    ("icon fas fa-fire", "Fire"),
-    ("icon fas fa-utensils", "Cutlery"),
-    ("icon fas fa-cogs", "Cogs"),
-    ("icon fas fa-om", "Om"),
-    ("icon fas fa-snowflake", "Snow"),
-    ("icon fas fa-magic", "Magic"),
+    ("icon fa-home", "Home"),
+    ("icon fa-flag-checkered", "Flag"),
+    ("icon fa-fire", "Fire"),
+    ("icon fa-utensils", "Cutlery"),
+    ("icon fa-cogs", "Cogs"),
+    ("icon fa-om", "Om"),
+    ("icon fa-snowflake", "Snow"),
+    ("icon fa-magic", "Magic"),
 )
 
 

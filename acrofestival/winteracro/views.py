@@ -4,21 +4,21 @@ from .models import Workshop, Day, Entrie
 
 def fest_homeview(request):
     template_name = "pages/winteracro/index.html"
-    qs_fri = Entrie.objects.filter(when__day="Friday").order_by("time")
     qs_sat = Entrie.objects.filter(when__day="Saturday").order_by("time")
     qs_sun = Entrie.objects.filter(when__day="Sunday").order_by("time")
     qs_mon = Entrie.objects.filter(when__day="Monday").order_by("time")
     qs_tue = Entrie.objects.filter(when__day="Tuesday").order_by("time")
     qs_wed = Entrie.objects.filter(when__day="Wednesday").order_by("time")
     qs_thu = Entrie.objects.filter(when__day="Thursday").order_by("time")
+    qs_fri = Entrie.objects.filter(when__day="Friday").order_by("time")
     context = {
-        "fri": qs_fri,
         "sat": qs_sat,
         "sun": qs_sun,
         "mon": qs_mon,
         "tue": qs_tue,
         "wed": qs_wed,
         "thu": qs_thu,
+        "fri": qs_fri,
     }
     return render(request, template_name, context)
 
