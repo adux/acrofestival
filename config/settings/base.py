@@ -70,7 +70,6 @@ LOCAL_APPS = [
     'acrofestival.users.apps.UsersConfig',
     'acrofestival.booking.apps.BookingConfig',
     'acrofestival.winteracro.apps.WinteracroConfig',
-    # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
