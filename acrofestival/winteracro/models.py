@@ -43,6 +43,6 @@ class Day(models.Model):
 class Entrie(models.Model):
     style = models.CharField(max_length=8, choices=Styles)
     icon = models.CharField(max_length=25, choices=Icons)
-    time = models.CharField(max_length=5)
+    time = models.TimeField(auto_now=False, auto_now_add=False)
     title = models.CharField(max_length=30)
     when = models.ForeignKey(Day, on_delete=models.CASCADE)
