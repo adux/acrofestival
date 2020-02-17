@@ -30,6 +30,7 @@ class WinterAcroBookingAdmin(admin.ModelAdmin):
         "pay_till",
         "pay_date",
         "amount",
+        "donation",
     )
     list_filter = ("datetime", "option", "status")
     search_fields = ("name", "email")
