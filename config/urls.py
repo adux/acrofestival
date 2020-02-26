@@ -8,6 +8,7 @@ from winteracro.views import (
     fest_homeview,
     fest_locationview,
     fest_pricesview,
+    fest_picturesview,
     frontpage_view,
     )
 
@@ -16,6 +17,7 @@ urlpatterns = [
     path(settings.ADMIN_URL, admin.site.urls),
     path("urbanacro/", urbanacro_view, name="urbanacro"),
     path("winteracro/", fest_homeview, name="winteracro"),
+    path("pictures/", fest_picturesview, name="pictures"),
     path("winteracro/form/", winteracroform_view, name="winterform"),
     path("winteracro/location", fest_locationview, name="winterlocation"),
     path("winteracro/prices/", fest_pricesview, name="winterprices"),

@@ -1,0 +1,26 @@
+{% extends "pages/winteracro/basefest.html" %}
+{% block content %}{% load static %}{% load tinycontent_tags %}
+<!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="header">
+            <h1>Winter Acro Pictures 2020</h1>
+        </header>
+            {% include 'pages/winteracro/snippets/navnothome.html' %}
+        <!-- Main -->
+        <div id="main">
+            <!-- Content -->
+            <section id="content" class="main">
+                <span class="image main"><img src="{% static "winteracro/images/pictures_banner.jpg"%}" alt="Winter Acro festival in lenk banner by mad motions !" /></span>
+                <h1>Pictures of the Winter Acro 2020</h1>
+                <h2><b>#winteracro</b> @acrolama</h2>
+                <ul>
+                <li>From <b>@mad-motions | mad-motions.com</b>: <a href="https://drive.google.com/drive/folders/1swq8T54PSmxQKjzVoM77SZQPonMkmbIz" target="_blank">Google Drive HERE</a></li>
+                </ul>
+                <p>Please give credit to the photographers.</p>
+                <p>If you have other links or pictures to share look for Adrian in the convention!</p>
+            </section>
+    </div>
+    {% include 'pages/winteracro/snippets/footer.html' %}
+    </div>
+{% endblock %}

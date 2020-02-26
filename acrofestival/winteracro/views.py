@@ -36,6 +36,12 @@ def fest_pricesview(request):
     return render(request, template_name, context)
 
 
+def fest_picturesview(request):
+    template_name = "pages/winteracro/pictures.html"
+    context = {}
+    return render(request, template_name, context)
+
+
 def fest_workshopsview(request):
     template_name = "pages/winteracro/workshops.html"
     qs_jueves = Workshop.objects.filter(date="2018-03-08").order_by("time")
