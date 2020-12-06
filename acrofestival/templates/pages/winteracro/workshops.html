@@ -8,7 +8,7 @@
                         <h1>Workshop List</h1>
                         <p>This list can and will be Updated/Changed.</p>
                     </header>
-                    {% include 'snippets/navnothome.html' %}
+                    {% include "pages/winteracro/snippets/navnothome.html" %}
                 <!-- Main -->
                     <div id="main">
                         <!-- Content -->
@@ -32,10 +32,10 @@
                                                 {% for obj in sabado %}
                                                 <tbody>
                                                     <tr>
-                                                            <td>{{obj.time}}</td>
-                                                            <td>{{obj.teachers}}</td>
-                                                            <td>{{obj.workshop}}</td>
-                                                            <td>{{obj.prerequisites}}</td>
+                                                        <td>{{obj.time}}</td>
+                                                        <td>{{obj.teachers}}</td>
+                                                        <td>{{obj.workshop}}</td>
+                                                        <td>{{obj.prerequisites}}</td>
 
                                                     </tr>
                                                 </tbody>
@@ -54,10 +54,10 @@
                                                 {% for obj in domingo %}
                                                 <tbody>
                                                     <tr>
-                                                            <td>{{obj.time}}</td>
-                                                            <td>{{obj.teachers}}</td>
-                                                            <td>{{obj.workshop}}</td>
-                                                            <td>{{obj.prerequisites}}</td>
+                                                        <td>{{obj.time}}</td>
+                                                        <td>{{obj.teachers}}</td>
+                                                        <td>{{obj.workshop}}</td>
+                                                        <td>{{obj.prerequisites}}</td>
 
                                                     </tr>
                                                 </tbody>
@@ -71,6 +71,6 @@
                                 </footer>
                             </section>
                     </div>
-                    {% include 'snippets/footer.html' %}
+                    {% include "pages/winteracro/snippets/footer.html" %}
             </div>
 {% endblock %}
