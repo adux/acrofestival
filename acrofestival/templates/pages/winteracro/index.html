@@ -7,315 +7,312 @@
             <span class="logo"><img src="{% static "winteracro/images/logo_vek.svg"%}" alt="" /></span>
         <h1>{% tinycontent_simple 'winter_general_title' %}</h1>
         <p>{% tinycontent_simple 'winter_general_date' %}</br>
-        Register <a href="{% url "winterform"%}">HERE</a></p>
+        <a target="_blank" rel="noopener" href="https://acrolama.com/events/winter-acro-festival-2021/">Registration</a></p>
     </header>
     {% include 'pages/winteracro/snippets/navhome.html' %}
 <!-- Main -->
     <div id="main">
         <!-- Introduction -->
-            <section id="intro" class="main">
-                <div class="spotlight">
-                    <div class="content">
-                        <header class="major">
-                            <h2>What's it all about</h2>
-                        </header>
-                            <p>
-                            {% tinycontent_simple 'winter_home_intro' %}
-                            </p>
-                        <ul class="actions">
-                            <li>
-                                <a style="box-shadow:0px 0px; background:#f3d216;" href="{% url "winterform"%}" class="button">
-                                    Register
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <span class="image"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_front.jpg"%}" alt="" /></span>
-                </div>
-            </section>
-        <!-- First Section -->
-            <section id="included" class="main special">
-                <header class="major">
-                    <h2>Included</h2>
-                </header>
-                <ul class="features">
-                    <li>
-                        <span class="icon major style3 fas fa-utensils"></span>
-                        <h3>Food</h3>
-                        <p>{% tinycontent_simple 'winter_home_food' %}
+        <section id="intro" class="main">
+            <div class="spotlight">
+                <div class="content">
+                    <header class="major">
+                        <h2>What's it all about</h2>
+                    </header>
+                        <p>
+                        {% tinycontent_simple 'winter_home_intro' %}
                         </p>
-                        </li>
-                    <li>
-                        <span class="icon major style5 fas fa-cogs"></span>
-                        <h3>Workshops</h3>
-                        <p>{% tinycontent_simple 'winter_home_workshops' %}
-                        <a class="button" href="#workshops">TEACHERS</a>
-                        </p>
-                    </li>
-                    <li>
-                        <span class="icon major style6 fas fa-snowflake"></span>
-                        <h3>Snow Event</h3>
-                        <p>{% tinycontent_simple 'winter_home_specialevent' %}
-                        </p>
-                    </li>
-                    <li>
-                        <span class="icon major style1 fas fa-fire"></span>
-                        <h3>Sauna</h3>
-                        <p>{% tinycontent_simple 'winter_home_sauna' %}
-                        </p>
-                        </li>
-                    <li>
-                        <span class="icon major style7 fas fa-magic"></span>
-                        <h3>Show</h3>
-                        <p>{% tinycontent_simple 'winter_home_show' %}
-                        </p>
-                    </li>
-                </ul>
-                <footer class="major">
-                    <ul class="actions">
-                            <li>
-                            <a style="box-shadow: 0px 0px; background:#f3d216;" href="{% url "winterform"%}"
-                                    class="button">Read Enough? Register HERE
-                            </a>
-                            </li>
-                    </ul>
-                </footer>
-            </section>
-            <section id="infopics" class="main">
-                    <div class="box alt">
-                            <div class="row gtr-uniform">
-                                    <div class="col-4">
-                                        <span class="image fit">
-                                            <img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_3high.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" />
-                                        </span>
-                                    </div>
-                                    <div class="col-4">
-                                        <span class="image fit">
-                                            <img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_kiss.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" />
-                                        </span>
-                                    </div>
-                                    <div class="col-4">
-                                        <span class="image fit">
-                                            <img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_snow2.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" />
-                                        </span>
-                                    </div>
-                                    <div class="col-4">
-                                        <span class="image fit">
-                                            <img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_snow.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" />
-                                        </span>
-                                    </div>
-                                    <div class="col-4">
-                                        <span class="image fit">
-                                            <img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_sauna.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" />
-                                        </span>
-                                    </div>
-                                    <div class="col-4">
-                                        <span class="image fit">
-                                            <img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_hall.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" />
-                                        </span>
-                                    </div>
-                            </div>
-                    </div>
-            </section>
-            <section id="info" class="main special">
-                <header class="major">
-                    <h2>General Information</h2>
-                </header>
-                <ul class="features">
-                    <li>
-                        <span class="icon major style1 fas fa-bed"></span>
-                        <h3>Accommodation</h3>
-                        <p>{% tinycontent_simple 'winter_home_accomodation' %}
-                        <a class="button" href="{% url 'winterlocation'%}#accommodation">CLICK HERE</a>
-                        </p>
-                    </li>
-                    <li>
-                        <span class="icon major style2 fas fa-map-marker"></span>
-                        <h3>Location</h3>
-                        <p>{% tinycontent_simple 'winter_home_location' %}
-                        <a class="button" href="{% url 'winterlocation'%}#location">CLICK HERE</a>
-                        </p>
-                        </li>
-                    <li>
-                        <span class="icon major style1 fas fa-money-bill-wave"></span>
-                        <h3>Prices</h3>
-                        <p>{% tinycontent_simple 'winter_home_prices' %}
-                        <a class="button" href="{% url 'winterprices'%}">CLICK HERE</a>
-                        </p>
-                </ul>
-                <footer class="major">
                     <ul class="actions">
                         <li>
-                        <a style="box-shadow: 0px 0px; background:#f3d216;" href="{% url "winterform"%}" class="button">
-                            Register HERE
-                        </a>
+                            <a style="box-shadow:0px 0px; background:#f3d216;" target="_blank" rel="noopener" href="https://acrolama.com/events/winter-acro-festival-2021/" class="button">
+                                Register
+                            </a>
                         </li>
                     </ul>
-                </footer>
-            </section>
-            <section id="teachers" class="main">
-                    <header class="major">
-                        <h2>{% tinycontent_simple 'winter_general_title' %} - Teachers</h2>
-                    </header>
-                    <p>
-                    <u>Confirmed</u> teachers on the left. <u>To be confirmed</u> on the right. We'll keep you posted :)
+                </div>
+                <span class="image"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_front.jpg"%}" alt="" /></span>
+            </div>
+        </section>
+    <!-- First Section -->
+        <section id="included" class="main special">
+            <header class="major">
+                <h2>Included</h2>
+            </header>
+            <ul class="features">
+                <li>
+                    <span class="icon major style3 fas fa-utensils"></span>
+                    <h3>Food</h3>
+                    <p>{% tinycontent_simple 'winter_home_food' %}
                     </p>
-                    <div class="box alt">
+                    </li>
+                <li>
+                    <span class="icon major style5 fas fa-cogs"></span>
+                    <h3>Workshops</h3>
+                    <p>{% tinycontent_simple 'winter_home_workshops' %}
+                    </p>
+                </li>
+                <li>
+                    <span class="icon major style6 fas fa-snowflake"></span>
+                    <h3>Snow Event</h3>
+                    <p>{% tinycontent_simple 'winter_home_specialevent' %}
+                    </p>
+                </li>
+                <li>
+                    <span class="icon major style1 fas fa-fire"></span>
+                    <h3>Sauna</h3>
+                    <p>{% tinycontent_simple 'winter_home_sauna' %}
+                    </p>
+                    </li>
+                <li>
+                    <span class="icon major style7 fas fa-magic"></span>
+                    <h3>Show</h3>
+                    <p>{% tinycontent_simple 'winter_home_show' %}
+                    </p>
+                </li>
+            </ul>
+            <footer class="major">
+                <ul class="actions">
+                    <li>
+                        <a style="box-shadow: 0px 0px; background:#f3d216;" target="_blank" rel="noopener" href="https://acrolama.com/events/winter-acro-festival-2021/" class="button">Registration</a>
+                    </li>
+                </ul>
+            </footer>
+        </section>
+        <section id="infopics" class="main">
+                <div class="box alt">
                         <div class="row gtr-uniform">
-                            <p><h2>Tom & Ayla</h2></p>
-                            <p>
-                            <span class="image left">
-                                    <img src="{% static "winteracro/images/teachers2019/tomundayla.jpg"%}" alt="Tom and Ayla at the Winter Acro 2021">
-                            </span>
-                            You prooooobably already know them and if you don't you should! Excelente acrobats with a quite particular style and sens of humor glad to have you guys on board!
-                            </p>
-                            <p><h2>Jen & Pri</h2></p>
-                            <p>
-                            <span class="image left">
-                                    <img src="{% static "winteracro/images/teachers2019/priandjane.jpg"%}" alt="Jane and Pri comming to the Winter Acro Festival 2020">
-                            </span>
-                            There's probably only a handfull of people who invest more time developing <u>whips in a wide range of variations</u>. We're super happy to count with them for this new version the Winter Acro.
-                            </p>
-                            <p><h2>Kat and Jared</h2></p>
-                            <p>
-                            <span class="image left">
-                                    <img src="{% static "winteracro/images/teachers2019/katandjared.jpg"%}" alt="Kat and Jared at the Winter Acro 2020 doing some dance acro">
-                            </span>
-                            Many conventions have been shared but finally we hope to have them at the Winter Acro 2020. Amazing show this two have! And we love their workshops too: Technical, clean, elegant!!
-                            </p>
-                            <p><h2>Bruno</h2></p>
-                            <p>
-                            <span class="image left">
-                            <img src="{% static "winteracro/images/teachers2019/bruno.jpg"%}" alt="Bruno the master of improvisation, clown and show winter acro 2020"></img>
-                            </span>
-                            I had to laugh only from remembering Bruno! <u>Improvisation and staging</u> are he's strengths and passion. But it's hard to find the words to describe such a clown, you just have to meet him. Happy to have you with us my friend!
-                            </p>
+                                <div class="col-4">
+                                    <span class="image fit">
+                                        <img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_3high.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" />
+                                    </span>
+                                </div>
+                                <div class="col-4">
+                                    <span class="image fit">
+                                        <img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_kiss.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" />
+                                    </span>
+                                </div>
+                                <div class="col-4">
+                                    <span class="image fit">
+                                        <img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_snow2.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" />
+                                    </span>
+                                </div>
+                                <div class="col-4">
+                                    <span class="image fit">
+                                        <img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_snow.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" />
+                                    </span>
+                                </div>
+                                <div class="col-4">
+                                    <span class="image fit">
+                                        <img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_sauna.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" />
+                                    </span>
+                                </div>
+                                <div class="col-4">
+                                    <span class="image fit">
+                                        <img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_hall.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" />
+                                    </span>
+                                </div>
                         </div>
                 </div>
-            </section>
-            <section id="pics" class="main">
-                    <header class="major">
-                    <h2>Photos 2018 - 2019</h2>
-                    <h3>by Matthias Bleisch and Fii</h3>
-                    </header>
-                    <div class="box alt">
-                            <div class="row gtr-uniform">
-                                    <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_3Manhigh.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
-                                    <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_Icarian.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
-                                    <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_Slackline.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
-                                    <div class="col-3"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_Snow.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
-                                    <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_3manhigh_2.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
-                                    <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_Acroyoga3.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
-                                    <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_Mira.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
-                                    <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_Acroyoga1.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
-                                    <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_Onearm.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
-                                    <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_show.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
-                                    <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_Star.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
-                                    <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_turnhalle.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
-                            </div>
-                    </div>
-            </section>
-            <!---Schedule -->
-            <section id="schedule" class="main special">
-                <header class="major">
-                    <h2>Schedule</h2>
-                    <p>{% tinycontent_simple 'winter_home_schedule' %}
+        </section>
+        <section id="info" class="main special">
+            <header class="major">
+                <h2>General Information</h2>
+            </header>
+            <ul class="features">
+                <li>
+                    <span class="icon major style1 fas fa-bed"></span>
+                    <h3>Accommodation</h3>
+                    <p>{% tinycontent_simple 'winter_home_accomodation' %}
+                    <a class="button" href="{% url 'winterlocation'%}#accommodation">CLICK HERE</a>
                     </p>
+                </li>
+                <li>
+                    <span class="icon major style2 fas fa-map-marker"></span>
+                    <h3>Location</h3>
+                    <p>{% tinycontent_simple 'winter_home_location' %}
+                    <a class="button" href="{% url 'winterlocation'%}#location">CLICK HERE</a>
+                    </p>
+                    </li>
+                <li>
+                    <span class="icon major style1 fas fa-money-bill-wave"></span>
+                    <h3>Prices</h3>
+                    <p>{% tinycontent_simple 'winter_home_prices' %}
+                    <a class="button" href="{% url 'winterprices'%}">CLICK HERE</a>
+                    </p>
+            </ul>
+            <footer class="major">
+                <ul class="actions">
+                    <li>
+                    <a style="box-shadow: 0px 0px; background:#f3d216;" target="_blank" rel="noopener" href="https://acrolama.com/events/winter-acro-festival-2021/" class="button">
+                        Register
+                    </a>
+                    </li>
+                </ul>
+            </footer>
+        </section>
+        <section id="teachers" class="main">
+                <header class="major">
+                    <h2>{% tinycontent_simple 'winter_general_title' %} - Teachers</h2>
                 </header>
-                    <h2>Saturday</h2>
-                    <ul class="statistics">
-                        {% for obj in sat %}
-                        <li class="{{obj.style}}">
-                                <span class="fas {{obj.icon}}"></span>
-                                <strong>{{obj.time}}</strong> {{obj.title}}
-                    </li>
-                    {% endfor %}
-                    </ul>
-                    <h2>Sunday</h2>
-                    <ul class="statistics">
-                        {% for obj in sun %}
-                        <li class="{{obj.style}}">
-                                <span class="fas {{obj.icon}}"></span>
-                                <strong>{{obj.time}}</strong> {{obj.title}}
-                    </li>
-                    {% endfor %}
-                    </ul>
-                    <h2>Monday</h2>
-                    <ul class="statistics">
-                        {% for obj in mon %}
-                        <li class="{{obj.style}}">
-                                <span class="fas {{obj.icon}}"></span>
-                                <strong>{{obj.time}}</strong> {{obj.title}}
-                    </li>
-                    {% endfor %}
-                    </ul>
-                    <h2>Tuesday</h2>
-                    <ul class="statistics">
-                    {% for obj in tue %}
+                <p>
+                <u>Confirmed</u> teachers on the left. <u>To be confirmed</u> on the right. We'll keep you posted :)
+                </p>
+                <div class="box alt">
+                    <div class="row gtr-uniform">
+                        <p><h2>Tom & Ayla</h2></p>
+                        <p>
+                        <span class="image left">
+                                <img src="{% static "winteracro/images/teachers2019/tomundayla.jpg"%}" alt="Tom and Ayla at the Winter Acro 2021">
+                        </span>
+                        You prooooobably already know them and if you don't, you should! Excellent acrobats with a particular style and sens of humor.Glad to have you guys on board!
+                        </p>
+                        <p><h2>Jen & Pri</h2></p>
+                        <p>
+                        <span class="image left">
+                                <img src="{% static "winteracro/images/teachers2019/priandjane.jpg"%}" alt="Jane and Pri comming to the Winter Acro Festival 2021">
+                        </span>
+                        There's probably only a handful of people who invest more time developing <u>whips in a wide range of variations</u>. We're super happy to count with them for this new version the Winter Acro.
+                        </p>
+                        <p><h2>Kat and Jared</h2></p>
+                        <p>
+                        <span class="image left">
+                                <img src="{% static "winteracro/images/teachers2019/katandjared.jpg"%}" alt="Kat and Jared at the Winter Acro 2021 doing some dance acro">
+                        </span>
+                        Many conventions have been shared but finally we hope to have them at the Winter Acro 2021. Amazing show this two have! And we love their workshops too!!
+                        </p>
+                        <p><h2>Bruno</h2></p>
+                        <p>
+                        <span class="image left">
+                        <img src="{% static "winteracro/images/teachers2019/bruno.jpg"%}" alt="Bruno the master of improvisation, clown and show winter acro 2021"></img>
+                        </span>
+                        I had to laugh only from remembering Bruno! <u>Improvisation and staging</u> are he's strengths and passion. But it's hard to find the words to describe such a clown, you just have to meet him. Happy to have you with us my friend!
+                        </p>
+                    </div>
+            </div>
+        </section>
+        <section id="pics" class="main">
+                <header class="major">
+                <h2>Photos 2018 - 2019</h2>
+                <h3>by Matthias Bleisch and Fii</h3>
+                </header>
+                <div class="box alt">
+                        <div class="row gtr-uniform">
+                                <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_3Manhigh.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
+                                <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_Icarian.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
+                                <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_Slackline.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
+                                <div class="col-3"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_Snow.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
+                                <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_3manhigh_2.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
+                                <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_Acroyoga3.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
+                                <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_Mira.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
+                                <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_Acroyoga1.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
+                                <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_Onearm.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
+                                <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_show.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
+                                <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_Star.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
+                                <div class="col-4"><span class="image fit"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_turnhalle.jpg"%}" alt="Winter Acro Festival Lenk Star - Acrolama" /></span></div>
+                        </div>
+                </div>
+        </section>
+        <!---Schedule -->
+        <section id="schedule" class="main special">
+            <header class="major">
+                <h2>Schedule</h2>
+                <p>{% tinycontent_simple 'winter_home_schedule' %}
+                </p>
+            </header>
+                <h2>Saturday</h2>
+                <ul class="statistics">
+                    {% for obj in sat %}
                     <li class="{{obj.style}}">
-                                <span class="fas {{obj.icon}}"></span>
-                                <strong>{{obj.time}}</strong> {{obj.title}}
-                    </li>
-                    {% endfor %}
-                    </ul>
-                    <h2>Wednesday</h2>
-                    <ul class="statistics">
-                    {% for obj in wed %}
-                        <li class="{{obj.style}}">
                             <span class="fas {{obj.icon}}"></span>
                             <strong>{{obj.time}}</strong> {{obj.title}}
-                    </li>
-                    {% endfor %}
+                </li>
+                {% endfor %}
+                </ul>
+                <h2>Sunday</h2>
+                <ul class="statistics">
+                    {% for obj in sun %}
+                    <li class="{{obj.style}}">
+                            <span class="fas {{obj.icon}}"></span>
+                            <strong>{{obj.time}}</strong> {{obj.title}}
+                </li>
+                {% endfor %}
+                </ul>
+                <h2>Monday</h2>
+                <ul class="statistics">
+                    {% for obj in mon %}
+                    <li class="{{obj.style}}">
+                            <span class="fas {{obj.icon}}"></span>
+                            <strong>{{obj.time}}</strong> {{obj.title}}
+                </li>
+                {% endfor %}
+                </ul>
+                <h2>Tuesday</h2>
+                <ul class="statistics">
+                {% for obj in tue %}
+                <li class="{{obj.style}}">
+                            <span class="fas {{obj.icon}}"></span>
+                            <strong>{{obj.time}}</strong> {{obj.title}}
+                </li>
+                {% endfor %}
+                </ul>
+                <h2>Wednesday</h2>
+                <ul class="statistics">
+                {% for obj in wed %}
+                    <li class="{{obj.style}}">
+                        <span class="fas {{obj.icon}}"></span>
+                        <strong>{{obj.time}}</strong> {{obj.title}}
+                </li>
+                {% endfor %}
+                </ul>
+                <h2>Thursday</h2>
+                <ul class="statistics">
+                    {% for obj in thu %}
+                    <li class="{{obj.style}}">
+                            <span class="fas {{obj.icon}}"></span>
+                            <strong>{{obj.time}}</strong> {{obj.title}}
+                </li>
+                {% endfor %}
+                </ul>
+                <h2>Friday</h2>
+                <ul class="statistics">
+                    {% for obj in fri %}
+                    <li class="{{obj.style}}">
+                            <span class="fas {{obj.icon}}"></span>
+                            <strong>{{obj.time}}</strong> {{obj.title}}
+                </li>
+                {% endfor %}
+                </ul>
+        </section>
+        <section id="donation" class="main">
+            <div class="spotlight">
+                <div class="content">
+                    <header class="major">
+                        <h2>Plant a tree campaign</h2>
+                    </header>
+                        <p>
+                        Already last year we supported this campaign at the Winter Acro with a lot of success and we hope we can get to help this year again.<br/>
+                        This video inspired us:
+                        <div class="iframe-container">
+                        <iframe src="https://www.youtube.com/embed/-Q0xUXo2zEY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <br>
+                        and so we found out about <a href="https://www.plant-for-the-planet.org">Plant for the planet</a> and their campaign <a href="https://www.trilliontreecampaign.org">Trillion trees</a>. We love it: the goal is simple, direct and they make it achievable.<br><br>
+                        A ton of NGO support them. Think it more as a connecting platform to make donation, for this particular cause, as simple as possible.<br>
+                        We looked between the organisations to find one we could speak directly, in person. And we found <a href="https://www.bos-schweiz.ch/">Bos Schweiz</a>
+                        They really do an awesome job to solve the tree problem from the roots (Saw what i did there ;D). Let them explain:
+                        <br><br>
+                        <div class="iframe-container">
+                        <iframe src="https://www.youtube.com/embed/16NCtzxrfrI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        </p>
+                    <ul class="actions">
+                        <li>
+                            We got a donation box on our registration. But you can make it directly too!<br>
+                        </li>
                     </ul>
-                    <h2>Thursday</h2>
-                    <ul class="statistics">
-                        {% for obj in thu %}
-                        <li class="{{obj.style}}">
-                                <span class="fas {{obj.icon}}"></span>
-                                <strong>{{obj.time}}</strong> {{obj.title}}
-                    </li>
-                    {% endfor %}
-                    </ul>
-                    <h2>Friday</h2>
-                    <ul class="statistics">
-                        {% for obj in fri %}
-                        <li class="{{obj.style}}">
-                                <span class="fas {{obj.icon}}"></span>
-                                <strong>{{obj.time}}</strong> {{obj.title}}
-                    </li>
-                    {% endfor %}
-                    </ul>
-            </section>
-            <section id="donation" class="main">
-                <div class="spotlight">
-                    <div class="content">
-                        <header class="major">
-                            <h2>Plant a tree campaign</h2>
-                        </header>
-                            <p>
-                            Much have been said, its time to help with a little grain. This video inspired us:
-                            <div class="iframe-container">
-                            <iframe src="https://www.youtube.com/embed/-Q0xUXo2zEY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                            <br>
-                            and so we found out about <a href="https://www.plant-for-the-planet.org">Plant for the planet</a> and their campaign <a href="https://www.trilliontreecampaign.org">Trillion trees</a>. We love it: the goal is simple, direct and they make it achivable.<br><br>
-                            A ton of NGO support them. Think it more as a connecting platform to make donation, for this particular cause, as simple as possible.<br>
-                            We looked between the organisations to find one we could speak directly, in person. And we found <a href="https://www.bos-schweiz.ch/">Bos Schweiz</a>
-                            They really do an awesome job to solve the tree problem from the roots (Saw what i did there ;D). Let them explain:
-                            <br><br>
-                            <div class="iframe-container">
-                            <iframe src="https://www.youtube.com/embed/16NCtzxrfrI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                            </p>
-                        <ul class="actions">
-                            <li>
-                                We got a donation box on our registration. But you can make it directly too!<br>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- <span class="image"><img src="{% static "winteracro/images/Winter_Acro_Festival_Lenk_front.jpg"%}" alt="" /></span> -->
                 </div>
-            </section>
+            </div>
+        </section>
     </div>
     {% include 'pages/winteracro/snippets/footer.html' %}
 </div>
