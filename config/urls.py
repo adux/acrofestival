@@ -11,10 +11,12 @@ from winteracro.views import (
     fest_picturesview,
     frontpage_view,
     )
+from dap.views import dap_view
 
 urlpatterns = [
     path("", frontpage_view, name="home"),
     path(settings.ADMIN_URL, admin.site.urls),
+    path("dap/", dap_view, name="dap"),
     path("urbanacro/", urbanacro_view, name="urbanacro"),
     path("winteracro/", fest_homeview, name="winteracro"),
     path("pictures/", fest_picturesview, name="pictures"),

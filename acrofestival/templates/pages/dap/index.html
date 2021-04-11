@@ -1,0 +1,2009 @@
+<!DOCTYPE html>{% load static %}
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+
+        <title>DAP - Dynamic Acro Programm</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Dynamic Acrobatic Programm - Intesive Acro and Acroyoga programm teaching the best of Whips, Icarian Games and Standing Acro in Europe hosted by Acrolama, Pri and Jenn, Alfonso Sabaidee and Bet Sinlao">
+        <meta name="author" content="DAP - AcroFestival - Acrolama">
+
+        <!-- viewport settings -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="{% static "dap/css/bootstrap.css" %}">
+
+        <link rel="stylesheet" href="{% static "dap/css/pe-icon-7-stroke.css" %}">
+        <link rel="stylesheet" href="{% static "dap/css/helper.css" %}">
+        <link rel="stylesheet" href="{% static "dap/css/animate.min.css" %}">
+        <link rel="stylesheet" href="{% static "dap/css/font-awesome.css" %}">
+        <link rel="stylesheet" href="{% static "dap/css/font.css" %}">
+        <link rel="stylesheet" href="{% static "dap/css/salvattore.css" %}">
+        <link rel="stylesheet" href="{% static "dap/css/jquery.countdown.css" %}">
+        <link rel="stylesheet" href="{% static "dap/css/magnific-popup.css" %}">
+        <link rel="stylesheet" href="{% static "dap/css/jquery.mCustomScrollbar.css" %}">
+        <link rel="stylesheet" href="{% static "dap/css/owl.carousel.css" %}">
+        <link rel="stylesheet" href="{% static "dap/css/owl.theme.css" %}">
+        <link rel="stylesheet" href="{% static "dap/css/owl.transitions.css" %}">
+        <link rel="stylesheet" href="{% static "dap/css/revolution.css" %}">
+        <link rel="stylesheet" href="{% static "dap/css/revolution-extralayers.css" %}">
+
+        <link rel="stylesheet" href="{% static "dap/css/main.css" %}">
+
+
+        <!-- Font -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="{% static "dap/img/favicon.ico" %}">
+
+
+	</head>
+
+	<body>
+
+        <!-- PRELOADING -->
+        <div id="preload">
+        	<div class="preload">
+            	<div class="spinner"></div>
+            </div>
+        </div>
+
+        <!-- NAVIGATION -->
+		<nav id="nav-primary" class="navbar navbar-custom" role="navigation">
+          <div class="container">
+
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="index.html"><img src="{% static "dap/img/logo.png" %}" alt="logo"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="nav">
+              <ul class="nav navbar-nav navbar-right uppercase">
+                <li><a data-toggle="elementscroll" href="#info">About</a></li>
+                <li><a data-toggle="elementscroll" href="#teachers">Teachers</a></li>
+                <li><a data-toggle="elementscroll" href="#program">Program</a></li>
+                <li><a data-toggle="elementscroll" href="#venue">Venue</a></li>
+                <li><a data-toggle="elementscroll" href="#register">Register</a></li>
+                <li><a data-toggle="elementscroll" href="#gallery">Gallery</a></li>
+                <li><a data-toggle="elementscroll" href="#orga">Organizers</a></li>
+                <li><a data-toggle="elementscroll" href="#footer">Contact</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+
+        <!-- FULLSCREEN SLIDER -->
+        <div class="tp-banner-container">
+            <div class="tp-banner">
+				<ul>
+                	<!-- SLIDE 1 -->
+                  <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-thumb="{% static "dap/img/slide_thumb_1.jpg" %}"  data-saveperformance="off"  data-title="Slide">
+                        <!-- MAIN IMAGE -->
+                        <img src="{% static "dap/img/slide1.jpg" %}"  alt="fullslide1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                        <!-- LAYERS -->
+
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption light_heavy_70_shadowed lfb ltt tp-resizeme"
+                            data-x="center" data-hoffset="250"
+                            data-y="center" data-voffset="-70"
+                            data-speed="600"
+                            data-start="800"
+                            data-easing="Power4.easeOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.01"
+                            data-endelementdelay="0.1"
+                            data-endspeed="500"
+                            data-endeasing="Power4.easeIn"
+                            style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">DAP - Dynamic Acro Program
+                        </div>
+
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption light_medium_30_shadowed lfb ltt tp-resizeme"
+                            data-x="center" data-hoffset="205"
+                            data-y="center" data-voffset="-10"
+                            data-speed="600"
+                            data-start="900"
+                            data-easing="Power4.easeOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.01"
+                            data-endelementdelay="0.1"
+                            data-endspeed="500"
+                            data-endeasing="Power4.easeIn"
+                            style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">September 1-21, in Belgium.
+                        </div>
+
+
+                    </li>
+
+        			<!-- SLIDE 2 -->
+              <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-thumb="{% static "dap/img/slide_thumb_2.jpg" %}"  data-saveperformance="off"  data-title="Slide">
+                        <!-- MAIN IMAGE -->
+                        <img src="{% static "dap/img/slide2.jpg" %}"  alt="fullslide2"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                        <!-- LAYERS -->
+
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption light_heavy_70_shadowed lfb ltt tp-resizeme"
+                            data-x="center" data-hoffset="270"
+                            data-y="center" data-voffset="-70"
+                            data-speed="600"
+                            data-start="800"
+                            data-easing="Power4.easeOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.01"
+                            data-endelementdelay="0.1"
+                            data-endspeed="500"
+                            data-endeasing="Power4.easeIn"
+                            style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">ICARIAN, STANDING AND WHIPS
+                        </div>
+
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption light_medium_30_shadowed lfb ltt tp-resizeme"
+                            data-x="center" data-hoffset="230"
+                            data-y="center" data-voffset="0"
+                            data-speed="600"
+                            data-start="900"
+                            data-easing="Power4.easeOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.01"
+                            data-endelementdelay="0.1"
+                            data-endspeed="500"
+                            data-endeasing="Power4.easeIn"
+                            style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">The best we got<br/>in a well organized full Program.
+                        </div>
+
+
+                    </li>
+
+        			<!-- <!-1- SLIDE 3 -1-> -->
+                    <!-- <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-thumb="{% static "dap/img/slide_thumb_3.jpg" %}"  data-saveperformance="off"  data-title="Slide"> -->
+                        <!-- <!-1- MAIN IMAGE -1-> -->
+                        <!-- <img src="{% static "dap/img/slide3.jpg" %}"  alt="fullslide6"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"> -->
+                        <!-- <!-1- LAYERS -1-> -->
+
+                        <!-- <!-1- LAYER NR. 1 -1-> -->
+                        <!-- <div class="tp-caption light_heavy_70_shadowed lfb ltt tp-resizeme" -->
+                            <!-- data-x="center" data-hoffset="215" -->
+                            <!-- data-y="center" data-voffset="-70" -->
+                            <!-- data-speed="600" -->
+                            <!-- data-start="800" -->
+                            <!-- data-easing="Power4.easeOut" -->
+                            <!-- data-splitin="none" -->
+                            <!-- data-splitout="none" -->
+                            <!-- data-elementdelay="0.01" -->
+                            <!-- data-endelementdelay="0.1" -->
+                            <!-- data-endspeed="500" -->
+                            <!-- data-endeasing="Power4.easeIn" -->
+                            <!-- style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">SKY HIGH -->
+                        <!-- </div> -->
+
+                        <!-- <!-1- LAYER NR. 2 -1-> -->
+                        <!-- <div class="tp-caption light_medium_30_shadowed lfb ltt tp-resizeme" -->
+                            <!-- data-x="center" data-hoffset="290" -->
+                            <!-- data-y="center" data-voffset="40" -->
+                            <!-- data-speed="600" -->
+                            <!-- data-start="900" -->
+                            <!-- data-easing="Power4.easeOut" -->
+                            <!-- data-splitin="none" -->
+                            <!-- data-splitout="none" -->
+                            <!-- data-elementdelay="0.01" -->
+                            <!-- data-endelementdelay="0.1" -->
+                            <!-- data-endspeed="500" -->
+                            <!-- data-endeasing="Power4.easeIn" -->
+                            <!-- style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">Imperfection is beauty, madness<br/> is genius and it's better to be<br/> absolutely ridiculous than<br/> absolutely boring. -->
+                        <!-- </div> -->
+
+
+                    <!-- </li> -->
+
+        			<!-- SLIDE 4 -->
+                    <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-thumb="{% static "dap/img/slide_thumb_4.jpg" %}"  data-saveperformance="off"  data-title="Slide">
+                        <!-- MAIN IMAGE -->
+                        <img src="{% static "dap/img/slide4.jpg" %}"  alt="fullslide7"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                        <!-- LAYERS -->
+
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption light_heavy_70_shadowed lfb ltt tp-resizeme"
+                            data-x="center" data-hoffset="270"
+                            data-y="center" data-voffset="-70"
+                            data-speed="600"
+                            data-start="800"
+                            data-easing="Power4.easeOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.01"
+                            data-endelementdelay="0.1"
+                            data-endspeed="500"
+                            data-endeasing="Power4.easeIn"
+                            style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">LOCATION
+                        </div>
+
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption light_medium_30_shadowed lfb ltt tp-resizeme"
+                            data-x="center" data-hoffset="220"
+                            data-y="center" data-voffset="0"
+                            data-speed="600"
+                            data-start="900"
+                            data-easing="Power4.easeOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.01"
+                            data-endelementdelay="0.1"
+                            data-endspeed="500"
+                            data-endeasing="Power4.easeIn"
+                            style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">Housing and Gym with Longes<br/>all we need to DAP "dapicon".
+                        </div>
+
+                    </li>
+
+    			</ul>
+                <div class="tp-bannertimer"></div>
+            </div>
+		</div>
+
+    	<!-- HIGHLIGHT -->
+        <section id="highlight">
+        	<div class="container-fluid">
+            	<div class="row">
+
+                	<div id="left" class="left col-lg-9 col-md-8 text-right">
+                    	<h2>Super Early Bird</h2>
+                      <p>Don't miss this oportunity</p>
+                    </div>
+
+                    <div id="right" class="col-lg-3 col-md-4 text-left">
+                    	<div id="countdown"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- INFO -->
+        <section id="info">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-10 col-lg-offset-1 col-md-12 text-center">
+                        <div class="row">
+
+                            <div class="feature col-lg-4 col-md-4 col-sm-4">
+                                <i class="pe-4x pe-7s-refresh-2"></i>
+                                <h4>21 days of Acro!</h4>
+                                <p>21-day acrobatic program structured into 3 weekly blocks. With 6 International Teachers form all over Europe.</p>
+                            </div>
+
+                            <div class="feature col-lg-4 col-md-4 col-sm-4">
+                                <i class="pe-4x pe-7s-micro"></i>
+                                <h4>3 Main topics</h4>
+                                <p>Icarian Games, Whips/Whips-Pops and Standing Acrobatics during the whole program with a heavier focus on one of the disciplines each week.</p>
+                            </div>
+
+                            <div class="feature col-lg-4 col-md-4 col-sm-4">
+                                <i class="pe-4x pe-7s-headphones"></i>
+                                <h4>Amazing Venue</h4>
+                                <p>Amazing venue equipped with a large floor space, extra outdoor training spaces and many lounges to train safely and reach your maximum potential.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-lg-12 text-center">
+                        <h1>DAP</h1>
+                        <p class="lead">Acrobatics in a latin vibe with northern efficiency.</p>
+                    </div>
+
+                    <div class="col-lg-10 col-lg-offset-1 col-md-12 text-center">
+                        <div class="row">
+
+                            <div class="feature col-lg-4 col-md-4 col-sm-4">
+                                <i class="pe-4x pe-7s-refresh-2"></i>
+                                <h4>Personal Coaching</h4>
+                                <p>Personal coaching: in addition to the workshops, all participants will enjoy several private sessions in the lounge with a teacher coaching.</p>
+                            </div>
+
+                            <div class="feature col-lg-4 col-md-4 col-sm-4">
+                                <i class="pe-4x pe-7s-micro"></i>
+                                <h4>Accomodation</h4>
+                                <p>Accommodation in private 8-person houses (4 shared rooms) with fully equipped kitchen, allowing everyone to take pleasant, necessary rest and cook as they please.</p>
+                            </div>
+
+                            <div class="feature col-lg-4 col-md-4 col-sm-4">
+                                <i class="pe-4x pe-7s-headphones"></i>
+                                <h4>Good Vibes</h4>
+                                <p>The perfect vibe to spend some of the best weeks of your life doing what we all love the most; surpassing your goals in a wonderful place with an amazing bunch of people.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SPEAKERS -->
+        <section id="teachers">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12">
+                        <h2 class="uppercase">Teachers</h2>
+                        <p class="lead">Our amazing team.</p>
+                    </div>
+
+                    <ul id="list-speaker" class="list-unstyled">
+
+                        <!-- SPEAKER 1 -->
+                        <li class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="speaker">
+                                <figure class="effect-ming">
+                                    <img class="img-responsive" src="{% static "dap/img/speaker1.png" %}" alt=""/>
+                                    <figcaption>
+                                        <span><a class="html-popup" href="speaker-detail.html"><img class="img-responsive" src="{% static "dap/img/plus.png" %}" alt=""></a></span>
+                                    </figcaption>
+                                </figure>
+
+                                <div class="caption text-center">
+                                    <h4>Alfonso Sabaidee</h4>
+                                    <p class="company">"The Icarian Prime Minister"</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- SPEAKER 2 -->
+                        <li class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="speaker">
+                                <figure class="effect-ming">
+                                    <img class="img-responsive" src="{% static "dap/img/speaker2.png" %}" alt=""/>
+                                    <figcaption>
+                                        <span><a class="html-popup" href="speaker-detail.html"><img class="img-responsive" src="{% static "dap/img/plus.png" %}" alt=""></a></span>
+                                    </figcaption>
+                                </figure>
+
+                                <div class="caption text-center">
+                                    <h4>Alberto Betsinlao</h4>
+                                    <p class="company">"The Movement Chamán"</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- SPEAKER 3 -->
+                        <li class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="speaker">
+                                <figure class="effect-ming">
+                                    <img class="img-responsive" src="{% static "dap/img/speaker3.png" %}" alt=""/>
+                                    <figcaption>
+                                        <span><a class="html-popup" href="speaker-detail.html"><img class="img-responsive" src="{% static "dap/img/plus.png" %}" alt=""></a></span>
+                                    </figcaption>
+                                </figure>
+
+                                <div class="caption text-center">
+                                    <h4>Danica Wagner</h4>
+                                    <p class="company">"The gentle Boss, but still Boss"</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- SPEAKER 4 -->
+                        <li class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="speaker">
+                                <figure class="effect-ming">
+                                    <img class="img-responsive" src="{% static "dap/img/speaker4.png" %}" alt=""/>
+                                    <figcaption>
+                                        <span><a class="html-popup" href="speaker-detail.html"><img class="img-responsive" src="{% static "dap/img/plus.png" %}" alt=""></a></span>
+                                    </figcaption>
+                                </figure>
+
+                                <div class="caption text-center">
+                                    <h4>Adrian Garate</h4>
+                                    <p class="company">"The Strong Lama"</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- SPEAKER 5 -->
+                        <li class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="speaker">
+                                <figure class="effect-ming">
+                                    <img class="img-responsive" src="{% static "dap/img/speaker5.png" %}" alt=""/>
+                                    <figcaption>
+                                        <span><a class="html-popup" href="speaker-detail.html"><img class="img-responsive" src="{% static "dap/img/plus.png" %}" alt=""></a></span>
+                                    </figcaption>
+                                </figure>
+
+                                <div class="caption text-center">
+                                    <h4>Pri</h4>
+                                    <p class="company">"The Lord of the Whips"</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- SPEAKER 6 -->
+                        <li class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="speaker">
+                                <figure class="effect-ming">
+                                    <img class="img-responsive" src="{% static "dap/img/speaker6.png" %}" alt=""/>
+                                    <figcaption>
+                                        <span><a class="html-popup" href="speaker-detail.html"><img class="img-responsive" src="{% static "dap/img/plus.png" %}" alt=""></a></span>
+                                    </figcaption>
+                                </figure>
+
+                                <div class="caption text-center">
+                                    <h4>Jen</h4>
+                                    <p class="company">"The Queen of the Whips"</p>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <!-- <div class="col-lg-12 col-md-12 col-sm-12 text-center"> -->
+                    <!-- 	<a id="loadmore" class="button button-small button-line-dark">load more</a> -->
+                    <!-- </div> -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRAM -->
+        <section id="program">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12">
+
+                        <h2 class="uppercase">PROGRAM</h2>
+                        <p class="lead">During the whole Prorgram a 50% of the Workshops are for the "Main Topic" and 25% for each of the two other Topics. There is a constant progression and work on ALL the Topics, with a main focus on a particular one.</p>
+
+                        <!-- SCHEDULE TAB -->
+                        <ul id="myTab" class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#day1" id="day1-tab" role="tab" data-toggle="tab" aria-controls="day1" aria-expanded="true">Week 1 (1-7 September)</a></li>
+                            <li role="presentation" class=""><a href="#day2" role="tab" id="day2-tab" data-toggle="tab" aria-controls="day2" aria-expanded="false">Week 2 (8-14 September)</a></li>
+                            <li role="presentation" class=""><a href="#day3" role="tab" id="day3-tab" data-toggle="tab" aria-controls="day3" aria-expanded="false">Week 3 (15-21 September)</a></li>
+                        </ul>
+
+                        <!-- CONTENT -->
+                        <div id="myTabContent" class="tab-content">
+
+                            <!-- DAY 1 -->
+                            <div role="tabpanel" class="tab-pane fade active in" id="day1" aria-labelledby="day1-tab">
+                                <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+
+                                    <!-- PROGRAM 1-->
+                                    <div class="panel panel-default">
+
+                                        <!-- Program Heading -->
+                                        <div class="panel-heading" role="tab" id="heading1">
+
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <p class="date">Main Focus</p>
+                                                </div>
+
+                                                <div class="col-lg-10 col-md-10 col-sm-10">
+
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#Program1" aria-expanded="true" aria-controls="Program1">
+                                                          <u>Icarian Games</u> teached by Alfonso and Alberto. [View More..]
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="Program1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                                            <!-- Program Content -->
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-2 col-sm-2">
+                                                        <img class="img-responsive img-circle" src="{% static "dap/img/speaker1.png" %}" alt="">
+                                                    </div>
+
+                                                    <div class="col-lg-10 col-md-10 col-sm-10">
+                                                    	<p class="speaker-name uppercase">Icarian Games</p>
+                                                        <h4>Detailed Program</h4>
+                                                        <p>- The basics: cleaning up your tempos/straight throws with the proper technique and discovering new variations will allow you to get your maximum height and accuracy. Challenging Icarians will become much easier afterwards.</p>
+                                                        <p>- Linking pops: one of the most exciting practices while training icarian that requires precision and focus. Learn how to link the pops you know, not only the easy ones.</p>
+                                                        <p>− Big Throws: as a base you will use your whole body to throw and catch pops where the flyer will learn to rotate in all directions. Fun and adrenaline are guaranteed here. Expect tricks at the level of “Cast Away”, “Martini”, “Front Saltos” “Pirouette” and so on.</p>
+                                                        <p>− Icarian Foot Juggling: one of the most challenging practices, especially for bases, where you mostly use the power and ability of your legs. “180º & 360º pops”, “Varial Flip” or “Icarian Back Whip” are some of these tricks.</p>
+                                                        <p>− Combining Standing Acro with Icarian: you will be surprised by some of the creations from these teachers where they combine both partner acrobatics disciplines. People with different levels of experience in standing acro will find it equally exciting.</p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- PROGRAM 2-->
+                                    <div class="panel panel-default">
+
+                                        <!-- Program Heading -->
+                                        <div class="panel-heading" role="tab" id="heading2">
+
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <p class="date">Week Plan</p>
+                                                </div>
+
+                                                <div class="col-lg-10 col-md-10 col-sm-10">
+
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#Program2" aria-expanded="true" aria-controls="Program2">
+                                                       Check out your week plan looks like. [View More..]
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="Program2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                                            <!-- Program Content -->
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-2 col-sm-2">
+                                                        <img class="img-responsive img-circle" src="{% static "dap/img/speaker2.png" %}" alt="">
+                                                    </div>
+
+                                                    <div class="col-lg-10 col-md-10 col-sm-10">
+                                                    	<p class="speaker-name uppercase">Your Week</p>
+                                                        <h4>Weekly Program</h4>
+                                                        <style type="text/css">
+                                                          .tg  {border-collapse:collapse;border-spacing:0;}
+                                                          .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                                            overflow:hidden;padding:10px 5px;word-break:normal;}
+                                                          .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                                            font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                                                          .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+                                                          .tg .tg-0lax{text-align:left;vertical-align:top}
+                                                          </style>
+                                                          <table class="tg">
+                                                          <thead>
+                                                            <tr>
+                                                              <th class="tg-0pky">Time<br></th>
+                                                              <th class="tg-0lax">1st Day</th>
+                                                              <th class="tg-0lax">2nd Day</th>
+                                                              <th class="tg-0lax">3rd Day</th>
+                                                              <th class="tg-0lax">4th Day</th>
+                                                              <th class="tg-0lax">5th Day<br></th>
+                                                              <th class="tg-0lax">6th Day</th>
+                                                              <th class="tg-0lax">7th Day</th>
+                                                            </tr>
+                                                          </thead>
+                                                          <tbody>
+                                                            <tr>
+                                                              <td class="tg-0lax">10:00 - 11:00</td>
+                                                              <td class="tg-0lax">Prehab<br></td>
+                                                              <td class="tg-0lax">Prehab</td>
+                                                              <td class="tg-0lax">Prehab<br></td>
+                                                              <td class="tg-0lax">Prehab</td>
+                                                              <td class="tg-0lax">Prehab</td>
+                                                              <td class="tg-0lax">Prehab</td>
+                                                              <td class="tg-0lax">REST</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td class="tg-0lax">11:00 - 13:30</td>
+                                                              <td class="tg-0lax">Workshop 1</td>
+                                                              <td class="tg-0lax">Workshop 3</td>
+                                                              <td class="tg-0lax">Workshop 5</td>
+                                                              <td class="tg-0lax">Workshop 6</td>
+                                                              <td class="tg-0lax">Workshop 8</td>
+                                                              <td class="tg-0lax">Workshop 10</td>
+                                                              <td class="tg-0lax">REST</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td class="tg-0lax">13:30 - 15:30<br></td>
+                                                              <td class="tg-0lax">Lunch/Siesta</td>
+                                                              <td class="tg-0lax">Lunch/Siesta</td>
+                                                              <td class="tg-0lax">Lunch/Siesta</td>
+                                                              <td class="tg-0lax">Lunch/Siesta</td>
+                                                              <td class="tg-0lax">Lunch/Siesta</td>
+                                                              <td class="tg-0lax">Lunch/Siesta</td>
+                                                              <td class="tg-0lax">REST</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td class="tg-0lax">15:00 - 17:30</td>
+                                                              <td class="tg-0lax">Workshop 2</td>
+                                                              <td class="tg-0lax">Workshop 4</td>
+                                                              <td class="tg-0lax">Therapeutics<br></td>
+                                                              <td class="tg-0lax">Workshop 7</td>
+                                                              <td class="tg-0lax">Workshop 9<br></td>
+                                                              <td class="tg-0lax">Therapeutics</td>
+                                                              <td class="tg-0lax">REST</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td class="tg-0lax">17:30 - 18:30</td>
+                                                              <td class="tg-0lax">Functional<br>Stretching</td>
+                                                              <td class="tg-0lax">Functional<br>Stretching</td>
+                                                              <td class="tg-0lax">REST / Coached<br>Training<br></td>
+                                                              <td class="tg-0lax">Functional<br>Stretching</td>
+                                                              <td class="tg-0lax">Functional<br>Stretching</td>
+                                                              <td class="tg-0lax">REST / Coached<br>Training</td>
+                                                              <td class="tg-0lax">REST</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td class="tg-0lax">18:30 -</td>
+                                                              <td class="tg-0lax">Jam</td>
+                                                              <td class="tg-0lax">Jam</td>
+                                                              <td class="tg-0lax"></td>
+                                                              <td class="tg-0lax">Jam</td>
+                                                              <td class="tg-0lax">Jam</td>
+                                                              <td class="tg-0lax"></td>
+                                                              <td class="tg-0lax"></td>
+                                                            </tr>
+                                                          </tbody>
+                                                          </table>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- PROGRAM 3-->
+                                    <div class="panel panel-default">
+
+                                        <!-- Program Heading -->
+                                        <div class="panel-heading" role="tab" id="heading3">
+
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <p class="date">Prerequisites</p>
+                                                </div>
+
+                                                <div class="col-lg-10 col-md-10 col-sm-10">
+
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#Program3" aria-expanded="true" aria-controls="Program3">
+                                                       They are bare minimum for you to enjoy the Workshops.[View More..]
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="Program3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                                            <!-- Program Content -->
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-2 col-sm-2">
+                                                        <img class="img-responsive img-circle" src="{% static "dap/img/speaker3.png" %}" alt="">
+                                                    </div>
+
+                                                    <div class="col-lg-7 col-md-7 col-sm-10">
+                                                    	<p class="speaker-name uppercase">Prerequisites</p>
+                                                        <h4>Icarian Week</h4>
+                                                        <p>Tempos on Front Plank (Straight throws)</br>
+                                                           Tempos on Throne/American Chair (Straight throws).</br>
+                                                           Icarian pop from Throne to Front Plank.
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="col-lg-3 col-md-3 col-sm-10">
+                                                    	<h5>Videos of Icarians</h5>
+                                                        <p class="small">In the following link you can find various of the Prerequisites.</p>
+                                                        <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">YouTube.com</a></span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- PROGRAM 4 -->
+                                    <div class="panel panel-default">
+
+                                        <!-- Program Heading -->
+                                        <div class="panel-heading" role="tab" id="heading4">
+
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <p class="date">Other Disciplines</p>
+                                                </div>
+
+                                                <div class="col-lg-10 col-md-10 col-sm-10">
+
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#Program4" aria-expanded="true" aria-controls="Program4">
+                                                       Prepare your body to get your maximum potential and reduce the risk of injuries. [View More..]
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="Program4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                                            <!-- Program Content -->
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-2 col-sm-2">
+                                                        <img class="img-responsive img-circle" src="{% static "dap/img/speaker3.png" %}" alt="">
+                                                    </div>
+
+                                                    <div class="col-lg-7 col-md-7 col-sm-10">
+                                                    	<p class="speaker-name uppercase">Other Disciplines</p>
+                                                        <h4>We will also look into ...</h4>
+                                                        <p>Everyday during the program you will find other kind of workshops that will help you reach more effectively your goals in the main disciplines at the same time that prepare your body to get your maximum potential and reduce the risk of injuries:</br></p>
+                                                        <p>
+                                                            Handstands.</br>
+                                                            Morning Prehabs.</br>
+                                                            Physical Conditioning.</br>
+                                                            Functional Stretching.</br>
+                                                            Flexibility.</br>
+                                                            Therapeutics/Massage.</br>
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="col-lg-3 col-md-3 col-sm-10">
+                                                    	<h5>Videos of Icarians</h5>
+                                                        <p class="small">In the following link you can find various of the Prerequisites.</p>
+                                                        <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">YouTube.com</a></span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- WEEK 2 -->
+                            <div role="tabpanel" class="tab-pane fade in" id="day2" aria-labelledby="day2-tab">
+                                <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+
+                                    <!-- PROGRAM 5-->
+                                    <div class="panel panel-default">
+
+                                        <!-- Program Heading -->
+                                        <div class="panel-heading" role="tab" id="heading5">
+
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <p class="date">Main Focus</p>
+                                                </div>
+
+                                                <div class="col-lg-10 col-md-10 col-sm-10">
+
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#Program5" aria-expanded="true" aria-controls="Program5">
+                                                          <u>Standing Acro</u> teached by Adrian and Danica from Acrolama. [View More..]
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="Program5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                                            <!-- Program Content -->
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-2 col-sm-2">
+                                                        <img class="img-responsive img-circle" src="{% static "dap/img/speaker1.png" %}" alt="">
+                                                    </div>
+
+                                                    <div class="col-lg-10 col-md-10 col-sm-10">
+                                                    	<p class="speaker-name uppercase">Standing Acro</p>
+                                                        <h4>Detailed Program</h4>
+                                                        <p>- Hand to Hand / Foot to hand: accompany us in this learning process going from the basics, where you will refine your technique and learn an infinite amount of small details that make big differences, towards plenty of challenging entrances, dismounts, patsheska, one arms and dynamic tricks.</p>
+                                                        <p>- Non Hand to Hand: There are a whole bunch of fun tricks to explore and learn in standing acrobatics that don’t require you to have a steady handstand. So if H2H is not your unique interest or it’s not there yet this topic is definitely going to give a new perspective on what's posible up there.</p>
+                                                        <p>- Banquine and Toss the Flyer: probably the most exciting techniques in partner acrobatics when playing in trios and groups. After getting good fundations you will discover that these techniques allow you to throw your flyer higher and farther than with any other discipline. Adrenaline and fun are guaranteed.</p>
+                                                        <p>- Acrodance / Partnering: elegance, fluidity and synchrony while moving with your partner and executing plenty of tricks and lifts that will make the audience “Wouu” and enrich the whole practice of partner acrobatics.</p>
+                                                        <p>- And much more: Basing and flying with the head, new entrances to Two High and Three High, Pitching and so much more!</p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- PROGRAM 6-->
+                                    <div class="panel panel-default">
+
+                                        <!-- Program Heading -->
+                                        <div class="panel-heading" role="tab" id="heading6">
+
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <p class="date">Week Plan</p>
+                                                </div>
+
+                                                <div class="col-lg-10 col-md-10 col-sm-10">
+
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#Program6" aria-expanded="true" aria-controls="Program6">
+                                                       Check out your week plan looks like. [View More..]
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="Program6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+                                            <!-- Program Content -->
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-2 col-sm-2">
+                                                        <img class="img-responsive img-circle" src="{% static "dap/img/speaker2.png" %}" alt="">
+                                                    </div>
+
+                                                    <div class="col-lg-10 col-md-10 col-sm-10">
+                                                    	<p class="speaker-name uppercase">Your Week</p>
+                                                        <h4>Weekly Program</h4>
+                                                        <style type="text/css">
+                                                          .tg  {border-collapse:collapse;border-spacing:0;}
+                                                          .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                                            overflow:hidden;padding:10px 5px;word-break:normal;}
+                                                          .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                                            font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                                                          .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+                                                          .tg .tg-0lax{text-align:left;vertical-align:top}
+                                                          </style>
+                                                          <table class="tg">
+                                                          <thead>
+                                                            <tr>
+                                                              <th class="tg-0pky">Time<br></th>
+                                                              <th class="tg-0lax">1st Day</th>
+                                                              <th class="tg-0lax">2nd Day</th>
+                                                              <th class="tg-0lax">3rd Day</th>
+                                                              <th class="tg-0lax">4th Day</th>
+                                                              <th class="tg-0lax">5th Day<br></th>
+                                                              <th class="tg-0lax">6th Day</th>
+                                                              <th class="tg-0lax">7th Day</th>
+                                                            </tr>
+                                                          </thead>
+                                                          <tbody>
+                                                            <tr>
+                                                              <td class="tg-0lax">10:00 - 11:00</td>
+                                                              <td class="tg-0lax">Prehab<br></td>
+                                                              <td class="tg-0lax">Prehab</td>
+                                                              <td class="tg-0lax">Prehab<br></td>
+                                                              <td class="tg-0lax">Prehab</td>
+                                                              <td class="tg-0lax">Prehab</td>
+                                                              <td class="tg-0lax">Prehab</td>
+                                                              <td class="tg-0lax">REST</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td class="tg-0lax">11:00 - 13:30</td>
+                                                              <td class="tg-0lax">Workshop 1</td>
+                                                              <td class="tg-0lax">Workshop 3</td>
+                                                              <td class="tg-0lax">Workshop 5</td>
+                                                              <td class="tg-0lax">Workshop 6</td>
+                                                              <td class="tg-0lax">Workshop 8</td>
+                                                              <td class="tg-0lax">Workshop 10</td>
+                                                              <td class="tg-0lax">REST</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td class="tg-0lax">13:30 - 15:30<br></td>
+                                                              <td class="tg-0lax">Lunch/Siesta</td>
+                                                              <td class="tg-0lax">Lunch/Siesta</td>
+                                                              <td class="tg-0lax">Lunch/Siesta</td>
+                                                              <td class="tg-0lax">Lunch/Siesta</td>
+                                                              <td class="tg-0lax">Lunch/Siesta</td>
+                                                              <td class="tg-0lax">Lunch/Siesta</td>
+                                                              <td class="tg-0lax">REST</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td class="tg-0lax">15:00 - 17:30</td>
+                                                              <td class="tg-0lax">Workshop 2</td>
+                                                              <td class="tg-0lax">Workshop 4</td>
+                                                              <td class="tg-0lax">Therapeutics<br></td>
+                                                              <td class="tg-0lax">Workshop 7</td>
+                                                              <td class="tg-0lax">Workshop 9<br></td>
+                                                              <td class="tg-0lax">Therapeutics</td>
+                                                              <td class="tg-0lax">REST</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td class="tg-0lax">17:30 - 18:30</td>
+                                                              <td class="tg-0lax">Functional<br>Stretching</td>
+                                                              <td class="tg-0lax">Functional<br>Stretching</td>
+                                                              <td class="tg-0lax">REST / Coached<br>Training<br></td>
+                                                              <td class="tg-0lax">Functional<br>Stretching</td>
+                                                              <td class="tg-0lax">Functional<br>Stretching</td>
+                                                              <td class="tg-0lax">REST / Coached<br>Training</td>
+                                                              <td class="tg-0lax">REST</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td class="tg-0lax">18:30 -</td>
+                                                              <td class="tg-0lax">Jam</td>
+                                                              <td class="tg-0lax">Jam</td>
+                                                              <td class="tg-0lax"></td>
+                                                              <td class="tg-0lax">Jam</td>
+                                                              <td class="tg-0lax">Jam</td>
+                                                              <td class="tg-0lax"></td>
+                                                              <td class="tg-0lax"></td>
+                                                            </tr>
+                                                          </tbody>
+                                                          </table>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- PROGRAM 7 -->
+                                    <div class="panel panel-default">
+
+                                        <!-- Program Heading -->
+                                        <div class="panel-heading" role="tab" id="heading7">
+
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <p class="date">Prerequisites</p>
+                                                </div>
+
+                                                <div class="col-lg-10 col-md-10 col-sm-10">
+
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#Program7" aria-expanded="true" aria-controls="Program7">
+                                                       They are bare minimum for you to enjoy the Workshops.[View More..]
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="Program7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
+                                            <!-- Program Content -->
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-2 col-sm-2">
+                                                        <img class="img-responsive img-circle" src="{% static "dap/img/speaker3.png" %}" alt="">
+                                                    </div>
+
+                                                    <div class="col-lg-7 col-md-7 col-sm-10">
+                                                    	<p class="speaker-name uppercase">Prerequisites</p>
+                                                        <h4>Standing Acro Week</h4>
+                                                        <p>
+                                                        30 seconds Handstand against the wall.</br>
+                                                        20 seconds Tuck Sit in L-basing.</br>
+                                                        20 seconds Foot to Hand in L-basing.</br>
+                                                        Solid Two High.</br>
+                                                        Comfortable with counterbalances and Flags.</br>
+                                                        Recommended some experience in standing Foot to Hand and Hand to Hand.</br>
+                                                        </p>
+
+
+                                                    </div>
+
+                                                    <div class="col-lg-3 col-md-3 col-sm-10">
+                                                    	<h5>Videos of Standing Acro</h5>
+                                                        <p class="small">In the following link you can find various of the Prerequisites.</p>
+                                                        <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">YouTube.com</a></span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- PROGRAM 8 -->
+                                    <div class="panel panel-default">
+
+                                        <!-- Program Heading -->
+                                        <div class="panel-heading" role="tab" id="heading8">
+
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <p class="date">Other Disciplines</p>
+                                                </div>
+
+                                                <div class="col-lg-10 col-md-10 col-sm-10">
+
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#Program8" aria-expanded="true" aria-controls="Program8">
+                                                       Prepare your body to get your maximum potential and reduce the risk of injuries. [View More..]
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="Program8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
+                                            <!-- Program Content -->
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-2 col-sm-2">
+                                                        <img class="img-responsive img-circle" src="{% static "dap/img/speaker3.png" %}" alt="">
+                                                    </div>
+
+                                                    <div class="col-lg-7 col-md-7 col-sm-10">
+                                                    	<p class="speaker-name uppercase">Other Disciplines</p>
+                                                        <h4>We will also look into ...</h4>
+                                                        <p>Everyday during the program you will find other kind of workshops that will help you reach more effectively your goals in the main disciplines at the same time that prepare your body to get your maximum potential and reduce the risk of injuries:</br></p>
+                                                        <p>
+                                                            Handstands.</br>
+                                                            Morning Prehabs.</br>
+                                                            Physical Conditioning.</br>
+                                                            Functional Stretching.</br>
+                                                            Flexibility.</br>
+                                                            Therapeutics/Massage.</br>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- DAY 3 -->
+                            <div role="tabpanel" class="tab-pane fade in" id="day3" aria-labelledby="day3-tab">
+                                <div class="panel-group" id="accordion3" role="tablist" aria-multiselectable="true">
+
+                                    <!-- PROGRAM 9-->
+                                    <div class="panel panel-default">
+
+                                        <!-- Program Heading -->
+                                        <div class="panel-heading" role="tab" id="heading9">
+
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <p class="date">Main Focus</p>
+                                                </div>
+
+                                                <div class="col-lg-10 col-md-10 col-sm-10">
+
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#Program9" aria-expanded="true" aria-controls="Program9">
+                                                          <u>Whips and Whipos</u> teached by Pri and Jenn from Acro Revolution. [View More..]
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="Program9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9">
+                                            <!-- Program Content -->
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-2 col-sm-2">
+                                                        <img class="img-responsive img-circle" src="{% static "dap/img/speaker1.png" %}" alt="">
+                                                    </div>
+
+                                                    <div class="col-lg-10 col-md-10 col-sm-10">
+                                                    	<p class="speaker-name uppercase">Whips and Whipops</p>
+                                                        <h4>Detailed Program</h4>
+                                                        <p>- Whips:</br>
+                                                                Basics: setting the basics and fundamentals of momentum-driven moves.</br>:
+                                                                Progressive approach: step by step progressions from basic (Tarzan Whip) to advanced Whips in a gradual and fun way. You will learn all sorts of variations and how to adapt them to your practice.</br>
+                                                                Intermediate and Advanced Whips: from the basic front dive to any back and side whips.</br>
+                                                                Whips centered spotting techniques: also known as the most technical spotting ever. You will come out of this as ninja spotters.</br></p>
+                                                        <p>-  Whips-Pops:</br>
+                                                                Basic and fundamentals: you will learn how to pop your Whips in order to change position or even plane.</br>
+                            All-levels Whip-pops will be covered and each move will be broken down and studied step by step with an analytical approach.</br>
+                            You will learn to Whip-pop to any final position through flyers’ movements which can consist of translations, rotations, spinning, twisting and a combination of them.</br></p>
+                                                        <p>- Whicarians:</br>
+                            Precision: we will work on the precision of the basic Icarian throws in order to ensure a landing position that allows you to fuse your Icarian tricks with any Whip you like.</br>
+                            Transitions: you will learn how to transition from Icarian to Whips or even Whip-pops and you’ll see how exciting these combinations are. Whicarian is the last frontier in the L-basing world. A bunch of new and fun tricks are waiting for you.</br></p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- PROGRAM 10-->
+                                    <div class="panel panel-default">
+
+                                        <!-- Program Heading -->
+                                        <div class="panel-heading" role="tab" id="heading10">
+
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <p class="date">Week Plan</p>
+                                                </div>
+
+                                                <div class="col-lg-10 col-md-10 col-sm-10">
+
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#Program10" aria-expanded="true" aria-controls="Program10">
+                                                       Check out your week plan looks like. [View More..]
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="Program10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading10">
+                                            <!-- Program Content -->
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-2 col-sm-2">
+                                                        <img class="img-responsive img-circle" src="{% static "dap/img/speaker2.png" %}" alt="">
+                                                    </div>
+
+                                                    <div class="col-lg-10 col-md-10 col-sm-10">
+                                                    	<p class="speaker-name uppercase">Your Week</p>
+                                                        <h4>Weekly Program</h4>
+                                                        <style type="text/css">
+                                                          .tg  {border-collapse:collapse;border-spacing:0;}
+                                                          .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                                            overflow:hidden;padding:10px 5px;word-break:normal;}
+                                                          .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                                                            font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                                                          .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+                                                          .tg .tg-0lax{text-align:left;vertical-align:top}
+                                                          </style>
+                                                          <table class="tg">
+                                                          <thead>
+                                                            <tr>
+                                                              <th class="tg-0pky">Time<br></th>
+                                                              <th class="tg-0lax">1st Day</th>
+                                                              <th class="tg-0lax">2nd Day</th>
+                                                              <th class="tg-0lax">3rd Day</th>
+                                                              <th class="tg-0lax">4th Day</th>
+                                                              <th class="tg-0lax">5th Day<br></th>
+                                                              <th class="tg-0lax">6th Day</th>
+                                                              <th class="tg-0lax">7th Day</th>
+                                                            </tr>
+                                                          </thead>
+                                                          <tbody>
+                                                            <tr>
+                                                              <td class="tg-0lax">10:00 - 11:00</td>
+                                                              <td class="tg-0lax">Prehab<br></td>
+                                                              <td class="tg-0lax">Prehab</td>
+                                                              <td class="tg-0lax">Prehab<br></td>
+                                                              <td class="tg-0lax">Prehab</td>
+                                                              <td class="tg-0lax">Prehab</td>
+                                                              <td class="tg-0lax">Prehab</td>
+                                                              <td class="tg-0lax">REST</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td class="tg-0lax">11:00 - 13:30</td>
+                                                              <td class="tg-0lax">Workshop 1</td>
+                                                              <td class="tg-0lax">Workshop 3</td>
+                                                              <td class="tg-0lax">Workshop 5</td>
+                                                              <td class="tg-0lax">Workshop 6</td>
+                                                              <td class="tg-0lax">Workshop 8</td>
+                                                              <td class="tg-0lax">Workshop 10</td>
+                                                              <td class="tg-0lax">REST</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td class="tg-0lax">13:30 - 15:30<br></td>
+                                                              <td class="tg-0lax">Lunch/Siesta</td>
+                                                              <td class="tg-0lax">Lunch/Siesta</td>
+                                                              <td class="tg-0lax">Lunch/Siesta</td>
+                                                              <td class="tg-0lax">Lunch/Siesta</td>
+                                                              <td class="tg-0lax">Lunch/Siesta</td>
+                                                              <td class="tg-0lax">Lunch/Siesta</td>
+                                                              <td class="tg-0lax">REST</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td class="tg-0lax">15:00 - 17:30</td>
+                                                              <td class="tg-0lax">Workshop 2</td>
+                                                              <td class="tg-0lax">Workshop 4</td>
+                                                              <td class="tg-0lax">Therapeutics<br></td>
+                                                              <td class="tg-0lax">Workshop 7</td>
+                                                              <td class="tg-0lax">Workshop 9<br></td>
+                                                              <td class="tg-0lax">Therapeutics</td>
+                                                              <td class="tg-0lax">REST</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td class="tg-0lax">17:30 - 18:30</td>
+                                                              <td class="tg-0lax">Functional<br>Stretching</td>
+                                                              <td class="tg-0lax">Functional<br>Stretching</td>
+                                                              <td class="tg-0lax">REST / Coached<br>Training<br></td>
+                                                              <td class="tg-0lax">Functional<br>Stretching</td>
+                                                              <td class="tg-0lax">Functional<br>Stretching</td>
+                                                              <td class="tg-0lax">REST / Coached<br>Training</td>
+                                                              <td class="tg-0lax">REST</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td class="tg-0lax">18:30 -</td>
+                                                              <td class="tg-0lax">Jam</td>
+                                                              <td class="tg-0lax">Jam</td>
+                                                              <td class="tg-0lax"></td>
+                                                              <td class="tg-0lax">Jam</td>
+                                                              <td class="tg-0lax">Jam</td>
+                                                              <td class="tg-0lax"></td>
+                                                              <td class="tg-0lax"></td>
+                                                            </tr>
+                                                          </tbody>
+                                                          </table>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- PROGRAM 11 -->
+                                    <div class="panel panel-default">
+
+                                        <!-- Program Heading -->
+                                        <div class="panel-heading" role="tab" id="heading11">
+
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <p class="date">Prerequisites</p>
+                                                </div>
+
+                                                <div class="col-lg-10 col-md-10 col-sm-10">
+
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#Program11" aria-expanded="true" aria-controls="Program11">
+                                                       They are bare minimum for you to enjoy the Workshops.[View More..]
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="Program11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading11">
+                                            <!-- Program Content -->
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-2 col-sm-2">
+                                                        <img class="img-responsive img-circle" src="{% static "dap/img/speaker3.png" %}" alt="">
+                                                    </div>
+
+                                                    <div class="col-lg-7 col-md-7 col-sm-10">
+                                                    	<p class="speaker-name uppercase">Prerequisites</p>
+                                                        <h4>Whips and Whipops Week</h4>
+                                                        <p>
+                                                        Tarzán, diving from Bird in between the legs and coming back.</br>
+                                                        Stable with all the basic Acroyoga positions.</br>
+                                                        Comfortable with washing machines and flows.</br>
+                                                        </p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- PROGRAM 12 -->
+                                    <div class="panel panel-default">
+
+                                        <!-- Program Heading -->
+                                        <div class="panel-heading" role="tab" id="heading12">
+
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <p class="date">Other Disciplines</p>
+                                                </div>
+
+                                                <div class="col-lg-10 col-md-10 col-sm-10">
+
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#Program12" aria-expanded="true" aria-controls="Program12">
+                                                       Prepare your body to get your maximum potential and reduce the risk of injuries. [View More..]
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="Program12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading12">
+                                            <!-- Program Content -->
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-2 col-sm-2">
+                                                        <img class="img-responsive img-circle" src="{% static "dap/img/speaker3.png" %}" alt="">
+                                                    </div>
+
+                                                    <div class="col-lg-7 col-md-7 col-sm-10">
+                                                    	<p class="speaker-name uppercase">Other Disciplines</p>
+                                                        <h4>We will also look into ...</h4>
+                                                        <p>Everyday during the program you will find other kind of workshops that will help you reach more effectively your goals in the main disciplines at the same time that prepare your body to get your maximum potential and reduce the risk of injuries:</br></p>
+                                                        <p>
+                                                            Handstands.</br>
+                                                            Morning Prehabs.</br>
+                                                            Physical Conditioning.</br>
+                                                            Functional Stretching.</br>
+                                                            Flexibility.</br>
+                                                            Therapeutics/Massage.</br>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIAL -->
+        <section id="testimonial">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-lg-6 col-lg-offset-6 col-md-6 col-md-offset-6 no-padding">
+                        <div class="testimonial-inner">
+                            <h2 class="hidden">Venue</h2>
+                            <div id="testimonial-carousel">
+                                <div class="item">
+                                    <p class="lead">Sunparks Kempense Meren is a big resort located in the middle of a vast belgium forest and lakes of the 'Stille Kempen'.</p>
+                                </div>
+                                <div class="item">
+                                    <p class="lead">Besides a lot of acro you will find here comfort, nature and plenty of facilities that will make the experience fully pleasant and enriching. In the middle of a forest and green spaces this venue provides accommodation of 3 stars, big training spaces indoors and outdoors, an immense swimming pool, a lake with beaches. Everything few minutes walking distance from each other.</p>
+                                </div>
+                                <div class="item">
+                                    <p class="lead">You will also have the best rest possible after the hard training in your own bed in houses with 8 spots divided in 4 rooms. The houses also have fully equipped kitchens, bathrooms and living rooms so you well have plenty of space for cooking and eating with whoever you want.
+</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VENUE -->
+        <section id="venue">
+
+            <div class="venue">
+            	<div class="venue-inner">
+                	<div class="container">
+                    	<div class="row">
+
+                        	<div class="col-lg-8 col-md-8 col-sm-8">
+                            	<h2 class="uppercase">venue</h2>
+                                <p class="lead">Donec finibus porta ultricies.<br>Interdum et malesuada fames ac ante ipsum primis in faucibus. </p>
+                        		<h4>Village Sunparks Kempense Meren</h4>
+                                <img class="img-responsive" src="{% static "dap/img/hotel-logo.png" %}" alt="hotel">
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                            	<i class="pe-4x pe-7s-map-2"></i>
+                                <h4 class="uppercase">address</h4>
+                                <p>49 West 32nd Street, New York, NY 10001<br>
+                                	1 212 736-3800<br>
+                                	4.9 mi /  7.9 km from Downtown</p>
+
+                                <a class="button button-xsmall button-line-light" href="">more information</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        <!-- REGISTER -->
+        <section id="register">
+            <div class="container">
+                <div class="row">
+
+                	<div class="col-lg-12">
+                    	<h2 class="uppercase text-center">register</h2>
+                        <p class="lead text-center">Nam pellentesque fringilla faucibus. Aliquam tortor ex, egestas porta eget, pretium at lorem.</p>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <!-- PRICE TABLES -->
+                        <div id="price-carousel">
+
+                            <div class="price-table early-bird">
+                                <div class="icon">
+                                    <i class="pe-5x pe-7s-wristwatch"></i>
+                                </div>
+
+                                <div class="table-header">
+                                    <h3>Super Early Bird</h3>
+                                    <p class="price">500 €</p>
+                                </div>
+
+                                <ul class="desc list-unstyled">
+                                    <li>1 Week of Full Program</li>
+                                    <li>10 Acro Workshops</li>
+                                    <li>13 Extra Classes</li>
+                                    <li>Accomodation</li>
+                                    <li>Tranining Space</li>
+                                    <li>Access to some the Resort facilities</li>
+                                </ul>
+                            </div>
+
+                            <div class="price-table standart">
+                                <div class="icon">
+                                    <i class="pe-5x pe-va pe-7s-ribbon"></i>
+                                </div>
+
+                                <div class="table-header">
+                                    <h3>Super Early Bird</h3>
+                                    <p class="price">890 €</p>
+                                </div>
+
+                                <ul class="desc list-unstyled">
+                                    <li>2 Week of Full Program</li>
+                                    <li>20+ Acro Workshops</li>
+                                    <li>26+ Extra Classes</li>
+                                    <li>Accomodation</li>
+                                    <li>Tranining Space</li>
+                                    <li>Access to some the Resort facilities</li>
+                                </ul>
+                            </div>
+
+                            <div class="price-table vip">
+                                <div class="icon">
+                                    <i class="pe-5x pe-va pe-7s-diamond"></i>
+                                </div>
+
+                                <div class="table-header">
+                                    <h3>Super Early Bird</h3>
+                                    <p class="price">1280 €</p>
+                                </div>
+
+                                <ul class="desc list-unstyled">
+                                    <li>Full Program 21 Days</li>
+                                    <li>30+ Acro Workshops</li>
+                                    <li>36+ Extra Classes</li>
+                                    <li>Accomodation</li>
+                                    <li>Constant Tranining Space</li>
+                                    <li>Access to some the Resort facilities</li>
+                                </ul>
+                            </div>
+                            <div class="price-table early-bird">
+                                <div class="icon">
+                                    <i class="pe-5x pe-7s-wristwatch"></i>
+                                </div>
+
+                                <div class="table-header">
+                                    <h3>Early Bird</h3>
+                                    <p class="price">550 €</p>
+                                </div>
+
+                                <ul class="desc list-unstyled">
+                                    <li>1 Week of Full Program</li>
+                                    <li>10 Acro Workshops</li>
+                                    <li>13 Extra Classes</li>
+                                    <li>Accomodation</li>
+                                    <li>Tranining Space</li>
+                                    <li>Access to some the Resort facilities</li>
+                                </ul>
+                            </div>
+
+                            <div class="price-table standart">
+                                <div class="icon">
+                                    <i class="pe-5x pe-va pe-7s-ribbon"></i>
+                                </div>
+
+                                <div class="table-header">
+                                    <h3>Early Bird</h3>
+                                    <p class="price">980 €</p>
+                                </div>
+
+                                <ul class="desc list-unstyled">
+                                    <li>2 Week of Full Program</li>
+                                    <li>20+ Acro Workshops</li>
+                                    <li>26+ Extra Classes</li>
+                                    <li>Accomodation</li>
+                                    <li>Tranining Space</li>
+                                    <li>Access to some the Resort facilities</li>
+                                </ul>
+                            </div>
+
+                            <div class="price-table vip">
+                                <div class="icon">
+                                    <i class="pe-5x pe-va pe-7s-diamond"></i>
+                                </div>
+
+                                <div class="table-header">
+                                    <h3>Eearly Bird</h3>
+                                    <p class="price">1380 €</p>
+                                </div>
+
+                                <ul class="desc list-unstyled">
+                                    <li>Full Program 21 Days</li>
+                                    <li>30+ Acro Workshops</li>
+                                    <li>36+ Extra Classes</li>
+                                    <li>Accomodation</li>
+                                    <li>Constant Tranining Space</li>
+                                    <li>Access to some the Resort facilities</li>
+                                </ul>
+                            </div>
+                            <div class="price-table early-bird">
+                                <div class="icon">
+                                    <i class="pe-5x pe-7s-wristwatch"></i>
+                                </div>
+
+                                <div class="table-header">
+                                    <h3>Full Price</h3>
+                                    <p class="price">600 €</p>
+                                </div>
+
+                                <ul class="desc list-unstyled">
+                                    <li>1 Week of Full Program</li>
+                                    <li>10 Acro Workshops</li>
+                                    <li>13 Extra Classes</li>
+                                    <li>Accomodation</li>
+                                    <li>Tranining Space</li>
+                                    <li>Access to some the Resort facilities</li>
+                                </ul>
+                            </div>
+
+                            <div class="price-table standart">
+                                <div class="icon">
+                                    <i class="pe-5x pe-va pe-7s-ribbon"></i>
+                                </div>
+
+                                <div class="table-header">
+                                    <h3>Full Price</h3>
+                                    <p class="price">1070 €</p>
+                                </div>
+
+                                <ul class="desc list-unstyled">
+                                    <li>2 Week of Full Program</li>
+                                    <li>20+ Acro Workshops</li>
+                                    <li>26+ Extra Classes</li>
+                                    <li>Accomodation</li>
+                                    <li>Tranining Space</li>
+                                    <li>Access to some the Resort facilities</li>
+                                </ul>
+                            </div>
+
+                            <div class="price-table vip">
+                                <div class="icon">
+                                    <i class="pe-5x pe-va pe-7s-diamond"></i>
+                                </div>
+
+                                <div class="table-header">
+                                    <h3>Full Price</h3>
+                                    <p class="price">1480 €</p>
+                                </div>
+
+                                <ul class="desc list-unstyled">
+                                    <li>Full Program 21 Days</li>
+                                    <li>30+ Acro Workshops</li>
+                                    <li>36+ Extra Classes</li>
+                                    <li>Accomodation</li>
+                                    <li>Constant Tranining Space</li>
+                                    <li>Access to some the Resort facilities</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+					          <div class="col-lg-12 text-center">
+                    	<a class="button button-small button-line-dark html-popup" href="register.html">register now</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FUNFACTS -->
+        <section id="funfacts">
+            <div class="funfacts-inner">
+                <div class="container">
+                    <div class="row">
+
+                        <h2 class="hidden">funfacts</h2>
+
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <div id="funfacts-carousel">
+
+                                <div class="item">
+                                    <i class="pe pe-4x pe-7s-world"></i>
+                                    <div class="desc">
+                                        <p class="number">21</p>
+                                        <p class="description">days</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <i class="pe pe-4x pe-7s-micro"></i>
+                                    <div class="desc">
+                                        <p class="number">6</p>
+                                        <p class="description">teachers</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <i class="pe pe-4x pe-7s-display2"></i>
+                                    <div class="desc">
+                                        <p class="number">36</p>
+                                        <p class="description">Workshops</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <i class="pe pe-va pe-4x pe-7s-id"></i>
+                                    <div class="desc">
+                                        <p class="number">9000</p>
+                                        <p class="description">fun</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <!-- <section id="gallery"> -->
+        <!--     <div class="container"> -->
+        <!--         <div class="row"> -->
+
+        <!--             <div class="col-lg-12"> -->
+        <!--                 <h2 class="uppercase">gallery</h2> -->
+        <!--                 <p class="lead">Nam pellentesque fringilla faucibus. Aliquam tortor ex, egestas porta eget, pretium at lorem.</p> -->
+
+        <!--                 <div id="timeline" data-columns> -->
+        <!--                     <div class="item wrap"> -->
+        <!--                         <img class="img-responsive" src="{% static "dap/img/thumb1.png" %}" alt=""> -->
+        <!--                         <div class="overlay"></div> -->
+        <!--                         <div class="icon"> -->
+        <!--                             <a class="image-popup" src="{% static "dap/img/gallery-img.jpg" %}" title="<h4>Sed at rutrum felis</h4>Curabitur nec metus tempor, malesuada quam a, laoreet urna."><i class="pe-3x pe-7s-plus"></i></a> -->
+        <!--                         </div> -->
+        <!--                     </div> -->
+
+        <!--                     <div class="item wrap"> -->
+        <!--                         <img class="img-responsive" src="{% static "dap/img/thumb2.png" %}" alt=""> -->
+        <!--                         <div class="overlay"></div> -->
+        <!--                         <div class="icon"> -->
+        <!--                             <a class="image-popup" src="{% static "dap/img/gallery-img.jpg" %}" title="<h4>Sed at rutrum felis</h4>Curabitur nec metus tempor, malesuada quam a, laoreet urna."><i class="pe-3x pe-7s-plus"></i></a> -->
+        <!--                         </div> -->
+        <!--                     </div> -->
+
+        <!--                     <div class="item wrap"> -->
+        <!--                         <img class="img-responsive" src="{% static "dap/img/thumb3.png" %}" alt=""> -->
+        <!--                         <div class="overlay"></div> -->
+        <!--                         <div class="icon"> -->
+        <!--                             <a class="image-popup" src="{% static "dap/img/gallery-img.jpg" %}" title="<h4>Sed at rutrum felis</h4>Curabitur nec metus tempor, malesuada quam a, laoreet urna."><i class="pe-3x pe-7s-plus"></i></a> -->
+        <!--                         </div> -->
+        <!--                     </div> -->
+
+        <!--                     <div class="item wrap"> -->
+        <!--                         <img class="img-responsive" src="{% static "dap/img/thumb4.png" %}" alt=""> -->
+        <!--                         <div class="overlay"></div> -->
+        <!--                         <div class="icon"> -->
+        <!--                             <a class="image-popup" src="{% static "dap/img/gallery-img.jpg" %}" title="<h4>Sed at rutrum felis</h4>Curabitur nec metus tempor, malesuada quam a, laoreet urna."><i class="pe-3x pe-7s-plus"></i></a> -->
+        <!--                         </div> -->
+        <!--                     </div> -->
+
+        <!--                     <div class="item wrap"> -->
+        <!--                         <img class="img-responsive" src="{% static "dap/img/thumb5.png" %}" alt=""> -->
+        <!--                         <div class="overlay"></div> -->
+        <!--                         <div class="icon"> -->
+        <!--                             <a class="image-popup" src="{% static "dap/img/gallery-img.jpg" %}" title="<h4>Sed at rutrum felis</h4>Curabitur nec metus tempor, malesuada quam a, laoreet urna."><i class="pe-3x pe-7s-plus"></i></a> -->
+        <!--                         </div> -->
+        <!--                     </div> -->
+
+        <!--                     <div class="item wrap"> -->
+        <!--                         <img class="img-responsive" src="{% static "dap/img/thumb6.png" %}" alt=""> -->
+        <!--                         <div class="overlay"></div> -->
+        <!--                         <div class="icon"> -->
+        <!--                             <a class="image-popup" src="{% static "dap/img/gallery-img.jpg" %}" title="<h4>Sed at rutrum felis</h4>Curabitur nec metus tempor, malesuada quam a, laoreet urna."><i class="pe-3x pe-7s-plus"></i></a> -->
+        <!--                         </div> -->
+        <!--                     </div> -->
+
+        <!--                     <div class="item wrap"> -->
+        <!--                         <img class="img-responsive" src="{% static "dap/img/thumb7.png" %}" alt=""> -->
+        <!--                         <div class="overlay"></div> -->
+        <!--                         <div class="icon"> -->
+        <!--                             <a class="image-popup" src="{% static "dap/img/gallery-img.jpg" %}" title="<h4>Sed at rutrum felis</h4>Curabitur nec metus tempor, malesuada quam a, laoreet urna."><i class="pe-3x pe-7s-plus"></i></a> -->
+        <!--                         </div> -->
+        <!--                     </div> -->
+
+        <!--                     <div class="item wrap"> -->
+        <!--                         <img class="img-responsive" src="{% static "dap/img/thumb8.png" %}" alt=""> -->
+        <!--                         <div class="overlay"></div> -->
+        <!--                         <div class="icon"> -->
+        <!--                             <a class="image-popup" src="{% static "dap/img/gallery-img.jpg" %}" title="<h4>Sed at rutrum felis</h4>Curabitur nec metus tempor, malesuada quam a, laoreet urna."><i class="pe-3x pe-7s-plus"></i></a> -->
+        <!--                         </div> -->
+        <!--                     </div> -->
+
+        <!--                     <div class="item wrap"> -->
+        <!--                         <img class="img-responsive" src="{% static "dap/img/thumb9.png" %}" alt=""> -->
+        <!--                         <div class="overlay"></div> -->
+        <!--                         <div class="icon"> -->
+        <!--                             <a class="image-popup" src="{% static "dap/img/gallery-img.jpg" %}" title="<h4>Sed at rutrum felis</h4>Curabitur nec metus tempor, malesuada quam a, laoreet urna."><i class="pe-3x pe-7s-plus"></i></a> -->
+        <!--                         </div> -->
+        <!--                     </div> -->
+
+        <!--                     <div class="item wrap"> -->
+        <!--                         <img class="img-responsive" src="{% static "dap/img/thumb10.png" %}" alt=""> -->
+        <!--                         <div class="overlay"></div> -->
+        <!--                         <div class="icon"> -->
+        <!--                             <a class="image-popup" src="{% static "dap/img/gallery-img.jpg" %}" title="<h4>Sed at rutrum felis</h4>Curabitur nec metus tempor, malesuada quam a, laoreet urna."><i class="pe-3x pe-7s-plus"></i></a> -->
+        <!--                         </div> -->
+        <!--                     </div> -->
+
+        <!--                     <div class="item wrap"> -->
+        <!--                         <img class="img-responsive" src="{% static "dap/img/thumb11.png" %}" alt=""> -->
+        <!--                         <div class="overlay"></div> -->
+        <!--                         <div class="icon"> -->
+        <!--                             <a class="image-popup" src="{% static "dap/img/gallery-img.jpg" %}" title="<h4>Sed at rutrum felis</h4>Curabitur nec metus tempor, malesuada quam a, laoreet urna."><i class="pe-3x pe-7s-plus"></i></a> -->
+        <!--                         </div> -->
+        <!--                     </div> -->
+
+        <!--                     <div class="item wrap"> -->
+        <!--                         <img class="img-responsive" src="{% static "dap/img/thumb12.png" %}" alt=""> -->
+        <!--                         <div class="overlay"></div> -->
+        <!--                         <div class="icon"> -->
+        <!--                             <a class="image-popup" src="{% static "dap/img/gallery-img.jpg" %}" title="<h4>Sed at rutrum felis</h4>Curabitur nec metus tempor, malesuada quam a, laoreet urna."><i class="pe-3x pe-7s-plus"></i></a> -->
+        <!--                         </div> -->
+        <!--                     </div> -->
+
+        <!--                     <div class="item wrap"> -->
+        <!--                         <img class="img-responsive" src="{% static "dap/img/thumb13.png" %}" alt=""> -->
+        <!--                         <div class="overlay"></div> -->
+        <!--                         <div class="icon"> -->
+        <!--                             <a class="image-popup" src="{% static "dap/img/gallery-img.jpg" %}" title="<h4>Sed at rutrum felis</h4>Curabitur nec metus tempor, malesuada quam a, laoreet urna."><i class="pe-3x pe-7s-plus"></i></a> -->
+        <!--                         </div> -->
+        <!--                     </div> -->
+
+        <!--                     <div class="item wrap"> -->
+        <!--                         <img class="img-responsive" src="{% static "dap/img/thumb14.png" %}" alt=""> -->
+        <!--                         <div class="overlay"></div> -->
+        <!--                         <div class="icon"> -->
+        <!--                             <a class="image-popup" src="{% static "dap/img/gallery-img.jpg" %}" title="<h4>Sed at rutrum felis</h4>Curabitur nec metus tempor, malesuada quam a, laoreet urna."><i class="pe-3x pe-7s-plus"></i></a> -->
+        <!--                         </div> -->
+        <!--                     </div> -->
+
+
+        <!--                 </div> -->
+        <!--             </div> -->
+
+        <!--         </div> -->
+        <!--     </div> -->
+        <!-- </section> -->
+
+        <!-- SPONSORS -->
+        <section id="sponsors">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="uppercase">sponsors</h2>
+                        <p class="lead">Duis ut quam sed ex consectetur euismod. Aliquam et condimentum eros.</p>
+
+                        <div id="sponsors-carousel">
+
+                            <div class="sponsor">
+                                <img class="img-responsive" src="{% static "dap/img/sponsor1.png" %}" alt="">
+                            </div>
+
+                            <div class="sponsor">
+                                <img class="img-responsive" src="{% static "dap/img/sponsor2.png" %}" alt="">
+                            </div>
+
+                            <div class="sponsor">
+                                <img class="img-responsive" src="{% static "dap/img/sponsor3.png" %}" alt="">
+                            </div>
+
+                            <div class="sponsor">
+                                <img class="img-responsive" src="{% static "dap/img/sponsor4.png" %}" alt="">
+                            </div>
+
+                            <div class="sponsor">
+                                <img class="img-responsive" src="{% static "dap/img/sponsor5.png" %}" alt="">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- google map -->
+		<div id="gmap_canvas"></div>
+
+        <!-- FOOTER -->
+        <footer id="footer">
+        	<div class="container">
+            	<div class="row">
+
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                    	<h4 class="uppercase">Dynamic Acro Program</h4>
+                        <p class="small">Vestibulum in ultrices justo. Praesent placerat justo metus, vitae malesuada lacus eleifend vel. Vivamus viverra volutpat leo, a gravida dolor posuere congue.</p>
+                        <ul class="list-unstyled list-inline uppercase">
+                            <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-lg fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-lg fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                    	<h4 class="uppercase">FAQ</h4>
+                        <!--<p class="small">Etiam nec porta risus. Aliquam id odio orci. Duis accumsan feugiat feugiat.</p>-->
+
+                        <dl class="faqs">
+                        	<dt>Is this the first question?</dt>
+                        	<dd class="small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</dd>
+
+                        	<dt>Mauris ac metus in justo rhoncus?</dt>
+                        	<dd class="small">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</dd>
+
+                        	<dt>Praesent eleifend lacinia?</dt>
+                        	<dd class="small">Nam eget dui. Etiam rhoncus. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo.</dd>
+
+                            <dt> Cras id metus vitae?</dt>
+                        	<dd class="small">Vivamus dignissim urna id condimentum lacinia. Fusce tristique ultrices est, at semper turpis ullamcorper eu.</dd>
+                        </dl>
+                    </div>
+
+
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <h4 class="uppercase">newsletter</h4>
+
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <input type="email" id="newsletter_email">
+                            </div>
+                            <div class="col-lg-4">
+                                <button class="button button-big button-line-light" onclick="newsletter_send();">subscribe</button>
+                            </div>
+                        </div>
+
+                        <p class="small">Pellentesque laoreet leo ut suscipit feugiat. Sed ultricies convallis nunc quis malesuada.</p>
+
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+        <!-- SUBFOOTER -->
+        <div class="subfooter">
+        	<div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12">
+                        <ul class="list-unstyled list-inline pull-right uppercase">
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Press Kit</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!- GOOGLE MAP -->
+        <script>
+          function initMap() {
+            var nyevent = {lat: 40.801485408197856, lng: -73.96745953467104};
+            var map = new google.maps.Map(document.getElementById('gmap_canvas'), {
+              zoom: 14,
+              center: nyevent,
+              scrollwheel: false,
+              styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}],
+             // mapTypeId: google.maps.MapTypeId.ROADMAP,
+            });
+
+            // Define Marker properties
+            var image = new google.maps.MarkerImage('dap/img/map-logo.png',
+             // This marker is 129 pixels wide by 42 pixels tall.
+             new google.maps.Size(125, 75),
+             // The origin for this image is 0,0.
+             new google.maps.Point(0,0),
+             // The anchor for this image is the base of the flagpole at 18,42.
+             new google.maps.Point(18, 42)
+            );
+
+            // Add Marker
+            var marker1 = new google.maps.Marker({
+             position: new google.maps.LatLng(40.801485408197856, -73.96745953467104),
+             map: map,
+             icon: image // This path is the custom pin to be shown. Remove this line and the proceeding comma to use default pin
+            });
+
+            // Add listener for a click on the pin
+            google.maps.event.addListener(marker1, 'click', function() {
+             infowindow1.open(map, marker1);
+            });
+
+            // Add information window
+            var infowindow1 = new google.maps.InfoWindow({
+             content:  createInfo('Eventr', '1571 Hidden Terrace,<br />New York, NY, 13247,<br />(917) 600-4570<br /><br />')
+            });
+
+            // Create information window
+            function createInfo(title, content) {
+             return '<div class="infowindow"><h4>'+ title +'</h4>'+content+'</div>';
+            }
+          }
+        </script>
+
+    	  <script src="{% static "dap/js/jquery-1.11.1.min.js" %}"></script>
+        <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script> -->
+        <script src="{% static "dap/js/jquery.themepunch.tools.min.js" %}"></script>
+        <script src="{% static "dap/js/jquery.themepunch.revolution.min.js" %}"></script>
+        <script src="{% static "dap/js/bootstrap.min.js" %}"></script>
+        <script src="{% static "dap/js/jquery.sticky.js" %}"></script>
+        <script src="{% static "dap/js/jquery.magnific-popup.min.js" %}"></script>
+        <script src="{% static "dap/js/salvattore.js" %}"></script>
+        <script src="{% static "dap/js/jquery.countdown.js" %}"></script>
+        <script src="{% static "dap/js/jquery.mCustomScrollbar.concat.min.js" %}"></script>
+        <script src="{% static "dap/js/waypoints.min.js" %}"></script>
+        <script src="{% static "dap/js/jquery.counterup.min.js" %}"></script>
+        <script src="{% static "dap/js/owl.carousel.min.js" %}"></script>
+        <script src="{% static "dap/js/retina.js" %}"></script>
+
+        <script src="{% static "dap/js/main.js" %}"></script>
+
+
+
+
+        <!-- <!-1- GOOGLE ANALYTICS -1-> -->
+        <!-- <script> -->
+		  <!-- (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ -->
+		  <!-- (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), -->
+		  <!-- m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) -->
+		  <!-- })(window,document,'script','http://www.google-analytics.com/analytics.js','ga'); -->
+
+		  <!-- ga('create', 'UA-XXXXXXX-XX', 'yourdomain.com'); -->
+		  <!-- ga('send', 'pageview'); -->
+
+		<!-- </script> -->
+
+	</body>
+</html>
