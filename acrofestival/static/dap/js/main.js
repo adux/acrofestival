@@ -186,10 +186,44 @@ jQuery(document).ready(function($) {
 			[1200, 3],
 		  ],
 		  pagination : false,
-		  navigation : true,
+		  navigation : false,
 		  navigationText : ['<i class="pe-4x pe-7s-angle-left pe-border"></i>','<i class="pe-4x  pe-7s-angle-right pe-border"></i>'],
 	  });
 	
+	  //OWLCAROUSEL PRICE TABLE CAROUSEL
+	var owl = $("#price-carousel-2");
+ 
+	  owl.owlCarousel({
+		  itemsCustom : [
+			[0, 1],
+			[450, 1],
+			[600, 2],
+			[700, 3],
+			[1000, 3],
+			[1200, 3],
+		  ],
+		  pagination : false,
+		  navigation : false,
+		  navigationText : ['<i class="pe-4x pe-7s-angle-left pe-border"></i>','<i class="pe-4x  pe-7s-angle-right pe-border"></i>'],
+	  });
+
+	  //OWLCAROUSEL PRICE TABLE CAROUSEL
+	var owl = $("#price-carousel-3");
+ 
+	  owl.owlCarousel({
+		  itemsCustom : [
+			[0, 1],
+			[450, 1],
+			[600, 2],
+			[700, 3],
+			[1000, 3],
+			[1200, 3],
+		  ],
+		  pagination : false,
+		  navigation : false,
+		  navigationText : ['<i class="pe-4x pe-7s-angle-left pe-border"></i>','<i class="pe-4x  pe-7s-angle-right pe-border"></i>'],
+	  });
+
 	//OWLCAROUSEL TESTIMONIAL CAROUSEL
 	var owl = $("#testimonial-carousel");
  
