@@ -572,7 +572,7 @@ a {
 }
 
 #venue .venue {
-	background-image: url(../img/bg-venue.png);
+	background-image: url(../img/bg-venue.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -667,7 +667,7 @@ a {
 /* FUNFACTS */
 
 #funfacts  {
-	background-image: url(../img/bg-funfacts.png);
+	background-image: url(../img/bg-funfacts.jpg);
 	background-repeat: no-repeat;
 	background-attachment:fixed;
 	background-position: center;
@@ -836,7 +836,7 @@ a {
 
 #testimonial {
 	background:#fac42b;
-	background-image: url(../img/bg-testimonial.png);
+	background-image: url(../img/bg-testimonial.jpg);
 	background-repeat: no-repeat;
 	background-attachment:fixed;
 	background-position: center;
