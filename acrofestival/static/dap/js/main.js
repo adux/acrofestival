@@ -101,7 +101,7 @@ jQuery(document).ready(function($) {
 	//COUNTDOWN TIMER
 	var newYear = new Date();
     newYear = new Date(newYear.getFullYear() + 1, 1 - 1, 1);
-    $('#countdown').countdown({until: new Date(2021, 6-1, 29)}); // enter event day
+    $('#countdown').countdown({until: new Date(2021, 7-1, 1)}); // enter event day
 
     $('#removeCountdown').toggle(
         function() {
