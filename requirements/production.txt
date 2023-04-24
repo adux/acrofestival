@@ -3,13 +3,13 @@
 -r ./base.txt
 
 gunicorn==20.1.0  # https://github.com/benoitc/gunicorn
-psycopg2==2.8.4 --no-binary psycopg2  # https://github.com/psycopg/psycopg2
-raven==6.8.0  # https://github.com/getsentry/raven-python
+psycopg2==2.8.6  # https://github.com/psycopg/psycopg2
+raven==6.10.0  # https://github.com/getsentry/raven-python
 
 # Django
 # ------------------------------------------------------------------------------
-django-storages[boto3]==1.6.6  # https://github.com/jschneier/django-storages
-django-anymail==2.2  # https://github.com/anymail/django-anymail
+django-storages[boto3]==1.12.3  # https://github.com/jschneier/django-storages
+django-anymail==8.6  # https://github.com/anymail/django-anymail
 
 #Analytical
-django-analytical==2.4.0
+django-analytical==2.6.0
