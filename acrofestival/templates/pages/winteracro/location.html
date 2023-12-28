@@ -4,7 +4,7 @@
 <div id="wrapper">
     <!-- Header -->
     <header id="header">
-        <h1>Lenk im Simmental</h1>
+        <h1>Tschlin im Engandin</h1>
         <p>How to get there and where will we sleep</p>
     </header>
     {% include "pages/winteracro/snippets/navnothome.html" %}
@@ -16,7 +16,7 @@
                 <img src="{% static "winteracro/images/pic04.jpg"%}" alt="lenk accomodation for the winter acro festival" />
             </span>
             <h1>Accommodation</h1>
-            <h2>Mountain lodge camp</h2>
+            <h2>Main House</h2>
             <p>
             <span class="image right">
                     <img src="{% static "winteracro/images/pic05.jpg" %}" alt="winter acromodation for the acrolama winter acro festival" />
@@ -39,37 +39,19 @@
         <section id="location" class="main">
             <h1>Transportation</h1>
             <h2>By train:</h2>
-            <p>The wonderful destination of Lenk lays at the end of a beautiful and varied train
-            ride from either Bern or Montreux.</br>
-            There's only one train change from Bern to Lenk.</br>
-            The Lötschberger train takes you hourly from Bern directly to Zweisimmen,
-            where you’ll change trains to catch the 20 minute regional train to Lenk.</p>
+            {% tinycontent_simple 'winter_transportation_train' %}
             <h3>Approximate travel times by train</h3>
-            <ul>
-                <li>Zurich – Berne – Lenk: 2h 30 min</li>
-                <li>Basel – Berne – Lenk: 2h 15 min</li>
-                <li>Geneva – Lausanne – Montreux – Lenk: 3h 30 min</li>
-                <li>Berne/Belp – Lenk: 1h 45 min</li>
-            </ul>
+            {% tinycontent_simple 'winter_transportation_train_time' %}
             <h3>Tickets</h3>
-            <p> Tickets can be bought in the Swiss Main Trains system
+            {% tinycontent_simple 'winter_transportation_tickets' %}
             <a href="https://www.sbb.ch/">SBB</a></br>
-            Prices are very relative to how soon you buy the tickets and time of train.
+            <a href="https://www.rome2rio.com/">Rome2Rio has offers worth checking</a></br>
+            Prices are very relative.
             As a obvious general recommendation <u>book with time!</u></p>
             <h2>By car:</h2>
-            <p> Traveling on the A6 motorway Bern-Thun, take the Wimmis/Zweisimmen exit through
-            the Simmenfluh Tunnel, on the other side of which begins your journey up the Simme
-            River Valley. The main road in the valley, the Simmentalstrasse.</br>
-            Coming from Bulle and the Canton of Freiburg, one can reach Lenk via Charmey by
-            traveling over the Jaunpass into the Simmental (Boltigen) or by
-            traveling via Château d’Oex-Saanen-Zweisimmen.</p>
+            {% tinycontent_simple 'winter_transportation_car' %}
             <h3>Approximate travel times by car</h3>
-            <ul>
-                <li>Berne – Lenk: 1h 15min</li>
-                <li>Basel – Lenk: 2h</li>
-                <li>Geneva – Lenk: 2h 15min</li>
-                <li>Zurich – Lenk: 2h 30min</li>
-            </ul>
+            {% tinycontent_simple 'winter_transportation_car_time' %}
             <footer class="major">
                 <ul class="actions">
                         <li><a href="{% url "winteracro"%}" class="button">Back</a></li>
