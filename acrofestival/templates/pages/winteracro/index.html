@@ -17,14 +17,14 @@
             <div class="spotlight">
                 <div class="content">
                     <header class="major">
-                        <h2>What's it all about</h2>
+                        <h2>Winteracro 2024</h2>
                     </header>
                         <p>
                         {% tinycontent_simple 'winter_home_intro' %}
                         </p>
                     <ul class="actions">
                         <li>
-                            <a style="box-shadow:0px 0px; background:#f3d216;" target="_blank" rel="noopener" href="https://acrolama.com/events/winter-acro-festival-2022/" class="button">
+                            <a style="box-shadow:0px 0px; background:#f3d216;" target="_blank" rel="noopener" href="https://urbanacro.com/events/winter-acro-festival-2022/" class="button">
                                 Register
                             </a>
                         </li>
@@ -159,47 +159,34 @@
                 </p>
                 <div class="box alt">
                     <div class="row gtr-uniform">
-                        <p><h2>Isis & Nathan aka. StandingAcro</h2></p>
+                        <p><h2>Kat & Jared - Duo Acrokatics</h2></p>
                         <p>
                         <span class="image left">
                                 <img src="{% static "winteracro/images/teachers2019/acrostandingacro.jpg"%}" alt="Standing Acro at the Winter Acro 2022">
                         </span>
-                        You prooooobably already know them and if you don't, you should come and meet them ;-)! Excellent acrobats with a unique style and sens of humor. Glad to have you guys on board!
+                        Check them out at: <a href="https://www.instagram.com/acrolinks/">Arolinks on Insta</a>
                         </p>
                         <p><h2>Bruno</h2></p>
                         <p>
                         <span class="image left">
-                        <img src="{% static "winteracro/images/teachers2019/bruno.jpg"%}" alt="Bruno the master of improvisation, clown and show winter acro 2022"></img>
+                            <img src="{% static "winteracro/images/teachers2019/bruno.jpg"%}" alt="Bruno the master of improvisation, clown and show winter acro 2022"></img>
                         </span>
                         I had to laugh only from remembering Bruno! <u>Improvisation and staging</u> are he's strengths and passion. But it's hard to find the words to describe such a warm hearted clown, you just have to meet him. Happy to have you with us my friend!
                         </p>
-                        <p><h2>Wybren & Trudi</h2></p>
+                        <p><h2>Je & Cuzio - Acrolinks</h2></p>
                         <p>
                         <span class="image left">
-                                <img src="{% static "winteracro/images/teachers2019/wybremandtrudi.jpg"%}" alt="Wybren and Trudi at the Winter Acro 2022">
+                            <img src="{% static "winteracro/images/teachers2019/alfonsoandceline.jpg"%}" alt="Wybren and Celine at the Winter Acro 2022">
                         </span>
-                        We ones again count with the blessing of having Trudi and Wybren! Nothing better then getting some real coaching for those serious tricks and share some good old stories with a cold beer.
-                        </p>
-                        <p><h2>Peter & Julie</h2></p>
-                        <p>
-                        <span class="image left">
-                                <img src="{% static "winteracro/images/teachers2019/peterandjulie.jpg"%}" alt="Peter Hunter and Julie Hundle at the Winter Acro 2022">
-                        </span>
-                        Acroyoga aint about competing ... we get it ... but if it was a competition, and cuteness and fun where the criteria, they would win, for life ... Glad to see you soon amigos.
-                        </p>
-                        <p><h2>Alfonso & Isa</h2></p>
-                        <p>
-                        <span class="image left">
-                                <img src="{% static "winteracro/images/teachers2019/alfonsoandceline.jpg"%}" alt="Wybren and Celine at the Winter Acro 2022">
-                        </span>
-                        I always joke with Alfonso that he comes with the inventory of the Winter Acro. As famous as he is, we have someone managed to keep the tradition! Glad to have you on board brother! This time with Isa, another amazing Icarian/Acro flyer from the northern regions of Europe. Looking forward! 
+                        Icarian fanatics which bring us some smooth and creative tricks with a sprinkle of "Wow"<br>
+                        Check them out at: <a href="https://www.instagram.com/acrolinks/">Arolinks on Insta</a>
                         </p>
                     </div>
             </div>
         </section>
         <section id="pics" class="main">
                 <header class="major">
-                <h2>Photos 2018 - 2019</h2>
+                <h2>Photos 2018 - 2022 - Lenk</h2>
                 <h3>by Matthias Bleisch and Fii</h3>
                 </header>
                 <div class="box alt">
@@ -225,52 +212,34 @@
                 <h2>Schedule</h2>
                 <p>{% tinycontent_simple 'winter_home_schedule' %}
                 </p>
-                <h2><a href="https://docs.google.com/spreadsheets/d/1U3Kyh77kwNPIyxkHhSyy07eEJlW29MELMOcjYbLpHWQ/edit?usp=sharing" target="_blank">WORKSHOP SCHEDULE</a></h2>
+                <!-- <h2><a href="https://docs.google.com/spreadsheets/d/1U3Kyh77kwNPIyxkHhSyy07eEJlW29MELMOcjYbLpHWQ/edit?usp=sharing" target="_blank">WORKSHOP SCHEDULE</a></h2> -->
             </header>
-                <h2>Saturday</h2>
-                <ul class="statistics">
-                    {% for obj in sat %}
-                    <li class="{{obj.style}}">
-                            <span class="fas {{obj.icon}}"></span>
-                            <strong>{{obj.time}}</strong> {{obj.title}}
-                </li>
-                {% endfor %}
-                </ul>
-                <h2>Sunday</h2>
-                <ul class="statistics">
-                    {% for obj in sun %}
-                    <li class="{{obj.style}}">
-                            <span class="fas {{obj.icon}}"></span>
-                            <strong>{{obj.time}}</strong> {{obj.title}}
-                </li>
-                {% endfor %}
-                </ul>
                 <h2>Monday</h2>
                 <ul class="statistics">
                     {% for obj in mon %}
                     <li class="{{obj.style}}">
                             <span class="fas {{obj.icon}}"></span>
                             <strong>{{obj.time}}</strong> {{obj.title}}
-                </li>
-                {% endfor %}
+                    </li>
+                    {% endfor %}
                 </ul>
                 <h2>Tuesday</h2>
                 <ul class="statistics">
-                {% for obj in tue %}
-                <li class="{{obj.style}}">
-                            <span class="fas {{obj.icon}}"></span>
-                            <strong>{{obj.time}}</strong> {{obj.title}}
-                </li>
-                {% endfor %}
+                    {% for obj in tue %}
+                    <li class="{{obj.style}}">
+                                <span class="fas {{obj.icon}}"></span>
+                                <strong>{{obj.time}}</strong> {{obj.title}}
+                    </li>
+                    {% endfor %}
                 </ul>
                 <h2>Wednesday</h2>
                 <ul class="statistics">
-                {% for obj in wed %}
-                    <li class="{{obj.style}}">
-                        <span class="fas {{obj.icon}}"></span>
-                        <strong>{{obj.time}}</strong> {{obj.title}}
-                </li>
-                {% endfor %}
+                    {% for obj in wed %}
+                        <li class="{{obj.style}}">
+                            <span class="fas {{obj.icon}}"></span>
+                            <strong>{{obj.time}}</strong> {{obj.title}}
+                    </li>
+                    {% endfor %}
                 </ul>
                 <h2>Thursday</h2>
                 <ul class="statistics">
@@ -278,8 +247,8 @@
                     <li class="{{obj.style}}">
                             <span class="fas {{obj.icon}}"></span>
                             <strong>{{obj.time}}</strong> {{obj.title}}
-                </li>
-                {% endfor %}
+                    </li>
+                    {% endfor %}
                 </ul>
                 <h2>Friday</h2>
                 <ul class="statistics">
@@ -287,40 +256,58 @@
                     <li class="{{obj.style}}">
                             <span class="fas {{obj.icon}}"></span>
                             <strong>{{obj.time}}</strong> {{obj.title}}
-                </li>
-                {% endfor %}
+                    </li>
+                    {% endfor %}
                 </ul>
+                <h2>Saturday</h2>
+                <ul class="statistics">
+                    {% for obj in sat %}
+                    <li class="{{obj.style}}">
+                            <span class="fas {{obj.icon}}"></span>
+                            <strong>{{obj.time}}</strong> {{obj.title}}
+                    </li>
+                    {% endfor %}
+                </ul>
+                <!-- <h2>Sunday</h2> -->
+                <!-- <ul class="statistics"> -->
+                <!--     {% for obj in sun %} -->
+                <!--     <li class="{{obj.style}}"> -->
+                <!--             <span class="fas {{obj.icon}}"></span> -->
+                <!--             <strong>{{obj.time}}</strong> {{obj.title}} -->
+                <!--     </li> -->
+                <!--     {% endfor %} -->
+                <!-- </ul> -->
         </section>
-        <section id="donation" class="main">
-            <div class="spotlight">
-                <div class="content">
-                    <header class="major">
-                        <h2>Plant a tree campaign</h2>
-                    </header>
-                        <p>
-                        Already last year we supported this campaign at the Winter Acro with a lot of success and we hope we can get to help this year again.<br/>
-                        This video inspired us:
-                        <div class="iframe-container">
-                        <iframe src="https://www.youtube.com/embed/-Q0xUXo2zEY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <br>
-                        and so we found out about <a href="https://www.plant-for-the-planet.org">Plant for the planet</a> and their campaign <a href="https://www.trilliontreecampaign.org">Trillion trees</a>. We love it: the goal is simple, direct and they make it achievable.<br><br>
-                        A ton of NGO support them. Think it more as a connecting platform to make donation, for this particular cause, as simple as possible.<br>
-                        We looked between the organisations to find one we could speak directly, in person. And we found <a href="https://www.bos-schweiz.ch/">Bos Schweiz</a>
-                        They really do an awesome job to solve the tree problem from the roots (Saw what i did there ;D). Let them explain:
-                        <br><br>
-                        <div class="iframe-container">
-                        <iframe src="https://www.youtube.com/embed/16NCtzxrfrI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        </p>
-                    <ul class="actions">
-                        <li>
-                            We got a donation box on our registration. But you can make it directly too!<br>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        <!-- <section id="donation" class="main"> -->
+        <!--     <div class="spotlight"> -->
+        <!--         <div class="content"> -->
+        <!--             <header class="major"> -->
+        <!--                 <h2>Plant a tree campaign</h2> -->
+        <!--             </header> -->
+        <!--                 <p> -->
+        <!--                 Already last year we supported this campaign at the Winter Acro with a lot of success and we hope we can get to help this year again.<br/> -->
+        <!--                 This video inspired us: -->
+        <!--                 <div class="iframe-container"> -->
+        <!--                 <iframe src="https://www.youtube.com/embed/-Q0xUXo2zEY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <!--                 </div> -->
+        <!--                 <br> -->
+        <!--                 and so we found out about <a href="https://www.plant-for-the-planet.org">Plant for the planet</a> and their campaign <a href="https://www.trilliontreecampaign.org">Trillion trees</a>. We love it: the goal is simple, direct and they make it achievable.<br><br> -->
+        <!--                 A ton of NGO support them. Think it more as a connecting platform to make donation, for this particular cause, as simple as possible.<br> -->
+        <!--                 We looked between the organisations to find one we could speak directly, in person. And we found <a href="https://www.bos-schweiz.ch/">Bos Schweiz</a> -->
+        <!--                 They really do an awesome job to solve the tree problem from the roots (Saw what i did there ;D). Let them explain: -->
+        <!--                 <br><br> -->
+        <!--                 <div class="iframe-container"> -->
+        <!--                 <iframe src="https://www.youtube.com/embed/16NCtzxrfrI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <!--                 </div> -->
+        <!--                 </p> -->
+        <!--             <ul class="actions"> -->
+        <!--                 <li> -->
+        <!--                     We got a donation box on our registration. But you can make it directly too!<br> -->
+        <!--                 </li> -->
+        <!--             </ul> -->
+        <!--         </div> -->
+        <!--     </div> -->
+        <!-- </section> -->
     </div>
     {% include 'pages/winteracro/snippets/footer.html' %}
 </div>
