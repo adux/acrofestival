@@ -81,39 +81,16 @@
                             <img src="{% static 'urbanacro/images/acrofestival_3rd_edition.jpg' %}" alt="" class="img-responsive" />
                         </div>
                         <div class="col-sm-7 align-left">
-                            <h6>6th. Urban Acro Festival</h6>
-                            <p>Time for another UAF! Hope we continue to be so lucky and not have to skip a single one!
-                                We have selected great teachers/friends around Switzerland and Europe
-                                and are happy to share with you a cool mix of different challenging and fun
-                                acro workshops over this weekend festival.</p>
-                            <p>Going full on training and playing is our bread and butter but there must be space for social,
-                                creative moments with a surprise here and there!</p>
-                            <p>We have this year only spots for 80 participants.</p>
+                            <h6>{% tinycontent_simple "urban_general_version" %}Urban Acro Festival</h6>
+                            <p>{% tinycontent_simple "urban_general_description" %}</p>
+                            <p>{% tinycontent_simple "urban_general_participants" %}</p>
                         </div>
                     </div>
 
                     <div id="horizontal_tab2" class="tab-pane fade">
                         <div class="col-sm-7 align-right">
                             <h6>Workshops</h6>
-
-                            <p>Spreading acro is our goal. We are happy to offer you a nice workshop
-                                list with many different styles of movement:</p>
-                            <p>Flow, Dynamic and Standing Acro ... From Intro to Advanced.
-                                It's three days of moving, sharing and having fun.</p>
-                            <p>We have carefully chosen our teacher-team around the Switzerland and Europe Acro
-                                Community. We trust in them and love to offer you small, personalized
-                                workshops. Of conviction, we keep it small and familiarly.</p>
-                            <p>So all in all, we are looking forward to 6 Rounds with each 3 Workshops
-                                to choose from.</p>
-                            <p>We'll list the Workshops as soon as possible, to receive the last news
-                                join or Newsletter or our Whatsapp Group</p>
-                            <p>As a little extra, we have each day:</p>
-                            <ul>
-                                <li>Morning Yoga Sessions</li>
-                                <li>Partner Thai Massage</li>
-                                <li>Handstand training</li>
-                                <li>Jam with longe</li>
-                            </ul>
+                            <p> {% tinycontent_simple "urbanacro_general_workshops" %}</p>
                         </div>
                         <div class="col-sm-5 images-column">
                             <img src="{% static "urbanacro/images/acrofestival_workshops.JPG"%}" alt="" class="img-responsive" />
@@ -126,10 +103,7 @@
                         </div>
                         <div class="col-sm-7 align-left">
                             <h6>What's included</h6>
-                            <li>main dishes and snacks, all vegan and organic</li>
-                            <li>workshop from some awesome local teachers</li>
-                            <li>all day jam to make sure you get enough acro</li>
-                            <li>special Saturday evening event ;-) </li>
+                            <p>{% tinycontent_simple "urban_general_included" %}</p>
                             </ul>
                         </div>
                     </div>
@@ -144,9 +118,7 @@
             <div class="col-sm-6 align-right fullwidth-column">
                 <article>
                     <h3>Food Corner</h3>
-                    <p><small class="text-alt">Not to picky <span class="highlight"> only local, organic and vegan with Love.</span></small></p>
-                    <p>We set a high value on healthy food. So everything you eat during this days comes from the local farmer and will be cooked with love. As we train all day long we need energy and we want to have high quality food for everyone.</p>
-                    <p>Vegan, organic, regional, fair and food-waste-conscious ingredients and processes are a given, forming a solid foundation upon which creativity roams free.</p>
+                    <p>{% tinycontent_simple "urban_general_food" %}</p>
                 </article>
             </div>
         </div>
@@ -155,30 +127,25 @@
             <div class="col-sm-6 col-sm-offset-6 align-left fullwidth-column">
                 <article>
                     <h3>Sleeping Area</h3>
-                    <p><small class="text-alt">Better <span class="highlight">together</span></small></p>
-                    <p>The gallery above the training hall and the barn in the Zirkusquartier
-                    area will be our two sleeping halls.</p>
-                    <p>Each spot fit approximately 25 people. Simple and easy<span class="highlight"> first comes first serves</span>.</p>
-                    <p><strong>Bring your own sleeping bag and matt to sleep.</strong></p>
-                    <p>More comfort?<br><br>In Zurich City there are many hostels or check out www.airbnb.com<br></p>
+                    <p>{% tinycontent_simple "urban_general_sleeping" %}</p>
                 </article>
             </div>
         </div>
-        <div class="fullwidth-path">
-                <div class="fullwidth-section-bg bg-right" style="background-image: url('{% static 'urbanacro/images/acrofestival_bos_schweiz.jpg'%}');"></div>
-            <div class="col-sm-6 align-left fullwidth-column">
-                <article>
-                    <h3>BOS Schweiz</h3>
-                    <p>Acrolama is officially a corporate partnership from BOS Schweiz and supports
-                        the one-tree-one-life reforestation campaign.</p>
-                    <p>We love it: the goal is simple, direct and they make it achievable.</p>
-                    <p>Through previous events we have already planted 255 new seedlings. Now we
-                        ask YOU to help! At the registration desk will be a little donation box to
-                        support this campaign and save our irreplaceable rain-forests. Thanks!</p>
-                    <p>More details about BOS Switzerland:<a href="https://www.bos-schweiz.ch/de/home/home.html">Bos-Schweiz</a></p>
-                </article>
-            </div>
-        </div>
+        <!-- <div class="fullwidth-path"> -->
+        <!--         <div class="fullwidth-section-bg bg-right" style="background-image: url('{% static 'urbanacro/images/acrofestival_bos_schweiz.jpg'%}');"></div> -->
+        <!--     <div class="col-sm-6 align-left fullwidth-column"> -->
+        <!--         <article> -->
+        <!--             <h3>BOS Schweiz</h3> -->
+        <!--             <p>Acrolama is officially a corporate partnership from BOS Schweiz and supports -->
+        <!--                 the one-tree-one-life reforestation campaign.</p> -->
+        <!--             <p>We love it: the goal is simple, direct and they make it achievable.</p> -->
+        <!--             <p>Through previous events we have already planted 255 new seedlings. Now we -->
+        <!--                 ask YOU to help! At the registration desk will be a little donation box to -->
+        <!--                 support this campaign and save our irreplaceable rain-forests. Thanks!</p> -->
+        <!--             <p>More details about BOS Switzerland:<a href="https://www.bos-schweiz.ch/de/home/home.html">Bos-Schweiz</a></p> -->
+        <!--         </article> -->
+        <!--     </div> -->
+        <!-- </div> -->
     </section>
 
     <!-- Counters Section -->
@@ -240,78 +207,54 @@
     <section id="teachers" class="section align-center">
         <div class="container">
             <span class="icon section-icon icon-faces-users-04"></span>
-            <h3>Teachers 2023</h3>
-            <p class="text-alt">Soon <span class="highlight"> International and Swiss teachers.</span></p>
+            <h3>Teachers {%tinycontent_simple "urbanacro_teachers_year" %}</h3>
+            <p class="text-alt">{% tinycontent_simple "urbanacro_teachers_about" %}</p>
             <br />
             <br />
-            <!-- <div class="col-sm-4"> -->
-            <!--     <div class="speaker"> -->
-            <!--         <div class="photo-wrapper"><img src="{% static 'urbanacro/images/speakers/acrofestival_jarno_tacha.jpg' %}" alt="Jarno and Tacha Acroatia at the Urban Acro Festival Icarian Games Schweiz" class="img-responsive"></div> -->
-            <!--         <h3 class="name">Jarno & Tacha</h3> -->
-            <!--         <p class="text-alt"><small>Standing Dynamic Acrobatics</small></p> -->
-            <!--         <p class="about">Just saw Jarno again in Acroatia, what a wonderful experience it is. It's just cool when a teacher knows their craft and has a sense humor and technique. This time with Tacha they come to the Urban Acro directly from Belgium, where they perform in diverse Circus shows, to share some Standing Acro with us. Thanks for coming! -->
-            <!--         </p> -->
-            <!--         <ul class="speaker-socials"> -->
-            <!--         <a href="https://www.instagram.com/jarnobiel/">@jarnobiel</a> -->
-            <!--         </ul> -->
-            <!--     </div> -->
-            <!-- </div> -->
-            <!-- <!-1- Teachers Come here -1-> -->
-            <!-- <div class="col-sm-4"> -->
-            <!--     <div class="speaker"> -->
-            <!--         <div class="photo-wrapper"><img src="{% static 'urbanacro/images/speakers/acrofestival_uwe_jasmina.jpg' %}" alt="Uwe and Jasmina Acro Dance at the Urban Acro Festival in Zürich" class="img-responsive"></div> -->
-            <!--         <h3 class="name">Uwe & Jasmina</h3> -->
-            <!--         <p class="text-alt"><small>Le Icarian Akrosphare</small></p> -->
-            <!--         <p class="about">Love this two Artists from Austria. They come to show us some Icarian and Group acro. Have you seen their show? It's all about it! Just amazing!! Where also recently in the Icarian Acro Convention in Spain. Thanks for being with us now! -->
-            <!--         <ul class="speaker-socials"> -->
-            <!--         </ul> -->
-            <!--     </div> -->
-            <!-- </div> -->
-            <!-- <div class="col-sm-4"> -->
-            <!--     <div class="speaker"> -->
-            <!--         <div class="photo-wrapper"><img src="{% static 'urbanacro/images/speakers/acrofestival_josh_and_cloe.jpg' %}" alt="Josh and Cloe, feel the flow hamburg in the Urban Acro festival Zürich" class="img-responsive"></div> -->
-            <!--         <h3 class="name">Josh & Cloe</h3> -->
-            <!--         <p class="text-alt"><small>Dream Team</small></p> -->
-            <!--         <p class="about">They just always manage too surprise me. Acrobatically of course, but also as humans, dancers, performers, been super lucky to see their path from the start. They just recently finshed their circus studies in Portugal and have been performing ever since. Thanks for coming back this year! -->
-            <!--         <ul class="speaker-socials"> -->
-            <!--         <a href="https://www.instagram.com/josh_and_cloe/">@josh_and_cloe</a> -->
-            <!--         </ul> -->
-            <!--     </div> -->
-            <!-- </div> -->
-            <!-- <div class="col-sm-4"> -->
-            <!--     <div class="speaker"> -->
-            <!--         <div class="photo-wrapper"><img src="{% static 'urbanacro/images/speakers/acrofestival_fadri_leona.jpg' %}" alt="Fadri and Leona at the Urban Acro Festival Acrobatic Acroyoga and Standing Flows Schweiz" class="img-responsive"></div> -->
-            <!--         <h3 class="name">Fadri & Leona</h3> -->
-            <!--         <p class="text-alt"><small>Creative Acro Flows</small></p> -->
-            <!--         <p class="about">Fadri is our biggest nerd in the Acrolama Team <heart> for over two years now and has a long long history as a Acrobat. Not a coincidence that ones he met Leona, another long long Acro lover, super creative new flows where born. Super looking forward to see you soon! -->
-            <!--         </p> -->
-            <!--         <ul class="speaker-socials"> -->
-            <!--         </ul> -->
-            <!--     </div> -->
-            <!-- </div> -->
-            <!-- <div class="col-sm-4"> -->
-            <!--     <div class="speaker"> -->
-            <!--         <div class="photo-wrapper"><img src="{% static 'urbanacro/images/speakers/acrofestival_celine.jpg' %}" alt="Celine at the Urban Acro Festival Acroyoga FlowsSchweiz" class="img-responsive"></div> -->
-            <!--         <h3 class="name">Celine</h3> -->
-            <!--         <p class="text-alt"><small>Acro Adventure</small></p> -->
-            <!--         <p class="about">Celine is probably the oldest acroyogi I know. Has seen it all and is still the most humble and loving teacher of them all. We finally managed to get her to live in Switzerland after importing her from Belgium. She will be sharing some handstand, flows and who knows maybe some Thai Massage ;-)? See you sooon!! -->
-            <!--         </p> -->
-            <!--         <ul class="speaker-socials"> -->
-            <!--         </ul> -->
-            <!--     </div> -->
-            <!-- </div> -->
-            <!-- <div class="col-sm-4"> -->
-            <!--     <div class="speaker"> -->
-            <!--         <div class="photo-wrapper"><img src="{% static 'urbanacro/images/speakers/acrofestival_dani_ursina.jpg' %}" alt="Acro kids at the Urban Acro Festival Acroyoga FlowsSchweiz" class="img-responsive"></div> -->
-            <!--         <h3 class="name">Dani, Uma & Ursina</h3> -->
-            <!--         <p class="text-alt"><small>Acro kids</small></p> -->
-            <!--         <p class="about">Dani founded one of the oldest acroyoga associations in Switzerland. Aside from teaching here and there, his group of Circus Kids in Basel is just so much fun! Ursina on the other hand is this natural born artist and together with Uma they make a power Trio. If enough kids around this is one you don't want to miss ! Let's see. Glad to have you with us!!. -->
-            <!--         </p> -->
-            <!--         <ul class="speaker-socials"> -->
-            <!--             <a href="https://www.instagram.com/martydaniel2/">@martydaniel2</a> -->
-            <!--         </ul> -->
-            <!--     </div> -->
-            <!-- </div> -->
+            <div class="col-sm-4">
+                <div class="speaker">
+                    <div class="photo-wrapper"><img src="{% static 'urbanacro/images/speakers/acrofestival_fadri_leona.jpg' %}" alt="Fadri and Leona at the Urban Acro Festival Acrobatic Acroyoga and Standing Flows Schweiz" class="img-responsive"></div>
+                    <h3 class="name">{% tinycontent_simple "urbanacro_teachers_teacher1_name" %}</h3>
+                    <p class="text-alt"><small>{% tinycontent_simple "urbanacro_teaschers_teacher1_team" %}</small></p>
+                    <p class="about">{% tinycontent_simple "urbanacro_teachers_teacher1_about" %}</p>
+                    <ul class="speaker-socials">
+                        {% tinycontent_simple "urbanacro_teacher1_instagram" %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="speaker">
+                    <div class="photo-wrapper"><img src="{% static 'urbanacro/images/speakers/acrofestival_fadri_leona.jpg' %}" alt="Fadri and Leona at the Urban Acro Festival Acrobatic Acroyoga and Standing Flows Schweiz" class="img-responsive"></div>
+                    <h3 class="name">{% tinycontent_simple "urbanacro_teachers_teacher2_name" %}</h3>
+                    <p class="text-alt"><small>{% tinycontent_simple "urbanacro_teaschers_teacher2_team" %}</small></p>
+                    <p class="about">{% tinycontent_simple "urbanacro_teachers_teacher2_about" %}</p>
+                    <ul class="speaker-socials">
+                        {% tinycontent_simple "urbanacro_teacher2_instagram" %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="speaker">
+                    <div class="photo-wrapper"><img src="{% static 'urbanacro/images/speakers/acrofestival_fadri_leona.jpg' %}" alt="Fadri and Leona at the Urban Acro Festival Acrobatic Acroyoga and Standing Flows Schweiz" class="img-responsive"></div>
+                    <h3 class="name">{% tinycontent_simple "urbanacro_teachers_teacher3_name" %}</h3>
+                    <p class="text-alt"><small>{% tinycontent_simple "urbanacro_teaschers_teacher3_team" %}</small></p>
+                    <p class="about">{% tinycontent_simple "urbanacro_teachers_teacher3_about" %}</p>
+                    <ul class="speaker-socials">
+                        {% tinycontent_simple "urbanacro_teacher3_instagram" %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="speaker">
+                    <div class="photo-wrapper"><img src="{% static 'urbanacro/images/speakers/acrofestival_fadri_leona.jpg' %}" alt="Fadri and Leona at the Urban Acro Festival Acrobatic Acroyoga and Standing Flows Schweiz" class="img-responsive"></div>
+                    <h3 class="name">{% tinycontent_simple "urbanacro_teachers_teacher4_name" %}</h3>
+                    <p class="text-alt"><small>{% tinycontent_simple "urbanacro_teaschers_teacher4_team" %}</small></p>
+                    <p class="about">{% tinycontent_simple "urbanacro_teachers_teacher4_about" %}</p>
+                    <ul class="speaker-socials">
+                        {% tinycontent_simple "urbanacro_teacher4_instagram" %}
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
