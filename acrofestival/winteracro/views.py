@@ -14,8 +14,8 @@ def fest_homeview(request):
     qs_thu = qs.filter(when__day="Thursday")
     qs_fri = qs.filter(when__day="Friday")
     context = {
-        "sat1": qs_sat,
-        "sat2": qs_sat,
+        "sat1": qs_sat1,
+        "sat2": qs_sat2,
         "sun": qs_sun,
         "mon": qs_mon,
         "tue": qs_tue,
