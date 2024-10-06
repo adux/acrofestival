@@ -5,7 +5,8 @@ from .models import Workshop, Day, Entrie
 def fest_homeview(request):
     template_name = "pages/winteracro/index.html"
     qs = Entrie.objects.all().order_by('time').select_related('when')
-    qs_sat = qs.filter(when__day="Saturday")
+    qs_sat1 = qs.filter(when__day="Saturday1")
+    qs_sat2 = qs.filter(when__day="Saturday2")
     qs_sun = qs.filter(when__day="Sunday")
     qs_mon = qs.filter(when__day="Monday")
     qs_tue = qs.filter(when__day="Tuesday")
@@ -13,7 +14,8 @@ def fest_homeview(request):
     qs_thu = qs.filter(when__day="Thursday")
     qs_fri = qs.filter(when__day="Friday")
     context = {
-        "sat": qs_sat,
+        "sat1": qs_sat,
+        "sat2": qs_sat,
         "sun": qs_sun,
         "mon": qs_mon,
         "tue": qs_tue,

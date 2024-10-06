@@ -215,6 +215,24 @@
                 </p>
                 <!-- <h2><a href="https://docs.google.com/spreadsheets/d/1U3Kyh77kwNPIyxkHhSyy07eEJlW29MELMOcjYbLpHWQ/edit?usp=sharing" target="_blank">WORKSHOP SCHEDULE</a></h2> -->
             </header>
+                <h2>Saturday</h2>
+                <ul class="statistics">
+                    {% for obj in sat1 %}
+                    <li class="{{obj.style}}">
+                            <span class="fas {{obj.icon}}"></span>
+                            <strong>{{obj.time}}</strong> {{obj.title}}
+                    </li>
+                    {% endfor %}
+                </ul>
+                <h2>Sunday</h2>
+                <ul class="statistics">
+                    {% for obj in sun %}
+                    <li class="{{obj.style}}">
+                            <span class="fas {{obj.icon}}"></span>
+                            <strong>{{obj.time}}</strong> {{obj.title}}
+                    </li>
+                    {% endfor %}
+                </ul>
                 <h2>Monday</h2>
                 <ul class="statistics">
                     {% for obj in mon %}
@@ -262,22 +280,13 @@
                 </ul>
                 <h2>Saturday</h2>
                 <ul class="statistics">
-                    {% for obj in sat %}
+                    {% for obj in sat2 %}
                     <li class="{{obj.style}}">
                             <span class="fas {{obj.icon}}"></span>
                             <strong>{{obj.time}}</strong> {{obj.title}}
                     </li>
                     {% endfor %}
                 </ul>
-                <!-- <h2>Sunday</h2> -->
-                <!-- <ul class="statistics"> -->
-                <!--     {% for obj in sun %} -->
-                <!--     <li class="{{obj.style}}"> -->
-                <!--             <span class="fas {{obj.icon}}"></span> -->
-                <!--             <strong>{{obj.time}}</strong> {{obj.title}} -->
-                <!--     </li> -->
-                <!--     {% endfor %} -->
-                <!-- </ul> -->
         </section>
         <!-- <section id="donation" class="main"> -->
         <!--     <div class="spotlight"> -->
