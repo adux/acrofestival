@@ -4,7 +4,7 @@
 <div id="wrapper">
     <!-- Header -->
     <header id="header">
-        <h1>Tschlin im Engandin</h1>
+        <h2>{% tinycontent_simple 'winter_acro_header_location' %}</h2>
         <p>How to get there and where will we sleep</p>
     </header>
     {% include "pages/winteracro/snippets/navnothome.html" %}
@@ -16,18 +16,24 @@
                 <img src="{% static "winteracro/images/tschlin_winter_acro_urbanacro.webp"%}" alt="Tschlin location of the winter acro festival" />
             </span>
             <h1>Accommodation</h1>
-            <h2>Main House</h2>
+            <h2>{% tinycontent_simple 'winter_accomodation_title' %}</h2>
+            <p>{% tinycontent_simple 'winter_accomodation_description' %}</p>
             <p>
             <span class="image right">
                     <img src="{% static "winteracro/images/rooms_winter_acro_urbanacro.jpg" %}" alt="winter accommodation for the urbanacro winter acro festival" />
             </span>
-            {% tinycontent_simple 'winter_accomodation_description' %}
-            <h3>Dorms</h3>
+            <h3>{% tinycontent_simple 'winter_accomodation_title_dorms' %}</h3>
             {% tinycontent_simple 'winter_accomodation_dorms' %}
-            <h3>Upgrade</h3>
-            {% tinycontent_simple 'winter_accomodation_upgrade' %}
-            <h3>Address</h3>
-            {% tinycontent_simple 'winter_accomodation_address' %}
+            <span class="image right">
+                    <img src="{% static "winteracro/images/rooms_winter_acro_urbanacro.jpg" %}" alt="winter accommodation for the urbanacro winter acro festival" />
+            </span>
+            <h3>{% tinycontent_simple 'winter_accomodation_title_upgrade1' %}</h3>
+            {% tinycontent_simple 'winter_accomodation_upgrade1' %}
+            <span class="image right">
+                    <img src="{% static "winteracro/images/rooms_winter_acro_urbanacro.jpg" %}" alt="winter accommodation for the urbanacro winter acro festival" />
+            </span>
+            <h3>{% tinycontent_simple 'winter_accomodation_title_upgrade2' %}</h3>
+            {% tinycontent_simple 'winter_accomodation_upgrade2' %}
             <a class="button" style="box-shadow:0px; background:#f3d216;" href="{% tinycontent_simple 'winter_accomodation_address_url' %}">
                     Google Maps CLICK HERE
             </a>
@@ -35,6 +41,25 @@
             </p>
             <h3>Some other extra infos:</h3>
             {% tinycontent_simple 'winter_accomodation_extra' %}
+        </section>
+        <section id="hall" class="main">
+            <span class="image main">
+                <img src="{% static "winteracro/images/tschlin_winter_acro_urbanacro.webp"%}" alt="Tschlin location of the winter acro festival" />
+            </span>
+            <h1>Hall</h1>
+            <h2>{% tinycontent_simple 'winter_hall_title' %}</h2>
+            <p>{% tinycontent_simple 'winter_hall_description' %}</p>
+            <p>
+            <span class="image right">
+                    <img src="{% static "winteracro/images/rooms_winter_acro_urbanacro.jpg" %}" alt="winter accommodation for the urbanacro winter acro festival" />
+            </span>
+            <h3>{% tinycontent_simple 'winter_hall_spa' %}</h3>
+            {% tinycontent_simple 'winter_hall_spa_description' %}
+            <a class="button" style="box-shadow:0px; background:#f3d216;" href="{% tinycontent_simple 'winter_accomodation_address_url' %}">
+                    Google Maps CLICK HERE
+            </a>
+            </br></br>
+            </p>
         </section>
         <section id="location" class="main">
             <h1>Transportation</h1>
