@@ -63,12 +63,18 @@
                     <p>{% tinycontent_simple 'winter_home_sauna' %}
                     </p>
                     </li>
-                <!-- <li> -->
-                <!--     <span class="icon major style7 fas fa-magic"></span> -->
-                <!--     <h3>Show</h3> -->
-                <!--     <p>{% tinycontent_simple 'winter_home_show' %} -->
-                <!--     </p> -->
-                <!-- </li> -->
+                <li>
+                    <span class="icon major style7 fas fa-magic"></span>
+                    <h3>Show</h3>
+                    <p>{% tinycontent_simple 'winter_home_show' %}
+                    </p>
+                </li>
+                <li>
+                    <span class="icon major style1 fas fa-heart"></span>
+                    <h3>Hall</h3>
+                    <p>{% tinycontent_simple 'winter_home_hall' %}
+                    </p>
+                </li>
             </ul>
             <footer class="major">
                 <ul class="actions">
@@ -116,28 +122,28 @@
         </section>
         <section id="info" class="main special">
             <header class="major">
-                <h2>General Information</h2>
+                <h2>Info</h2>
             </header>
             <ul class="features">
                 <li>
-                    <span class="icon major style1 fas fa-bed"></span>
+                    <a href="{% url 'winteraccomodation'%}"><span class="icon major style1 fas fa-bed"></span></a>
                     <h3>Accommodation</h3>
                     <p>{% tinycontent_simple 'winter_home_accomodation' %}
-                    <a class="button" href="{% url 'winterlocation'%}#accommodation">CLICK HERE</a>
+                    <a class="button" href="{% url 'winteraccomodation'%}">More Info.</a>
                     </p>
                 </li>
                 <li>
-                    <span class="icon major style2 fas fa-map-marker"></span>
+                    <a href="{% url 'winterlocation'%}"><span class="icon major style2 fas fa-map-marker"></span></a>
                     <h3>Location</h3>
                     <p>{% tinycontent_simple 'winter_home_location' %}
-                    <a class="button" href="{% url 'winterlocation'%}#location">CLICK HERE</a>
+                    <a class="button" href="{% url 'winterlocation'%}">More Info</a>
                     </p>
                     </li>
                 <li>
-                    <span class="icon major style1 fas fa-money-bill-wave"></span>
-                    <h3>Prices</h3>
+                    <a href="{% url 'winterprices'%}">More Info<span class="icon major style1 fas fa-money-bill-wave"></span></a>
+                    <h3>Conditions</h3>
                     <p>{% tinycontent_simple 'winter_home_prices' %}
-                    <a class="button" href="{% url 'winterprices'%}">CLICK HERE</a>
+                    <a class="button" href="{% url 'winterconditions'%}">More Info</a>
                     </p>
             </ul>
             <footer class="major">
@@ -159,14 +165,14 @@
                 <!-- </p> -->
                 <div class="box alt">
                     <div class="row gtr-uniform">
-                        <p><h2>Kat & Jared - Duo Acrokatics</h2></p>
-                        <p>
-                        <span class="image left">
-                            <img src="{% static "winteracro/images/teachers2024/urbanacro_winteracro_festival_teachers_acrokatics.png"%}" alt="Winter acro from urbanacro teacher acrokatics doing acro pose">
-                        </span>
-                        Awesome acrobats, teachers, and people! We have been trying to get them to come for years, but it's always hard with circus artists. Very happy to have them here teaching some duo and group acrobatics!<br>
-                        Check them out at: <a href="https://www.instagram.com/acrokatics/">Acrokatics on Instagram</a>
-                        </p>
+                        <!-- <p><h2>Kat & Jared - Duo Acrokatics</h2></p> -->
+                        <!-- <p> -->
+                        <!-- <span class="image left"> -->
+                        <!--     <img src="{% static "winteracro/images/teachers2024/urbanacro_winteracro_festival_teachers_acrokatics.png"%}" alt="Winter acro from urbanacro teacher acrokatics doing acro pose"> -->
+                        <!-- </span> -->
+                        <!-- Awesome acrobats, teachers, and people! We have been trying to get them to come for years, but it's always hard with circus artists. Very happy to have them here teaching some duo and group acrobatics!<br> -->
+                        <!-- Check them out at: <a href="https://www.instagram.com/acrokatics/">Acrokatics on Instagram</a> -->
+                        <!-- </p> -->
                         <p><h2>Je & Cuzio - Acrolinks</h2></p>
                         <p>
                         <span class="image left">

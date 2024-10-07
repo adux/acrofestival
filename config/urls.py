@@ -7,7 +7,8 @@ from booking.views import (urbanacro_view, winteracroform_view)
 from winteracro.views import (
     fest_homeview,
     fest_locationview,
-    fest_pricesview,
+    fest_accommodationview,
+    fest_conditionsview,
     fest_picturesview,
     frontpage_view,
     )
@@ -22,7 +23,8 @@ urlpatterns = [
     path("pictures/", fest_picturesview, name="pictures"),
     path("winteracro/form/", winteracroform_view, name="winterform"),
     path("winteracro/location", fest_locationview, name="winterlocation"),
-    path("winteracro/prices/", fest_pricesview, name="winterprices"),
+    path("winteracro/accommodation", fest_accommodationview, name="winteraccommodation"),
+    path("winteracro/conditions", fest_conditionsview, name="winterconditions"),
 ] + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
 )

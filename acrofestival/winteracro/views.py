@@ -31,9 +31,14 @@ def fest_locationview(request):
     context = {}
     return render(request, template_name, context)
 
+def fest_accommodationview(request):
+    template_name = "pages/winteracro/accommodation.html"
+    context = {}
+    return render(request, template_name, context)
 
-def fest_pricesview(request):
-    template_name = "pages/winteracro/prices.html"
+
+def fest_conditionsview(request):
+    template_name = "pages/winteracro/conditions.html"
     context = {}
     return render(request, template_name, context)
 
