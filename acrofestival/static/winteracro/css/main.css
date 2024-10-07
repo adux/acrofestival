@@ -2493,19 +2493,6 @@
         width: 100%;
       }
 
-    /* New clearfix to fix float collapsing issue */
-    .clearfix::after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-    /* Style for the next block element */
-    .next-img {
-      clear: both;  /* Ensures it starts below the floated image */
-      padding-top: 1em;
-    }
-
 /* List */
 
   ol {
