@@ -3269,7 +3269,8 @@
     width: 64em;
     max-width: calc(100% - 4em);
     padding: 1em;
-    background-color: #f46a8b;
+    /* background-color: #f46a8b; */
+    background-color: #80b9d2;
     border-top-left-radius: 0.25em;
     border-top-right-radius: 0.25em;
     cursor: default;
