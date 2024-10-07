@@ -126,25 +126,26 @@
             </header>
             <ul class="features">
                 <li>
-                    <a href="{% url 'winteraccommodation'%}"><span class="icon major style1 fas fa-bed"></span></a>
+                    <a href="{% url 'winteraccommodation'%}" style="text-decoration: none;"><span class="icon major style1 fas fa-bed"></span></a>
                     <h3>Accommodation</h3>
                     <p>{% tinycontent_simple 'winter_home_accomodation' %}
                     <a class="button" href="{% url 'winteraccommodation'%}">More Info.</a>
                     </p>
                 </li>
                 <li>
-                    <a href="{% url 'winterlocation'%}"><span class="icon major style2 fas fa-map-marker"></span></a>
+                    <a href="{% url 'winterlocation'%}" style="text-decoration: none;"><span class="icon major style2 fas fa-map-marker"></span></a>
                     <h3>Location</h3>
                     <p>{% tinycontent_simple 'winter_home_location' %}
                     <a class="button" href="{% url 'winterlocation'%}">More Info</a>
                     </p>
                     </li>
                 <li>
-                    <a href="{% url 'winterconditions'%}">More Info<span class="icon major style1 fas fa-money-bill-wave"></span></a>
+                    <a href="{% url 'winterconditions'%}" style="text-decoration: none;"><span class="icon major style1 fas fa-money-bill-wave"></span></a>
                     <h3>Conditions</h3>
                     <p>{% tinycontent_simple 'winter_home_prices' %}
                     <a class="button" href="{% url 'winterconditions'%}">More Info</a>
                     </p>
+                </li>
             </ul>
             <footer class="major">
                 <ul class="actions">
