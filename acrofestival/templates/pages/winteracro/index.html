@@ -227,7 +227,7 @@
                     {% for obj in sat1 %}
                     <li class="{{obj.style}}">
                             <span class="fas {{obj.icon}}"></span>
-                            <strong>{{obj.time}}</strong> {{obj.title}}
+                            <strong>{{obj.time|format:"H:i"}}</strong> {{obj.title}}
                     </li>
                     {% endfor %}
                 </ul>
@@ -236,7 +236,7 @@
                     {% for obj in sun %}
                     <li class="{{obj.style}}">
                             <span class="fas {{obj.icon}}"></span>
-                            <strong>{{obj.time}}</strong> {{obj.title}}
+                            <strong>{{obj.time|format:"H:i"}}</strong> {{obj.title}}
                     </li>
                     {% endfor %}
                 </ul>
@@ -245,7 +245,7 @@
                     {% for obj in mon %}
                     <li class="{{obj.style}}">
                             <span class="fas {{obj.icon}}"></span>
-                            <strong>{{obj.time}}</strong> {{obj.title}}
+                            <strong>{{obj.time|format:"H:i"}}</strong> {{obj.title}}
                     </li>
                     {% endfor %}
                 </ul>
@@ -253,8 +253,8 @@
                 <ul class="statistics">
                     {% for obj in tue %}
                     <li class="{{obj.style}}">
-                                <span class="fas {{obj.icon}}"></span>
-                                <strong>{{obj.time}}</strong> {{obj.title}}
+                            <span class="fas {{obj.icon}}"></span>
+                            <strong>{{obj.time|format:"H:i"}}</strong> {{obj.title}}
                     </li>
                     {% endfor %}
                 </ul>
@@ -263,7 +263,7 @@
                     {% for obj in wed %}
                         <li class="{{obj.style}}">
                             <span class="fas {{obj.icon}}"></span>
-                            <strong>{{obj.time}}</strong> {{obj.title}}
+                            <strong>{{obj.time|format:"H:i"}}</strong> {{obj.title}}
                     </li>
                     {% endfor %}
                 </ul>
@@ -272,7 +272,7 @@
                     {% for obj in thu %}
                     <li class="{{obj.style}}">
                             <span class="fas {{obj.icon}}"></span>
-                            <strong>{{obj.time}}</strong> {{obj.title}}
+                            <strong>{{obj.time|format:"H:i"}}</strong> {{obj.title}}
                     </li>
                     {% endfor %}
                 </ul>
@@ -281,7 +281,7 @@
                     {% for obj in fri %}
                     <li class="{{obj.style}}">
                             <span class="fas {{obj.icon}}"></span>
-                            <strong>{{obj.time}}</strong> {{obj.title}}
+                            <strong>{{obj.time|format:"H:i"}}</strong> {{obj.title}}
                     </li>
                     {% endfor %}
                 </ul>
@@ -290,7 +290,7 @@
                     {% for obj in sat2 %}
                     <li class="{{obj.style}}">
                             <span class="fas {{obj.icon}}"></span>
-                            <strong>{{obj.time}}</strong> {{obj.title}}
+                            <strong>{{obj.time|format:"H:i"}}</strong> {{obj.title}}
                     </li>
                     {% endfor %}
                 </ul>
