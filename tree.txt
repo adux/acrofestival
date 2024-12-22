@@ -1,0 +1,101 @@
+.
+├── acrofestival
+│   ├── booking
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── forms.py
+│   │   ├── __init__.py
+│   │   ├── migrations
+│   │   ├── models.py
+│   │   ├── tests.py
+│   │   └── views.py
+│   ├── contrib
+│   │   ├── __init__.py
+│   │   └── sites
+│   ├── dap
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── __init__.py
+│   │   ├── migrations
+│   │   ├── models.py
+│   │   ├── tests.py
+│   │   └── views.py
+│   ├── __init__.py
+│   ├── static
+│   │   ├── dap
+│   │   ├── formulario
+│   │   ├── urbanacro
+│   │   └── winteracro
+│   ├── templates
+│   │   ├── 403_csrf.html
+│   │   ├── 404.html
+│   │   ├── 500.html
+│   │   ├── account
+│   │   ├── base.html
+│   │   ├── frontpage.html
+│   │   ├── pages
+│   │   └── users
+│   ├── users
+│   │   ├── adapters.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── __init__.py
+│   │   ├── migrations
+│   │   ├── models.py
+│   │   ├── tests
+│   │   ├── urls.py
+│   │   └── views.py
+│   └── winteracro
+│       ├── admin.py
+│       ├── apps.py
+│       ├── __init__.py
+│       ├── migrations
+│       ├── models.py
+│       ├── tests.py
+│       └── views.py
+├── config
+│   ├── __init__.py
+│   ├── settings
+│   │   ├── base.py
+│   │   ├── __init__.py
+│   │   ├── local.py
+│   │   ├── production.py
+│   │   └── test.py
+│   ├── urls.py
+│   └── wsgi.py
+├── CONTRIBUTORS.txt
+├── docs
+│   ├── conf.py
+│   ├── deploy.rst
+│   ├── docker_ec2.rst
+│   ├── index.rst
+│   ├── __init__.py
+│   ├── install.rst
+│   ├── make.bat
+│   └── Makefile
+├── LICENSE
+├── locale
+│   └── README.rst
+├── manage.py
+├── merge_production_dotenvs_in_dotenv.py
+├── Pipfile
+├── Procfile
+├── pytest.ini
+├── README.rst
+├── requirements
+│   ├── base.txt
+│   ├── local.txt
+│   └── production.txt
+├── requirements.txt
+├── runtime.txt
+├── setup.cfg
+├── tree.txt
+└── utility
+    ├── install_os_dependencies.sh
+    ├── install_python_dependencies.sh
+    ├── requirements-jessie.apt
+    ├── requirements-stretch.apt
+    ├── requirements-trusty.apt
+    └── requirements-xenial.apt
+
+28 directories, 71 files

@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import Workshop, Entrie, Day
+from .models import Workshop, Entrie, Day, TeacherProfile
 
 
 class WorkshopAdmin(admin.ModelAdmin):
@@ -18,6 +18,14 @@ class DayEntrieInline(admin.StackedInline):
 
 class DayAdmin(admin.ModelAdmin):
     inlines = [DayEntrieInline]
+
+
+@admin.register(TeacherProfile)
+class TeacherProfileAdmin(admin.ModelAdmin):
+    list_display = ['name', 'title', 'year', 'active', 'order']
+    list_editable = ['order', 'active']
+    search_fields = ['name', 'description']
+    list_filter = ['year', 'active']
 
 
 admin.site.register(Day, DayAdmin)

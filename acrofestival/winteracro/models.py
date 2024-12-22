@@ -46,3 +46,28 @@ class Entrie(models.Model):
     time = models.TimeField(auto_now=False, auto_now_add=False)
     title = models.CharField(max_length=30)
     when = models.ForeignKey(Day, on_delete=models.CASCADE)
+
+
+class TeacherProfile(models.Model):
+    name = models.CharField(max_length=100)
+    title = models.CharField(max_length=200, blank=True)  # e.g., "Acrolinks", "Master of Improvisation"
+    description = models.TextField()
+    image = models.ImageField(upload_to='teachers/%Y/')
+    order = models.IntegerField(default=0, help_text="Order of appearance")
+    active = models.BooleanField(default=True)
+
+    # Social Media Links
+    instagram = models.URLField(blank=True)
+    facebook = models.URLField(blank=True)
+    youtube = models.URLField(blank=True)
+    website = models.URLField(blank=True)
+
+    # Additional Fields
+    specialties = models.CharField(max_length=200, blank=True)  # e.g., "Improvisation and staging"
+    year = models.IntegerField(help_text="Year teaching at the festival")
+
+    class Meta:
+        ordering = ['order', 'name']
+
+    def __str__(self):
+        return f"{self.name} ({self.year})"

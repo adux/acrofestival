@@ -1,10 +1,11 @@
 from django.shortcuts import render
-from .models import Workshop, Day, Entrie
+from .models import Workshop, Day, Entrie, TeacherProfile
 
 
 def fest_homeview(request):
     template_name = "pages/winteracro/index.html"
-    qs = Entrie.objects.all().order_by('time').select_related('when')
+    teachers = TeacherProfile.objects.filter(active=True).order_by("order")
+    qs = Entrie.objects.all().order_by("time").select_related("when")
     qs_sat1 = qs.filter(when__day="Saturday1")
     qs_sat2 = qs.filter(when__day="Saturday2")
     qs_sun = qs.filter(when__day="Sunday")
@@ -14,6 +15,7 @@ def fest_homeview(request):
     qs_thu = qs.filter(when__day="Thursday")
     qs_fri = qs.filter(when__day="Friday")
     context = {
+        "teachers": teachers,
         "sat1": qs_sat1,
         "sat2": qs_sat2,
         "sun": qs_sun,
@@ -30,6 +32,7 @@ def fest_locationview(request):
     template_name = "pages/winteracro/location.html"
     context = {}
     return render(request, template_name, context)
+
 
 def fest_accommodationview(request):
     template_name = "pages/winteracro/accommodation.html"
