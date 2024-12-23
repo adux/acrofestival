@@ -217,4 +217,5 @@ LOGGING = {
 # ------------------------------------------------------------------------------
 
 INSTALLED_APPS += ["analytical"]
-GOOGLE_ANALYTICS_PROPERTY_ID = "UA-118797477-2"
+ANALYTICAL_AUTO_IDENTIFY = False
+GOOGLE_ANALYTICS_GTAG_PROPERTY_ID = "G-NKGZG0QF36"
