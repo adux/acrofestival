@@ -276,5 +276,4 @@ pip-selfcheck.json
 MailHog
 acrofestival/media/
 .env
-Pipfile
 .envs/*
