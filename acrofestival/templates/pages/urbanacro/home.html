@@ -1,6 +1,6 @@
 {% extends 'base.html'%}
 {% block content %}
-{% load static %}{% load tinycontent_tags %}
+{% load static %}{% load tinycontent_tags %}{% load content_tags %}
     <div class="preloader-mask">
         <div class="preloader"></div>
     </div>
@@ -11,12 +11,12 @@
         </ul>
         <div class="heading-block centered-block align-center">
             <div class="container">
-                    <h5 class="heading-alt" style="margin-bottom: 8px;"><span class="fa fa-calendar-o base-clr-txt"></span><span style="background-color: rgba(254, 73, 24, 1)">{% tinycontent_simple 'urban_general_date' %}</span><span class="fa fa-map-marker base-clr-txt" style="margin-left: 14px;"></span><span style="background-color: rgba(254, 73, 24, 1)">Zürich, CH</span></h5>
-                    <h1 class="extra-heading" >Urban Acro Festival</h1>
+                    <h5 class="heading-alt" style="margin-bottom: 8px;"><span class="fa fa-calendar-o base-clr-txt"></span><span style="background-color: rgba(254, 73, 24, 1)">{% content_snippet 'urban_general_date' %}</span><span class="fa fa-map-marker base-clr-txt" style="margin-left: 14px;"></span><span style="background-color: rgba(254, 73, 24, 1)">Zürich, CH</span></h5>
+                    <h1 class="extra-heading" >{% content_snippet 'urban_general_title'%}</h1>
                     <h6 class="thin base-font" style="background-color: rgba(254, 73, 24, 1)">The volume of a pizza with radius z and uniform thickness a is pi zz a. ❤</h6>
                 <div class="btns-container">
                     <!-- <a href="#" class="btn btn-md" data-modal-link="email-ticket">REGISTER</a> -->
-                    <a href="https://www.urbanacro.com/events/7th-urban-acro-festival/" class="btn btn-md" >Register</a>
+                    <a href="{% content_snippet 'urban_registration_link' %}" class="btn btn-md" >Register</a>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
                             <li class="navigation-item"><a href="#contacts" class="navigation-link">Location</a></li>
                         </ul>
                         <!-- <a data-modal-link="email-ticket" class="pull-right buy-btn">Register</a> -->
-                        <a href="https://www.urbanacro.com/events/7th-urban-acro-festival/" class="pull-right buy-btn" >Register</a>
+                        <a href="{% content_snippet 'urban_registration_link' %}" class="pull-right buy-btn" >Register</a>
                     </div>
                 </div>
             </div>
@@ -81,19 +81,19 @@
                             <img src="{% static 'urbanacro/images/acrofestival_3rd_edition.jpg' %}" alt="" class="img-responsive" />
                         </div>
                         <div class="col-sm-7 align-left">
-                            <h6>{% tinycontent_simple "urban_general_version" %}Urban Acro Festival</h6>
-                            <p>{% tinycontent_simple "urban_general_description" %}</p>
-                            <p>{% tinycontent_simple "urban_general_participants" %}</p>
+                            <h6>{% content_snippet "urban_general_title" %}</h6>
+                            <p>{% content_snippet "urban_general_description" %}</p>
+                            <p>{% content_snippet "urban_general_participants" %}</p>
                         </div>
                     </div>
 
                     <div id="horizontal_tab2" class="tab-pane fade">
-                        <div class="col-sm-7 align-right">
+                        <div class="col-sm-7 align-left">
                             <h6>Workshops</h6>
-                            <p> {% tinycontent_simple "urbanacro_general_workshops" %}</p>
+                            <p> {% content_snippet "urban_general_workshops" %}</p>
                         </div>
                         <div class="col-sm-5 images-column">
-                            <img src="{% static "urbanacro/images/acrofestival_workshops.JPG"%}" alt="" class="img-responsive" />
+                            <img src="{% static "urbanacro/images/acrofestival_workshops_2024.jpg"%}" alt="Urban Acro Festival 2024 workshops in Zürich" class="img-responsive" />
                         </div>
                     </div>
 
@@ -103,7 +103,7 @@
                         </div>
                         <div class="col-sm-7 align-left">
                             <h6>What's included</h6>
-                            <p>{% tinycontent_simple "urban_general_included" %}</p>
+                            <p>{% content_snippet "urban_general_included" %}</p>
                             </ul>
                         </div>
                     </div>
@@ -118,7 +118,7 @@
             <div class="col-sm-6 align-right fullwidth-column">
                 <article>
                     <h3>Food Corner</h3>
-                    <p>{% tinycontent_simple "urban_general_food" %}</p>
+                    <p>{% content_snippet "urban_general_food" %}</p>
                 </article>
             </div>
         </div>
@@ -127,7 +127,7 @@
             <div class="col-sm-6 col-sm-offset-6 align-left fullwidth-column">
                 <article>
                     <h3>Sleeping Area</h3>
-                    <p>{% tinycontent_simple "urban_general_sleeping" %}</p>
+                    <p>{% content_snippet "urban_general_sleeping" %}</p>
                 </article>
             </div>
         </div>
@@ -207,42 +207,80 @@
     <section id="teachers" class="section align-center">
         <div class="container">
             <span class="icon section-icon icon-faces-users-04"></span>
-            <h3>Teachers {%tinycontent_simple "urbanacro_teachers_year" %}</h3>
-            <p class="text-alt">{% tinycontent_simple "urbanacro_teachers_about" %}</p>
+            <h3>Teachers {%content_snippet "urbanacro_teachers_year" %}</h3>
+            <p class="text-alt">{% content_snippet "urbanacro_teachers_about" %}</p>
             <br />
             <br />
+            <div class="row">
             <div class="col-sm-4">
                 <div class="speaker">
-                    <div class="photo-wrapper"><img src="{% static 'urbanacro/images/speakers/duofuria_urbanacro_festival.jpg' %}" alt="Duo Furia of Chile at the urbanacro festival in Zürich" class="img-responsive"></div>
-                    <h3 class="name">{% tinycontent_simple "urbanacro_teachers_teacher1_name" %}</h3>
-                    <p class="text-alt"><small>{% tinycontent_simple "urbanacro_teaschers_teacher1_team" %}</small></p>
-                    <p class="about">{% tinycontent_simple "urbanacro_teachers_teacher1_about" %}</p>
+                    <div class="photo-wrapper"><img src="{% static 'urbanacro/images/speakers/ferandfifi_urbanacro_festival.jpg' %}" alt="Fer and Fifi from Spain and Israel at the urbanacro festival in Zürich" class="img-responsive"></div>
+                    <h3 class="name">{% content_snippet "urbanacro_teachers_teacher1_name" %}</h3>
+                    <p class="text-alt"><small>{% content_snippet "urbanacro_teaschers_teacher1_team" %}</small></p>
+                    <p class="about">{% content_snippet "urbanacro_teachers_teacher1_about" %}</p>
                     <ul class="speaker-socials">
-                        {% tinycontent_simple "urbanacro_teacher1_instagram" %}
+                        {% content_snippet "urbanacro_teacher1_instagram" %}
                     </ul>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="speaker">
-                    <div class="photo-wrapper"><img src="{% static 'urbanacro/images/speakers/albertoalfonso_urbanacro_festival.jpg' %}" alt="Alberto and Alfonso organizers of the icarian convention and DAP at the urbanacro festival in zürich" class="img-responsive"></div>
-                    <h3 class="name">{% tinycontent_simple "urbanacro_teachers_teacher2_name" %}</h3>
-                    <p class="text-alt"><small>{% tinycontent_simple "urbanacro_teaschers_teacher2_team" %}</small></p>
-                    <p class="about">{% tinycontent_simple "urbanacro_teachers_teacher2_about" %}</p>
+                    <div class="photo-wrapper"><img src="{% static 'urbanacro/images/speakers/nsacrobalance_urbanacro_festival.jpg' %}" alt="NSAcrobalance Jelena and Nenad from Serbia at the urbanacro festival in zürich" class="img-responsive"></div>
+                    <h3 class="name">{% content_snippet "urbanacro_teachers_teacher2_name" %}</h3>
+                    <p class="text-alt"><small>{% content_snippet "urbanacro_teaschers_teacher2_team" %}</small></p>
+                    <p class="about">{% content_snippet "urbanacro_teachers_teacher2_about" %}</p>
                     <ul class="speaker-socials">
-                        {% tinycontent_simple "urbanacro_teacher2_instagram" %}
+                        {% content_snippet "urbanacro_teacher2_instagram" %}
                     </ul>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="speaker">
-                    <div class="photo-wrapper"><img src="{% static 'urbanacro/images/speakers/cielagom_urbanacro_festival.jpg' %}" alt="Ciel Agom with Isaiah from Belgium at the urbanacro festival in zürich" class="img-responsive"></div>
-                    <h3 class="name">{% tinycontent_simple "urbanacro_teachers_teacher3_name" %}</h3>
-                    <p class="text-alt"><small>{% tinycontent_simple "urbanacro_teaschers_teacher3_team" %}</small></p>
-                    <p class="about">{% tinycontent_simple "urbanacro_teachers_teacher3_about" %}</p>
+                    <div class="photo-wrapper"><img src="{% static 'urbanacro/images/speakers/manas_acro_urbanacro_festival.jpg' %}" alt="Manas Sahoo from Sweden at the urbanacro festival in zürich" class="img-responsive"></div>
+                    <h3 class="name">{% content_snippet "urbanacro_teachers_teacher3_name" %}</h3>
+                    <p class="text-alt"><small>{% content_snippet "urbanacro_teaschers_teacher3_team" %}</small></p>
+                    <p class="about">{% content_snippet "urbanacro_teachers_teacher3_about" %}</p>
                     <ul class="speaker-socials">
-                        {% tinycontent_simple "urbanacro_teacher3_instagram" %}
+                        {% content_snippet "urbanacro_teacher3_instagram" %}
                     </ul>
                 </div>
+            </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-sm-4">
+                <div class="speaker">
+                    <div class="photo-wrapper"><img src="{% static 'urbanacro/images/speakers/coming_soon.png' %}" alt="Coming soon teacher at the urbanacro festival in zürich" class="img-responsive"></div>
+                    <h3 class="name">{% content_snippet "urbanacro_teachers_teacher4_name" %}</h3>
+                    <p class="text-alt"><small>{% content_snippet "urbanacro_teachers_teacher4_team" %}</small></p>
+                    <p class="about">{% content_snippet "urbanacro_teachers_teacher4_about" %}</p>
+                    <ul class="speaker-socials">
+                        {% content_snippet "urbanacro_teacher4_instagram" %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="speaker">
+                    <div class="photo-wrapper"><img src="{% static 'urbanacro/images/speakers/coming_soon.png' %}" alt="Coming soon teacher at the urbanacro festival in zürich" class="img-responsive"></div>
+                    <h3 class="name">{% content_snippet "urbanacro_teachers_teacher5_name" %}</h3>
+                    <p class="text-alt"><small>{% content_snippet "urbanacro_teachers_teacher5_team" %}</small></p>
+                    <p class="about">{% content_snippet "urbanacro_teachers_teacher5_about" %}</p>
+                    <ul class="speaker-socials">
+                        {% content_snippet "urbanacro_teacher5_instagram" %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="speaker">
+                    <div class="photo-wrapper"><img src="{% static 'urbanacro/images/speakers/coming_soon.png' %}" alt="Coming soon teacher at the urbanacro festival in zürich" class="img-responsive"></div>
+                    <h3 class="name">{% content_snippet "urbanacro_teachers_teacher6_name" %}</h3>
+                    <p class="text-alt"><small>{% content_snippet "urbanacro_teachers_teacher6_team" %}</small></p>
+                    <p class="about">{% content_snippet "urbanacro_teachers_teacher6_about" %}</p>
+                    <ul class="speaker-socials">
+                        {% content_snippet "urbanacro_teacher6_instagram" %}
+                    </ul>
+                </div>
+            </div>
             </div>
         </div>
     </section>
@@ -261,9 +299,9 @@
 
                     <!-- Navigation by day start -->
                     <ul class="nav nav-schedule">
-                        <li class="active"><a href="#schedule3_day1" data-toggle="tab"><h5 class="highlight">Day 1</h5><p class="text-alt">16/08/2024</p></a></li>
-                        <li><a href="#schedule3_day2" data-toggle="tab"><h5 class="highlight">Day 2</h5><p class="text-alt">17/08/2024</p></a></li>
-                        <li><a href="#schedule3_day3" data-toggle="tab"><h5 class="highlight">Day 3</h5><p class="text-alt">18/08/2024</p></a></li>
+                        <li class="active"><a href="#schedule3_day1" data-toggle="tab"><h5 class="highlight">Friday</h5><p class="text-alt">01/08/2025</p></a></li>
+                        <li><a href="#schedule3_day2" data-toggle="tab"><h5 class="highlight">Saturday</h5><p class="text-alt">02/08/2025</p></a></li>
+                        <li><a href="#schedule3_day3" data-toggle="tab"><h5 class="highlight">Sunday</h5><p class="text-alt">03/08/2025</p></a></li>
                     </ul>
                     <!-- Navigation by day end -->
 
@@ -282,67 +320,82 @@
                                     <!-- Accordion start -->
                                     <div class="panel-group" id="schedule3_day1_main_timeline">
 
-                                        <!-- Lecture start -->
+                                        <!-- Door Open -->
                                         <div class="panel schedule-item">
                                             <div class="lecture-icon-wrapper">
                                                 <span class="fa fa-flag-checkered"></span>
                                             </div>
                                             <a data-toggle="collapse" data-parent="#schedule3_day1_main_timeline" href="#schedule3_day1_main_time1" class="schedule-item-toggle">
-                                                <strong class="time highlight"><span class="icon icon-office-24"></span>16:00</strong>
+                                                <strong class="time highlight"><span class="icon icon-office-24"></span>10:00</strong>
                                                 <h6 class="title">Door Opening<i class="icon icon-arrows-06"></i></h6>
                                             </a>
                                             <div id="schedule3_day1_main_time1" class="panel-collapse collapse in schedule-item-body">
                                                 <article>
-                                                    <p class="description">Check in, grab a snack, choose your helping task, explore, jam :).</p>
+                                                    <p class="description">Welcome to UAF 2025! Check in, grab some snacks, and get ready for an amazing weekend.</p>
                                                 </article>
                                             </div>
                                         </div>
-                                        <!-- Lecture end -->
 
-                                        <!-- Lecture start -->
+                                        <!-- Welcome -->
                                         <div class="panel schedule-item">
                                             <div class="lecture-icon-wrapper">
-                                                <span class="fa fa-rocket"></span>
+                                                <span class="fa fa-heart"></span>
                                             </div>
-                                            <a data-toggle="collapse" data-parent="#schedule3_day1_main_timeline" href="#schedule3_day1_main_time3" class="schedule-item-toggle collapsed">
-                                                <strong class="time highlight"><span class="icon icon-office-24"></span>17:30-18:00</strong>
+                                            <a data-toggle="collapse" data-parent="#schedule3_day1_main_timeline" href="#schedule3_day1_main_time2" class="schedule-item-toggle collapsed">
+                                                <strong class="time highlight"><span class="icon icon-office-24"></span>12:30</strong>
                                                 <h6 class="title">Welcome Round<i class="icon icon-arrows-06"></i></h6>
                                             </a>
-                                        </div>
-                                        <!-- Lecture end -->
-
-                                        <!-- Lecture start -->
-                                        <div class="panel schedule-item">
-                                            <div class="lecture-icon-wrapper">
-                                                <span class="fa fa-cutlery"></span>
-                                            </div>
-                                            <a data-toggle="collapse" data-parent="#schedule3_day1_main_timeline" href="#schedule3_day1_main_time4" class="schedule-item-toggle collapsed">
-                                                <strong class="time highlight"><span class="icon icon-office-24"></span>18:00</strong>
-                                                <h6 class="title">Dinner<i class="icon icon-arrows-06"></i></h6>
-                                            </a>
-                                            <div id="schedule3_day1_main_time4" class="panel-collapse collapse schedule-item-body">
+                                            <div id="schedule3_day1_main_time2" class="panel-collapse collapse schedule-item-body">
                                                 <article>
-                                                        <p class="description">Dinner is served! A helpful spirit is very welcome :)!</p>
+                                                    <p class="description">Meet the community, learn about the festival, and get excited for the weekend ahead!</p>
                                                 </article>
                                             </div>
                                         </div>
-                                        <!-- Lecture end -->
+
+                                        <!-- Jam & Coaching -->
                                         <div class="panel schedule-item">
                                             <div class="lecture-icon-wrapper">
-                                                <span class="fa fa-rocket"></span>
+                                                <span class="fa fa-leaf"></span>
                                             </div>
                                             <a data-toggle="collapse" data-parent="#schedule3_day1_main_timeline" href="#schedule3_day1_main_time3" class="schedule-item-toggle collapsed">
-                                                <strong class="time highlight"><span class="icon icon-office-24"></span>19:30-21:00</strong>
-                                                <h6 class="title">Workshop Round Uno<i class="icon icon-arrows-06"></i></h6>
+                                                <strong class="time highlight"><span class="icon icon-office-24"></span>14:00-15:00</strong>
+                                                <h6 class="title">Jam & Coaching Session<i class="icon icon-arrows-06"></i></h6>
                                             </a>
                                             <div id="schedule3_day1_main_time3" class="panel-collapse collapse schedule-item-body">
                                                 <article>
-                                                    <strong class="highlight speaker-name">Duo Furia</strong>
-                                                    <p class="description">Flows</p>
-                                                    <strong class="highlight speaker-name">Alberto + Alberto</strong>
-                                                    <p class="description">Standing Acro</p>
-                                                    <strong class="highlight speaker-name">Trio Lagom Cie</strong>
-                                                    <p class="description">Trio Dynamics</p>
+                                                    <p class="description">Open jam time with coaching opportunities - limited spots available!</p>
+                                                </article>
+                                            </div>
+                                        </div>
+
+                                        <!-- Workshop Block 1 -->
+                                        <div class="panel schedule-item">
+                                            <div class="lecture-icon-wrapper">
+                                                <span class="fa fa-rocket"></span>
+                                            </div>
+                                            <a data-toggle="collapse" data-parent="#schedule3_day1_main_timeline" href="#schedule3_day1_main_time4" class="schedule-item-toggle collapsed">
+                                                <strong class="time highlight"><span class="icon icon-office-24"></span>15:30-17:00</strong>
+                                                <h6 class="title">Workshop Block 1<i class="icon icon-arrows-06"></i></h6>
+                                            </a>
+                                            <div id="schedule3_day1_main_time4" class="panel-collapse collapse schedule-item-body">
+                                                <article>
+                                                    <p class="description">First workshop session - details coming soon!</p>
+                                                </article>
+                                            </div>
+                                        </div>
+
+                                        <!-- Workshop Block 2 -->
+                                        <div class="panel schedule-item">
+                                            <div class="lecture-icon-wrapper">
+                                                <span class="fa fa-rocket"></span>
+                                            </div>
+                                            <a data-toggle="collapse" data-parent="#schedule3_day1_main_timeline" href="#schedule3_day1_main_time5" class="schedule-item-toggle collapsed">
+                                                <strong class="time highlight"><span class="icon icon-office-24"></span>17:30-19:00</strong>
+                                                <h6 class="title">Workshop Block 2<i class="icon icon-arrows-06"></i></h6>
+                                            </a>
+                                            <div id="schedule3_day1_main_time5" class="panel-collapse collapse schedule-item-body">
+                                                <article>
+                                                    <p class="description">Second workshop session - details coming soon!</p>
                                                 </article>
                                             </div>
                                         </div>
@@ -389,7 +442,7 @@
                                         <!-- </div> -->
                                         <!-- Lecture end -->
 
-                                        <!-- Lecture start -->
+                                        <!-- Breakfast -->
                                         <div class="panel schedule-item">
                                             <div class="lecture-icon-wrapper">
                                                 <span class="fa fa-cutlery"></span>
@@ -400,7 +453,7 @@
                                             </a>
                                             <div id="schedule3_day2_main_time2" class="panel-collapse collapse schedule-item-body">
                                                 <article>
-                                                    <p class="description">Starting the day with some good Breakfast!</p>
+                                                    <p class="description">Start your day with delicious breakfast and good vibes!</p>
                                                 </article>
                                             </div>
                                         </div>
@@ -417,10 +470,8 @@
                                             </a>
                                             <div id="schedule3_day2_main_time3" class="panel-collapse collapse schedule-item-body">
                                                 <article>
-                                                    <strong class="highlight speaker-name">Isaiah</strong><br>
-                                                    <p class="description">Intermediate Handstand. 10 Sec +</p>
-                                                    <strong class="highlight speaker-name">Alberto</strong>
-                                                    <p class="description">Intro Handstnad<br>
+                                                    <strong class="highlight speaker-name">TBA</strong><br>
+                                                    <p class="description">Handstand session - details coming soon!</p>
                                                 </article>
                                             </div>
                                         </div>
@@ -433,14 +484,14 @@
                                             </div>
                                             <a data-toggle="collapse" data-parent="#schedule3_day2_main_timeline" href="#schedule3_day2_main_time4" class="schedule-item-toggle collapsed">
                                                 <strong class="time highlight"><span class="icon icon-office-24"></span>11:00 - 12:30</strong>
-                                                <h6 class="title">Workshops Round Dos<i class="icon icon-arrows-06"></i></h6>
+                                                <h6 class="title">Workshop Block 1<i class="icon icon-arrows-06"></i></h6>
                                             </a>
                                             <div id="schedule3_day2_main_time4" class="panel-collapse collapse schedule-item-body">
                                                 <article>
-                                                    <strong class="highlight speaker-name">Trio Lagom</strong><br>
-                                                    <p class="description">Duo Dynamics</p>
-                                                    <strong class="highlight speaker-name">Duo Furia</strong>
-                                                    <p class="description">Intro to Whips</p>
+                                                    <strong class="highlight speaker-name">TBA</strong><br>
+                                                    <p class="description">Workshop details coming soon!</p>
+                                                    <strong class="highlight speaker-name">TBA</strong>
+                                                    <p class="description">Workshop details coming soon!</p>
                                                 </article>
                                             </div>
                                         </div>
@@ -458,7 +509,7 @@
                                             </a>
                                             <div id="schedule3_day2_main_time5" class="panel-collapse collapse schedule-item-body">
                                                 <article>
-                                                    <p class="description">Lunch time! Remember to write in the comments of your registration if you have some intolerance or preference.</p>
+                                                    <p class="description">Lunch break! Outdoor kitchen facilities available, plus plenty of food options all around the area.</p>
                                                 </article>
                                             </div>
                                         </div>
@@ -476,7 +527,7 @@
                                             <div id="schedule3_day2_main_time7" class="panel-collapse collapse schedule-item-body">
                                                 <article>
                                                     <strong class="highlight speaker-name">Coaching</strong>
-                                                    <p class="description">5 Spots for Coaching Session with or without longe</p>
+                                                    <p class="description">Limited spots for coaching sessions with our teachers</p>
                                                 </article>
                                             </div>
                                         </div>
@@ -489,16 +540,16 @@
                                             </div>
                                             <a data-toggle="collapse" data-parent="#schedule3_day2_main_timeline" href="#schedule3_day2_main_time8" class="schedule-item-toggle collapsed">
                                                 <strong class="time highlight"><span class="icon icon-office-24"></span>15:30 - 17:00</strong>
-                                                <h6 class="title">Workshops Round Tres<i class="icon icon-arrows-06"></i></h6>
+                                                <h6 class="title">Workshop Block 2<i class="icon icon-arrows-06"></i></h6>
                                             </a>
                                             <div id="schedule3_day2_main_time8" class="panel-collapse collapse schedule-item-body">
                                                 <article>
-                                                    <strong class="highlight speaker-name">Adrian</strong><br>
-                                                    <p class="description">H2H A-Z L-Basing to Extended</p>
-                                                    <strong class="highlight speaker-name">Alfonso + Alberto</strong>
-                                                    <p class="description">Unusual Icarians</p>
-                                                    <strong class="highlight speaker-name">Matias</strong>
-                                                    <p class="description">Trampolin</p>
+                                                    <strong class="highlight speaker-name">TBA</strong><br>
+                                                    <p class="description">Workshop details coming soon!</p>
+                                                    <strong class="highlight speaker-name">TBA</strong>
+                                                    <p class="description">Workshop details coming soon!</p>
+                                                    <strong class="highlight speaker-name">TBA</strong>
+                                                    <p class="description">Workshop details coming soon!</p>
                                                 </article>
                                             </div>
                                         </div>
@@ -511,16 +562,16 @@
                                             </div>
                                             <a data-toggle="collapse" data-parent="#schedule3_day2_main_timeline" href="#schedule3_day2_main_time11" class="schedule-item-toggle collapsed">
                                                 <strong class="time highlight"><span class="icon icon-office-24"></span>17:30 - 19:00</strong>
-                                                <h6 class="title">Workshops Round Cuatro<i class="icon icon-arrows-06"></i></h6>
+                                                <h6 class="title">Workshop Block 3<i class="icon icon-arrows-06"></i></h6>
                                             </a>
                                             <div id="schedule3_day2_main_time11" class="panel-collapse collapse schedule-item-body">
                                                 <article>
-                                                    <strong class="highlight speaker-name">Alfonso + Alberto</strong><br>
-                                                    <p class="description">Standing Tricks</p>
-                                                    <strong class="highlight speaker-name">Duo Furia</strong>
-                                                    <p class="description">Whips Intermediate</p>
-                                                    <strong class="highlight speaker-name">Soon</strong>
-                                                    <p class="description">Guided Thai Massage</p>
+                                                    <strong class="highlight speaker-name">TBA</strong><br>
+                                                    <p class="description">Workshop details coming soon!</p>
+                                                    <strong class="highlight speaker-name">TBA</strong>
+                                                    <p class="description">Workshop details coming soon!</p>
+                                                    <strong class="highlight speaker-name">TBA</strong>
+                                                    <p class="description">Workshop details coming soon!</p>
                                                 </article>
                                             </div>
                                         </div>
@@ -536,7 +587,7 @@
                                             </a>
                                             <div id="schedule3_day2_main_time9" class="panel-collapse collapse schedule-item-body">
                                                 <article>
-                                                        <p class="description">You can congratulate the kitchen team if its good here too :)</p>
+                                                        <p class="description">Dinner time! Outdoor kitchen facilities available, plus plenty of food options all around the area.</p>
                                                 </article>
                                             </div>
                                         </div>
@@ -549,11 +600,11 @@
                                             </div>
                                             <a data-toggle="collapse" data-parent="#schedule3_day2_main_timeline" href="#schedule3_day2_main_time10" class="schedule-item-toggle collapsed">
                                                 <strong class="time highlight"><span class="icon icon-office-24"></span>20:00</strong>
-                                                <h6 class="title">Trio Lagom Cie Show<i class="icon icon-arrows-06"></i></h6>
+                                                <h6 class="title">Acro Games!<i class="icon icon-arrows-06"></i></h6>
                                             </a>
                                             <div id="schedule3_day2_main_time10" class="panel-collapse collapse schedule-item-body">
                                                 <article>
-                                                        <p class="description">Show time!</p>
+                                                        <p class="description">Fun acro games and challenges for the whole community!</p>
                                                 </article>
                                             </div>
                                         </div>
@@ -627,10 +678,8 @@
                                             </a>
                                             <div id="schedule3_day3_main_time3" class="panel-collapse collapse schedule-item-body">
                                                 <article>
-                                                    <strong class="highlight speaker-name">Isaiah</strong><br>
-                                                    <p class="description">Intermediate Handstand. 10 Sec +</p>
-                                                    <strong class="highlight speaker-name">Alberto</strong>
-                                                    <p class="description">Intro Handstnad<br>
+                                                    <strong class="highlight speaker-name">TBA</strong><br>
+                                                    <p class="description">Handstand session - details coming soon!</p>
                                                 </article>
                                             </div>
                                         </div>
@@ -643,14 +692,14 @@
                                             </div>
                                             <a data-toggle="collapse" data-parent="#schedule3_day3_main_timeline" href="#schedule3_day3_main_time4" class="schedule-item-toggle collapsed">
                                                 <strong class="time highlight"><span class="icon icon-office-24"></span>11:00-12:00</strong>
-                                                <h6 class="title">Workshops Round Cinco<i class="icon icon-arrows-06"></i></h6>
+                                                <h6 class="title">Workshop Block 1<i class="icon icon-arrows-06"></i></h6>
                                             </a>
                                             <div id="schedule3_day3_main_time4" class="panel-collapse collapse schedule-item-body">
                                                 <article>
-                                                    <strong class="highlight speaker-name">Matias</strong><br>
-                                                    <p class="description">Floor Acro</p>
-                                                    <strong class="highlight speaker-name">Alberto + Alfonso</strong>
-                                                    <p class="description">Icarian</p>
+                                                    <strong class="highlight speaker-name">TBA</strong><br>
+                                                    <p class="description">Workshop details coming soon!</p>
+                                                    <strong class="highlight speaker-name">TBA</strong>
+                                                    <p class="description">Workshop details coming soon!</p>
                                                 </article>
                                             </div>
                                         </div>
@@ -667,7 +716,7 @@
                                             </a>
                                             <div id="schedule3_day3_main_time5" class="panel-collapse collapse schedule-item-body">
                                                 <article>
-                                                    <p class="description">Lunch time! Recover some energy to keep going :)! Maybe a group picture ? </p>
+                                                    <p class="description">Lunch break! Outdoor kitchen facilities available, plus plenty of food options all around the area. Perfect time for a group picture!</p>
                                                 </article>
                                             </div>
                                         </div>
@@ -697,16 +746,16 @@
                                             </div>
                                             <a data-toggle="collapse" data-parent="#schedule3_day3_main_timeline" href="#schedule3_day3_main_time7" class="schedule-item-toggle collapsed">
                                                 <strong class="time highlight"><span class="icon icon-office-24"></span>15:30-17:00</strong>
-                                                <h6 class="title">Workshops Round Seis<i class="icon icon-arrows-06"></i></h6>
+                                                <h6 class="title">Workshop Block 2<i class="icon icon-arrows-06"></i></h6>
                                             </a>
                                             <div id="schedule3_day3_main_time7" class="panel-collapse collapse schedule-item-body">
                                                 <article>
-                                                    <strong class="highlight speaker-name">Trio Lagom Cie</strong><br>
-                                                    <p class="description">Group Dynamics</p>
-                                                    <strong class="highlight speaker-name">Duo Furia</strong>
-                                                    <p class="description">Icarian Intermediate</p>
-                                                    <strong class="highlight speaker-name">Matias</strong>
-                                                    <p class="description">Trampoline Intermediate</p>
+                                                    <strong class="highlight speaker-name">TBA</strong><br>
+                                                    <p class="description">Workshop details coming soon!</p>
+                                                    <strong class="highlight speaker-name">TBA</strong>
+                                                    <p class="description">Workshop details coming soon!</p>
+                                                    <strong class="highlight speaker-name">TBA</strong>
+                                                    <p class="description">Workshop details coming soon!</p>
                                                 </article>
                                             </div>
                                         </div>
@@ -716,7 +765,7 @@
                                         <!-- Lecture start -->
                                         <div class="panel schedule-item">
                                             <div class="lecture-icon-wrapper">
-                                                <span class="fa fa-handshake-o"></span>
+                                                <span class="fa fa-heart"></span>
                                             </div>
                                             <a data-toggle="collapse" data-parent="#schedule3_day3_main_timeline" href="#schedule3_day3_main_time8" class="schedule-item-toggle collapsed">
                                                 <strong class="time highlight"><span class="icon icon-office-24"></span>17:00</strong>
@@ -724,7 +773,7 @@
                                             </a>
                                             <div id="schedule3_day3_main_time8" class="panel-collapse collapse schedule-item-body">
                                                 <article>
-                                                        <p class="description"> Hoping all had a wonderful time we wanted to ask you to help us clean the house :)! Thanks you all! </p>
+                                                        <p class="description">Help us tidy up the space - many hands make light work! Thank you for a wonderful festival!</p>
                                                 </article>
                                             </div>
                                         </div>
@@ -772,20 +821,40 @@
             <h5 class="heading-alt">Pricing</h5>
             <p class="text-alt" style="margin-bottom: 80px;">Some questions might get answered in our<a href="https://urbanacro.com/info/UrbanAcroFestivalPolicy/" > Return Policies</a> otherwise just write us!</p>
 
-                <div class="col-sm-4 col-sm-offset-4">
+                <div class="col-sm-4 col-sm-offset-2">
                     <div class="package-column package-bright special-column">
                         <h6 class="package-title">Full Festival</h6>
                         <div class="package-price">
-                            <span class="currency">CHF</span>240.-
+                            <span class="currency">CHF/€</span>{% content_snippet 'urban_full_festival_price' %}
                         </div>
                         <div class="package-detail">
                             <ul>
                                 <li><span class="fa fa-check check-icon"></span>All Workshops</li>
-                                <li><span class="fa fa-check check-icon"></span>Food and Snacks</li>
-                                <li><span class="fa fa-check check-icon"></span>Saturday Night Event</li>
+                                <li><span class="fa fa-check check-icon"></span>Handstand Sessions</li>
+                                <li><span class="fa fa-check check-icon"></span>Coaching Sessions</li>
+                                <li><span class="fa fa-check check-icon"></span>Evening Sauna</li>
+                                <li><span class="fa fa-check check-icon"></span>Snacks & Coffee</li>
+                                <li><span class="fa fa-check check-icon"></span>Hall Sleeping Option</li>
                             </ul>
                         </div>
-                        <a href="https://www.urbanacro.com/events/7th-urban-acro-festival/" class="btn btn-lg btn-white" >Register</a>
+                        <a href="{% content_snippet 'urban_registration_link' %}" class="btn btn-lg btn-white" >Register</a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="package-column package-bright">
+                        <h6 class="package-title">Day Ticket</h6>
+                        <div class="package-price">
+                            <span class="currency">CHF/€</span>{% content_snippet 'urban_day_ticket_price' %}
+                        </div>
+                        <div class="package-detail">
+                            <ul>
+                                <li><span class="fa fa-check check-icon"></span>1 Day Access</li>
+                                <li><span class="fa fa-check check-icon"></span>All Workshops</li>
+                                <li><span class="fa fa-check check-icon"></span>Snacks & Coffee</li>
+                                <li><span class="fa fa-info-circle check-icon"></span>Available last week only</li>
+                            </ul>
+                        </div>
+                        <a href="{% content_snippet 'urban_registration_link' %}" class="btn btn-lg btn-white" >Register</a>
                     </div>
                 </div>
             </div>

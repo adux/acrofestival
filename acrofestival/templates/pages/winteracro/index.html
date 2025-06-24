@@ -1,12 +1,12 @@
 {% extends "pages/winteracro/basefest.html" %}
-{% block content %}{% load static %}{% load tinycontent_tags %}
+{% block content %}{% load static %}{% load content_tags %}
 <!-- Wrapper -->
 <div id="wrapper">
 <!-- Header -->
     <header id="header" class="alt">
             <span class="logo"><img src="{% static "winteracro/images/2025/winter_acro_2025_logo_transparent.png"%}" alt="Logo Winter Acro in Arosa 2025" /></span>
-        <h1>{% tinycontent_simple 'winter_general_title' %}</h1>
-        <p>{% tinycontent_simple 'winter_general_date' %}</br>
+        <h1>{% content_snippet 'winter_general_title' %}</h1>
+        <p>{% content_snippet 'winter_general_date' %}</br>
         <a target="_blank" rel="noopener" href="https://www.urbanacro.com/events/winter-acro-2025-arosa/">Registration</a></p>
     </header>
     {% include 'pages/winteracro/snippets/navhome.html' %}
@@ -20,7 +20,7 @@
                         <h2>Winteracro 2025</h2>
                     </header>
                         <p>
-                        {% tinycontent_simple 'winter_home_intro' %}
+                        {% content_snippet 'winter_home_intro' %}
                         </p>
                     <ul class="actions">
                         <li>
@@ -42,37 +42,37 @@
                 <li>
                     <span class="icon major style3 fas fa-utensils"></span>
                     <h3>Food</h3>
-                    <p>{% tinycontent_simple 'winter_home_food' %}
+                    <p>{% content_snippet 'winter_home_food' %}
                     </p>
                     </li>
                 <li>
                     <span class="icon major style5 fas fa-cogs"></span>
                     <h3>Workshops</h3>
-                    <p>{% tinycontent_simple 'winter_home_workshops' %}
+                    <p>{% content_snippet 'winter_home_workshops' %}
                     </p>
                 </li>
                 <li>
                     <span class="icon major style6 fas fa-snowflake"></span>
                     <h3>Snow Event</h3>
-                    <p>{% tinycontent_simple 'winter_home_specialevent' %}
+                    <p>{% content_snippet 'winter_home_specialevent' %}
                     </p>
                 </li>
                 <li>
                     <span class="icon major style1 fas fa-fire"></span>
                     <h3>Wellness</h3>
-                    <p>{% tinycontent_simple 'winter_home_sauna' %}
+                    <p>{% content_snippet 'winter_home_sauna' %}
                     </p>
                     </li>
                 <li>
                     <span class="icon major style7 fas fa-magic"></span>
                     <h3>Show</h3>
-                    <p>{% tinycontent_simple 'winter_home_show' %}
+                    <p>{% content_snippet 'winter_home_show' %}
                     </p>
                 </li>
                 <li>
                     <span class="icon major style1 fas fa-heart"></span>
                     <h3>Hall</h3>
-                    <p>{% tinycontent_simple 'winter_home_hall' %}
+                    <p>{% content_snippet 'winter_home_hall' %}
                     </p>
                 </li>
             </ul>
@@ -128,21 +128,21 @@
                 <li>
                     <a href="{% url 'winteraccommodation'%}" style="text-decoration: none;"><span class="icon major style1 fas fa-bed"></span></a>
                     <h3>Accommodation</h3>
-                    <p>{% tinycontent_simple 'winter_home_accomodation' %}
+                    <p>{% content_snippet 'winter_home_accomodation' %}
                     <a class="button" href="{% url 'winteraccommodation'%}">More Info.</a>
                     </p>
                 </li>
                 <li>
                     <a href="{% url 'winterlocation'%}" style="text-decoration: none;"><span class="icon major style2 fas fa-map-marker"></span></a>
                     <h3>Location</h3>
-                    <p>{% tinycontent_simple 'winter_home_location' %}
+                    <p>{% content_snippet 'winter_home_location' %}
                     <a class="button" href="{% url 'winterlocation'%}">More Info</a>
                     </p>
                     </li>
                 <li>
                     <a href="{% url 'winterconditions'%}" style="text-decoration: none;"><span class="icon major style1 fas fa-money-bill-wave"></span></a>
                     <h3>Conditions</h3>
-                    <p>{% tinycontent_simple 'winter_home_prices' %}
+                    <p>{% content_snippet 'winter_home_prices' %}
                     <a class="button" href="{% url 'winterconditions'%}">More Info</a>
                     </p>
                 </li>
@@ -159,7 +159,7 @@
         </section>
         <section id="teachers" class="main">
                 <header class="major">
-                    <h2>{% tinycontent_simple 'winter_general_title' %} - Teachers</h2>
+                    <h2>{% content_snippet 'winter_general_title' %} - Teachers</h2>
                 </header>
                 <!-- <p> -->
                 <!-- <u>Confirmed</u> teachers on the left. <u>To be confirmed</u> on the right. We'll keep you posted :) -->
@@ -224,7 +224,7 @@
         <section id="schedule" class="main special">
             <header class="major">
                 <h2>Schedule</h2>
-                <p>{% tinycontent_simple 'winter_home_schedule' %}
+                <p>{% content_snippet 'winter_home_schedule' %}
                 </p>
                 <!-- <h2><a href="https://docs.google.com/spreadsheets/d/1U3Kyh77kwNPIyxkHhSyy07eEJlW29MELMOcjYbLpHWQ/edit?usp=sharing" target="_blank">WORKSHOP SCHEDULE</a></h2> -->
             </header>

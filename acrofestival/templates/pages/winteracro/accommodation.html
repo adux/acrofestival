@@ -1,10 +1,10 @@
 {% extends "pages/winteracro/basefest.html" %}
-{% block content %}{% load static %}{% load tinycontent_tags %}
+{% block content %}{% load static %}{% load content_tags %}
 <!-- Wrapper -->
 <div id="wrapper">
     <!-- Header -->
     <header id="header">
-        <h2>{% tinycontent_simple 'winter_acro_header_location' %}</h2>
+        <h2>{% content_snippet 'winter_acro_header_location' %}</h2>
         <p>How to get there and where will we sleep</p>
     </header>
     {% include "pages/winteracro/snippets/navnothome.html" %}
@@ -16,48 +16,48 @@
                 <img src="{% static "winteracro/images/tschlin_winter_acro_urbanacro.webp"%}" alt="Tschlin location of the winter acro festival" />
             </span>
             <h1>Accommodation</h1>
-            <h2>{% tinycontent_simple 'winter_accomodation_title' %}</h2>
-            <p>{% tinycontent_simple 'winter_accomodation_description' %}</p>
+            <h2>{% content_snippet 'winter_accomodation_title' %}</h2>
+            <p>{% content_snippet 'winter_accomodation_description' %}</p>
             <p>
             <span class="image right">
                     <img src="{% static "winteracro/images/2025/strela_doppel.png" %}" alt="winter accommodation for the urbanacro winter acro festival" />
             </span>
-            <h3>{% tinycontent_simple 'winter_accomodation_title_dorms' %}</h3>
-            {% tinycontent_simple 'winter_accomodation_dorms' %}
+            <h3>{% content_snippet 'winter_accomodation_title_dorms' %}</h3>
+            {% content_snippet 'winter_accomodation_dorms' %}
             <!-- <span class="image left clearfix"> -->
             <!--         <img src="{% static "winteracro/images/2025/strela_dorm.png" %}" alt="winter accommodation winter acro in strela dorms arosa" /> -->
             <!-- </span> -->
-            <a class="button" style="box-shadow:0px; background:#f3d216;" href="{% tinycontent_simple 'winter_accomodation_dorms_url' %}">
+            <a class="button" style="box-shadow:0px; background:#f3d216;" href="{% content_snippet 'winter_accomodation_dorms_url' %}">
                     Google Maps Strela
             </a>
             <hr>
             <span class="image left">
                     <img src="{% static "winteracro/images/2025/pfadiheim_draussen.png" %}" alt="winter accommodation in Arosa pfadiheim draussen" />
             </span>
-            <h3>{% tinycontent_simple 'winter_accomodation_title_upgrade1' %}</h3>
-            {% tinycontent_simple 'winter_accomodation_upgrade1' %}
+            <h3>{% content_snippet 'winter_accomodation_title_upgrade1' %}</h3>
+            {% content_snippet 'winter_accomodation_upgrade1' %}
             <!-- <span class="image right clearfix"> -->
             <!--         <img src="{% static "winteracro/images/2025/pfadiheim.png" %}" alt="winter accommodation for Arosa Winter acro 2025" /> -->
             <!-- </span> -->
-            <a class="button" style="box-shadow:0px; background:#f3d216;" href="{% tinycontent_simple 'winter_accomodation_upgrade1_url' %}">
+            <a class="button" style="box-shadow:0px; background:#f3d216;" href="{% content_snippet 'winter_accomodation_upgrade1_url' %}">
                     Google Maps Pfadiheim
             </a>
             <hr>
             <span class="image right">
                     <img src="{% static "winteracro/images/2025/aula.png" %}" alt="winter accommodation for the urbanacro winter acro festival" />
             </span>
-            <h3>{% tinycontent_simple 'winter_accomodation_title_upgrade2' %}</h3>
-            {% tinycontent_simple 'winter_accomodation_upgrade2' %}
+            <h3>{% content_snippet 'winter_accomodation_title_upgrade2' %}</h3>
+            {% content_snippet 'winter_accomodation_upgrade2' %}
             <!-- <span class="image left clearfix"> -->
             <!--         <img src="{% static "winteracro/images/2025/halle.png" %}" alt="winter halle for the urbanacro winter acro festival" /> -->
             <!-- </span> -->
-            <a class="button" style="box-shadow:0px; background:#f3d216;" href="{% tinycontent_simple 'winter_accomodation_hall_url' %}">
+            <a class="button" style="box-shadow:0px; background:#f3d216;" href="{% content_snippet 'winter_accomodation_hall_url' %}">
                     Google Maps Hall
             </a>
             </br>
             </p>
             <h3>Some other extra infos:</h3>
-            {% tinycontent_simple 'winter_accomodation_extra' %}
+            {% content_snippet 'winter_accomodation_extra' %}
         </section>
     </div>
     {% include "pages/winteracro/snippets/footer.html" %}

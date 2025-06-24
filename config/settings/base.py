@@ -32,6 +32,10 @@ USE_L10N = True
 # https://docs.djangoproject.com/en/dev/ref/settings/#use-tz
 USE_TZ = True
 
+# GOOGLE MAPS
+# ------------------------------------------------------------------------------
+GOOGLE_API_KEY = env("GOOGLE_API_KEY", default="")
+
 # DATABASES
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
@@ -72,6 +76,7 @@ LOCAL_APPS = [
     "acrofestival.booking.apps.BookingConfig",
     "acrofestival.winteracro.apps.WinteracroConfig",
     "acrofestival.dap.apps.DapConfig",
+    "acrofestival.content.apps.ContentConfig",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -189,6 +194,7 @@ TEMPLATES = [
                 "django.template.context_processors.static",
                 "django.template.context_processors.tz",
                 "django.contrib.messages.context_processors.messages",
+                "acrofestival.context_processors.google_maps",
             ],
         },
     },

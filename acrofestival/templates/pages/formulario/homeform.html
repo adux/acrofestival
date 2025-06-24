@@ -1,11 +1,11 @@
-{% extends "pages/formulario/baseform.html" %}{% load tinycontent_tags %}
+{% extends "pages/formulario/baseform.html" %}{% load content_tags %}
 {% block content %}
 <div class="container">
     <div class="fs-form-wrap" id="fs-form-wrap">
         <div class="fs-title">
             <h1>Winter Acro Festival</h1>
             <div class="codrops-top">
-                <a class="codrops-icon fa-facebook-square" href="{% tinycontent_simple 'winter_general_fb' %}"><span>Facebook Event</span></a>
+                <a class="codrops-icon fa-facebook-square" href="{% content_snippet 'winter_general_fb' %}"><span>Facebook Event</span></a>
                 <a class="codrops-icon fa-envelope" href="mailto:acrolama@acrolama.com"><span>Send us an Email</span></a>
                 <a class="codrops-icon fa-question-circle-o" href="{% url "winteracro"%}#first"><span>Frequently Asked Questions</span></a>
             </div>
@@ -43,31 +43,31 @@
                     <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
                         <span>
                             <label for="full" class="radio-3day">
-                                {% tinycontent_simple 'winter_prices_full' %}
+                                {% content_snippet 'winter_prices_full' %}
                             </label>
                             <input id="full" name="option" type="radio" value="Full"/>
                         </span>
                         <span>
                             <label for="f-nsl" class="radio-3day">
-                                {% tinycontent_simple 'winter_prices_full_nosleep' %}
+                                {% content_snippet 'winter_prices_full_nosleep' %}
                             </label>
                             <input id="f-nsl" name="option" type="radio" value="F-NSL"/>
                         </span>
                         <span>
                             <label for="sin" class="radio-1day">
-                                {% tinycontent_simple 'winter_prices_single' %}
+                                {% content_snippet 'winter_prices_single' %}
                             </label>
                             <input id="sin" name="option" type="radio" data-info="Please add in comment which day(s). Thanks!" value="SIN"/>
                         </span>
                         <span>
                             <label for="up1" class="radio-4day">
-                                {% tinycontent_simple 'winter_prices_upgrade1' %}
+                                {% content_snippet 'winter_prices_upgrade1' %}
                             </label>
                             <input id="up1" name="option" type="radio" value="UP1"/>
                         </span>
                         <span>
                             <label for="up2" class="radio-4day">
-                                {% tinycontent_simple 'winter_prices_upgrade2' %}
+                                {% content_snippet 'winter_prices_upgrade2' %}
                             </label>
                             <input id="up2" name="option" type="radio" value="UP2"/>
                         </span>

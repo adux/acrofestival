@@ -1,5 +1,5 @@
 {% extends "pages/winteracro/basefest.html" %}
-{% block content %}{% load static %}{% load tinycontent_tags %}
+{% block content %}{% load static %}{% load content_tags %}
 <!-- Wrapper -->
     <div id="wrapper">
         <!-- Header -->
@@ -14,22 +14,22 @@
             <section id="content" class="main">
                 <span class="image main"><img src="{% static "winteracro/images/2025/winter_arosa.jpg"%}" alt="Hall for the Winter acro festival in tschlin by urbanacro" /></span>
                 <h2>Festival passes</h2>
-                <p>{% tinycontent_simple 'winter_prices_description' %}
+                <p>{% content_snippet 'winter_prices_description' %}
                 <h3>Price list</h3>
                 <ul>
-                    <li>{% tinycontent_simple 'winter_prices_short' %}</li>
-                    <li>{% tinycontent_simple 'winter_prices_full' %}</li>
-                    <li>{% tinycontent_simple 'winter_prices_full_nosleep' %}</li>
-                    <li>{% tinycontent_simple 'winter_prices_single' %}</li>
-                    <li>{% tinycontent_simple 'winter_prices_upgrade1' %}</li>
-                    <li>{% tinycontent_simple 'winter_prices_upgrade2' %}</li>
+                    <li>{% content_snippet 'winter_prices_short' %}</li>
+                    <li>{% content_snippet 'winter_prices_full' %}</li>
+                    <li>{% content_snippet 'winter_prices_full_nosleep' %}</li>
+                    <li>{% content_snippet 'winter_prices_single' %}</li>
+                    <li>{% content_snippet 'winter_prices_upgrade1' %}</li>
+                    <li>{% content_snippet 'winter_prices_upgrade2' %}</li>
                 </ul>
                 <h3>Payment methods</h3>
                 <p> We will send you the bank details by email after we confirm and process your registration.</br>
                 If another payment method is needed please ask us directly.</br>
                 *Note that there might be a fee included.</p>
                 <h2>Refund conditions</h2>
-                <p>{% tinycontent_simple 'winter_prices_refunds' %}</p>
+                <p>{% content_snippet 'winter_prices_refunds' %}</p>
             </section>
     </div>
     {% include "pages/winteracro/snippets/footer.html" %}

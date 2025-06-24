@@ -1,10 +1,10 @@
-{% extends 'base.html'%}{% block content %}{% load static %}{% load tinycontent_tags %}
+{% extends 'base.html'%}{% block content %}{% load static %}{% load tinycontent_tags %}{% load content_tags %}
 <section class="xop-container">
 	<div class="xop-left">
 		<article>
         <a href="{% url 'winteracro'%}">
-            <h1>{% tinycontent_simple 'winter_general_title' %}</h1>
-            <h1 style="font-size:2rem;">{% tinycontent_simple 'winter_general_date' %}</h1>
+            <h1>{% content_snippet 'winter_general_title' %}</h1>
+            <h1 style="font-size:2rem;">{% content_snippet 'winter_general_date' %}</h1>
             <a href="{% url 'winteracro'%}" class="xop-button">Enter</a>
         </a>
 		</article>
@@ -12,8 +12,8 @@
 	<div class="xop-right">
 		<article>
         <a href="{% url 'urbanacro'%}">
-            <h1>Urban Acro Festival</h1>
-            <h1 style="font-size:2rem" >{% tinycontent_simple 'urban_general_date' %}</h1>
+            <h1>{% content_snippet 'urban_general_title' %}</h1>
+            <h1 style="font-size:2rem" >{% content_snippet 'urban_general_date' %}</h1>
             <a href="{% url 'urbanacro'%}" class="xop-button">Enter</a>
         </a>
 		</article>
