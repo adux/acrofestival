@@ -6,12 +6,19 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{% block title %}AcroFestival{% endblock title %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The first Acro, Acroyoga Festival in Zurich Switzerland. Come and join us in 3 days of play with movement, acrobatics, yoga and healing arts.">
+    <meta name="description" content="{% block meta_description %}The first Acro, Acroyoga Festival in Zurich Switzerland. Come and join us in 3 days of play with movement, acrobatics, yoga and healing arts.{% endblock meta_description %}">
     <meta name="author" content="Adrian Garate">
-    <meta name="keywords" content="Acroyoga, Acrofestival, Acrobatic, Akrobatik, Acro Zürich, Acroyoga Zürich, Acrolama Festival">
-    <meta property="og:url" content="https://www.acrofestival.ch" />
-    <meta property="og:title" content="Urban Acro Festival Züri" />
-    <meta property="og:image" content="{% static 'urbanacro/images/logo_acrofestival.jpg'%}">
+    <meta name="keywords" content="{% block meta_keywords %}Acroyoga, Acrofestival, Acrobatic, Akrobatik, Acro Zürich, Acroyoga Zürich, Acrolama Festival{% endblock meta_keywords %}">
+    <link rel="canonical" href="{% block canonical_url %}https://www.acrofestival.ch{% endblock canonical_url %}">
+    <meta property="og:url" content="{% block og_url %}https://www.acrofestival.ch{% endblock og_url %}" />
+    <meta property="og:title" content="{% block og_title %}Urban Acro Festival Züri{% endblock og_title %}" />
+    <meta property="og:description" content="{% block og_description %}The first Acro, Acroyoga Festival in Zurich Switzerland. Come and join us in 3 days of play with movement, acrobatics, yoga and healing arts.{% endblock og_description %}" />
+    <meta property="og:image" content="{% block og_image %}{% static 'urbanacro/images/logo_acrofestival.jpg'%}{% endblock og_image %}">
+    <meta property="og:type" content="{% block og_type %}website{% endblock og_type %}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% block twitter_title %}Urban Acro Festival Züri{% endblock twitter_title %}">
+    <meta name="twitter:description" content="{% block twitter_description %}The first Acro, Acroyoga Festival in Zurich Switzerland. Come and join us in 3 days of play with movement, acrobatics, yoga and healing arts.{% endblock twitter_description %}">
+    <meta name="twitter:image" content="{% block twitter_image %}{% static 'urbanacro/images/logo_acrofestival.jpg'%}{% endblock twitter_image %}">
     <link rel="icon" href="{% static 'urbanacro/images/favicons/favicon.ico' %}">
     <!-- <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.jpg"> -->
 
@@ -37,6 +44,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'urbanacro/css/style.css'%}" />
     <link rel="stylesheet" type="text/css" href="{% static 'urbanacro/css/frontpage.css'%}" />
     {% endblock %}
+    
+    {% block structured_data %}{% endblock structured_data %}
     {% analytical_head_bottom %}
   </head>
 
