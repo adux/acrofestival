@@ -84,8 +84,8 @@
     </div>
     <section id="hero" class="hero-section bg1 bg-cover window-height light-text">
         <ul class="socials-nav">
-            <li class="socials-nav-item"><a href="https://www.facebook.com/events/745099830608019"><span class="fa fa-facebook"></span></a></li>
-            <li class="socials-nav-item"><a href="https://www.instagram.com/urban.acro"><span class="fa fa-instagram"></span></a></li>
+            <li class="socials-nav-item"><a href="{% content_snippet 'urban_social_facebook' %}"><span class="fa fa-facebook"></span></a></li>
+            <li class="socials-nav-item"><a href="{% content_snippet 'urban_social_instagram' %}"><span class="fa fa-instagram"></span></a></li>
         </ul>
         <div class="heading-block centered-block align-center">
             <div class="container">
@@ -995,8 +995,8 @@
                 </div>
                 <div class="col-md-6 align-right">
                     <ul class="socials-nav align-right">
-                        <li class="socials-nav-item"><a href="https://facebook.com/urbanacro.ch"><span class="fa fa-facebook"></span></a></li>
-                        <li class="socials-nav-item"><a href="https://instagram.com/urban.acro"><span class="fa fa-instagram"></span></a></li>
+                        <li class="socials-nav-item"><a href="{% content_snippet 'urban_social_facebook' %}"><span class="fa fa-facebook"></span></a></li>
+                        <li class="socials-nav-item"><a href="{% content_snippet 'urban_social_instagram' %}"><span class="fa fa-instagram"></span></a></li>
                     </ul>
                     <p class="text-alt"><small>All Rights Reserved © 2024</small></p>
                 </div>
@@ -1050,11 +1050,4 @@
         </div>
     </div>
 
-    <div class="modal-window" data-modal="0" style="background-color: rgba(2, 2, 2, 0.85);">
-        <div class="modal-box iframe-box iframe-video">
-            <span class="close-btn icon icon-office-52"></span>
-
-            <iframe src="https://www.youtube.com/embed/goH-Pv1w6xo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
 {% endblock %}

@@ -30,12 +30,19 @@ urban_general_sleeping: |
   In Zurich City there are many hostels or check out www.airbnb.com
 
 urban_general_food: |
-  "We are what we eat"
-  <br>
-  Main dishes & healthy snacks are all organic, (mostly) local, vegan and cooked with love.
-  *Everyone will be asked to colaborate by doing some task in the kitchen.
-  Kitchen Team: Mira and her sous chef(fe)s! 
-  Lots of you know her, otherwise you'll not forget her after this week ;)
+  <strong>Kitchen Setup & Food Freedom</strong><br>
+  This year, we're giving you the freedom to organize your own meals!<br><br>
+  
+  <strong>What's available:</strong><br>
+  🍽️ Fully equipped communal kitchen for your use<br>
+  ❄️ Large fridge space<br>
+  🔥 Cooking facilities and utensils<br>
+  🧽 Clean-up station<br><br>
+  
+  <strong>How it works:</strong><br>
+  Bring your own food, cook together, share meals, or grab something from the many nearby cafes and restaurants. The kitchen is yours to use throughout the festival!<br><br>
+  
+  Perfect for meal prepping, group cooking sessions, or just storing your festival snacks!
 
 # Urban Acro Workshops
 urban_general_workshops: |
@@ -115,3 +122,7 @@ urbanacro_teachers_teacher6_team: '<a href="#">@coming_soon</a>'
 
 # Urban Acro Registration Link
 urban_registration_link: "https://www.urbanacro.com/events/8th-urban-acro-festival/"
+
+# Urban Acro Social Links
+urban_social_facebook: "https://www.facebook.com/events/745099830608019"
+urban_social_instagram: "https://www.instagram.com/urban.acro"
