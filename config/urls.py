@@ -17,6 +17,7 @@ from dap.views import dap_view
 urlpatterns = [
     path("", frontpage_view, name="home"),
     path(settings.ADMIN_URL, admin.site.urls),
+    path("content-editor/", include("acrofestival.content.urls", namespace="content")),
     path("dap/", dap_view, name="dap"),
     path("urbanacro/", urbanacro_view, name="urbanacro"),
     path("winteracro/", fest_homeview, name="winteracro"),

@@ -1,0 +1,254 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit {{ festival_name }} - Content Editor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: white;
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+        }
+        .subtitle {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2rem;
+        }
+        .back-link {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .messages {
+            margin-bottom: 1.5rem;
+        }
+        .message {
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        .message.success {
+            background: rgba(72, 187, 120, 0.9);
+        }
+        .message.error {
+            background: rgba(245, 101, 101, 0.9);
+        }
+        .message.warning {
+            background: rgba(237, 137, 54, 0.9);
+        }
+        .editor-form {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 1.5rem;
+        }
+        .form-group:last-child {
+            border-bottom: none;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .key-name {
+            font-family: 'Courier New', monospace;
+            color: #667eea;
+            font-size: 0.85rem;
+            font-weight: normal;
+            margin-left: 0.5rem;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+        input[type="text"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+            font-family: 'Courier New', monospace;
+            line-height: 1.5;
+        }
+        .char-count {
+            text-align: right;
+            font-size: 0.85rem;
+            color: #718096;
+            margin-top: 0.25rem;
+        }
+        .form-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e2e8f0;
+        }
+        .btn {
+            padding: 0.875rem 2rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s, transform 0.1s;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .btn:active {
+            transform: scale(0.98);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #2d3748;
+        }
+        .help-text {
+            font-size: 0.85rem;
+            color: #718096;
+            margin-top: 0.25rem;
+            font-style: italic;
+        }
+        .search-box {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #f7fafc;
+            border-radius: 6px;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="{% url 'content:editor_list' %}" class="back-link">&larr; Back to Content Editor</a>
+        <h1>{{ festival_name }}</h1>
+        <p class="subtitle">Edit content snippets below. Changes will be committed to git automatically.</p>
+
+        {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+            <div class="message {{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="editor-form">
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Search content keys...">
+            </div>
+
+            <form method="post">
+                {% csrf_token %}
+                <div id="content-fields">
+                    {% for key, value in content %}
+                    <div class="form-group" data-key="{{ key }}">
+                        <label>
+                            {{ key|title }}
+                            <span class="key-name">{{ key }}</span>
+                        </label>
+                        {% if value|length > 100 or '\n' in value or '<' in value %}
+                        <textarea name="content_{{ key }}" rows="8">{{ value }}</textarea>
+                        {% else %}
+                        <input type="text" name="content_{{ key }}" value="{{ value }}">
+                        {% endif %}
+                        <div class="char-count">{{ value|length }} characters</div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save & Commit Changes</button>
+                    <a href="{% url 'content:editor_list' %}" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Search functionality
+        document.getElementById('search').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const formGroups = document.querySelectorAll('.form-group');
+
+            formGroups.forEach(group => {
+                const key = group.getAttribute('data-key').toLowerCase();
+                const content = group.textContent.toLowerCase();
+
+                if (key.includes(searchTerm) || content.includes(searchTerm)) {
+                    group.style.display = 'block';
+                } else {
+                    group.style.display = 'none';
+                }
+            });
+        });
+
+        // Auto-resize textareas
+        document.querySelectorAll('textarea').forEach(textarea => {
+            textarea.addEventListener('input', function() {
+                this.style.height = 'auto';
+                this.style.height = this.scrollHeight + 'px';
+            });
+
+            // Initial resize
+            textarea.style.height = 'auto';
+            textarea.style.height = textarea.scrollHeight + 'px';
+        });
+
+        // Update character counts
+        document.querySelectorAll('input[type="text"], textarea').forEach(input => {
+            input.addEventListener('input', function() {
+                const charCount = this.parentElement.querySelector('.char-count');
+                if (charCount) {
+                    charCount.textContent = this.value.length + ' characters';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
