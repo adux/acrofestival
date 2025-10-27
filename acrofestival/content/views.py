@@ -1,7 +1,8 @@
+import base64
 import os
-from typing import Dict
+from typing import Dict, Tuple
 
-import git
+import requests
 import yaml
 from django.conf import settings
 from django.contrib.admin.views.decorators import staff_member_required
@@ -18,6 +19,11 @@ FESTIVAL_FILES = {
     'dap': 'dap.yml',
     'general': 'general.yml',
 }
+
+# GitHub repository configuration
+GITHUB_OWNER = 'adux'
+GITHUB_REPO = 'acrofestival'
+GITHUB_BRANCH = 'master'
 
 
 def get_snippets_dir():
@@ -53,38 +59,75 @@ def save_yaml_file(festival: str, content: Dict) -> bool:
     return True
 
 
-def git_commit_and_push(festival: str, user_email: str, user_name: str):
-    """Commit changes to git and optionally push to origin"""
+def commit_to_github(festival: str, content: Dict, user_email: str, user_name: str) -> Tuple[bool, str]:
+    """
+    Commit changes to GitHub using the GitHub API.
+    Requires GITHUB_TOKEN environment variable to be set.
+    """
+    github_token = os.getenv('GITHUB_TOKEN')
+
+    if not github_token:
+        return False, "GITHUB_TOKEN not configured. Changes saved locally only."
+
+    filename = FESTIVAL_FILES.get(festival)
+    if not filename:
+        return False, "Invalid festival"
+
+    file_path = f"config/snippets/{filename}"
+
+    # Convert YAML content to string
+    yaml_content = yaml.dump(content, default_flow_style=False, allow_unicode=True, sort_keys=False)
+
+    # Encode content to base64
+    content_encoded = base64.b64encode(yaml_content.encode('utf-8')).decode('utf-8')
+
+    # GitHub API endpoint
+    api_url = f"https://api.github.com/repos/{GITHUB_OWNER}/{GITHUB_REPO}/contents/{file_path}"
+
+    headers = {
+        'Authorization': f'token {github_token}',
+        'Accept': 'application/vnd.github.v3+json',
+    }
+
     try:
-        repo = git.Repo(settings.ROOT_DIR)
-        filename = FESTIVAL_FILES.get(festival)
-        file_path = os.path.join('config', 'snippets', filename)
+        # Get the current file SHA (required for updates)
+        response = requests.get(api_url, headers=headers, params={'ref': GITHUB_BRANCH})
 
-        # Configure git user for this commit
-        with repo.config_writer() as config:
-            config.set_value('user', 'email', user_email)
-            config.set_value('user', 'name', user_name)
+        if response.status_code == 200:
+            current_sha = response.json()['sha']
+        elif response.status_code == 404:
+            # File doesn't exist yet
+            current_sha = None
+        else:
+            return False, f"GitHub API error: {response.status_code} - {response.text}"
 
-        # Stage the file
-        repo.index.add([file_path])
-
-        # Commit
+        # Prepare commit data
         commit_message = f"Update {festival} content via web editor\n\nEdited by: {user_name} ({user_email})"
-        repo.index.commit(commit_message)
 
-        # Push to origin (GitHub)
-        # Note: This requires SSH keys to be configured
-        # If not configured, it will fail silently
-        try:
-            origin = repo.remote(name='origin')
-            origin.push()
-            return True, "Changes committed and pushed to GitHub"
-        except Exception as push_error:
-            # Commit succeeded but push failed
-            return True, f"Changes committed locally. Push failed: {str(push_error)}"
+        commit_data = {
+            'message': commit_message,
+            'content': content_encoded,
+            'branch': GITHUB_BRANCH,
+            'committer': {
+                'name': user_name,
+                'email': user_email,
+            },
+        }
+
+        if current_sha:
+            commit_data['sha'] = current_sha
+
+        # Create/update the file
+        response = requests.put(api_url, headers=headers, json=commit_data)
+
+        if response.status_code in [200, 201]:
+            commit_url = response.json().get('commit', {}).get('html_url', '')
+            return True, f"Changes committed to GitHub successfully! {commit_url}"
+        else:
+            return False, f"GitHub commit failed: {response.status_code} - {response.text}"
 
     except Exception as e:
-        return False, f"Git operation failed: {str(e)}"
+        return False, f"GitHub API error: {str(e)}"
 
 
 @staff_member_required
@@ -119,7 +162,7 @@ def content_editor_edit(request, festival):
                 yaml_key = key[8:]  # Remove 'content_' prefix
                 content[yaml_key] = value
 
-        # Save YAML file
+        # Save YAML file locally
         if save_yaml_file(festival, content):
             # Reload snippets in memory
             ContentSnippets().reload()
@@ -128,13 +171,13 @@ def content_editor_edit(request, festival):
             user_email = request.user.email or 'noreply@acrofestival.com'
             user_name = request.user.get_full_name() or request.user.username
 
-            # Commit to git
-            success, message = git_commit_and_push(festival, user_email, user_name)
+            # Commit to GitHub
+            success, message = commit_to_github(festival, content, user_email, user_name)
 
             if success:
-                messages.success(request, f"{message}")
+                messages.success(request, message)
             else:
-                messages.warning(request, f"Content saved but git failed: {message}")
+                messages.warning(request, f"Content saved locally. GitHub sync: {message}")
 
             return redirect('content:editor_edit', festival=festival)
         else:
