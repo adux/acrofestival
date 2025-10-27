@@ -108,9 +108,9 @@ urbanacro_teachers_teacher3_name: "Manas Sahoo (SWEDEN)"
 urbanacro_teachers_teacher3_about: "If you’ve ever seen Manas move, you know—his flows are pure art. Based in Stockholm, he’s known for his incredibly creative transitions, strong foundations, and smooth style. A true acro flow master, he’ll be sharing both powerful technique and inspiring movement ideas. Prepare to level up!"
 urbanacro_teachers_teacher3_team: '<a href="https://www.instagram.com/manas_acro_addict/">@manas_acro_addict</a>'
 
-urbanacro_teachers_teacher4_name: "Coming Soon"
-urbanacro_teachers_teacher4_about: "We're excited to announce another amazing teacher soon! Stay tuned for more details."
-urbanacro_teachers_teacher4_team: '<a href="#">@coming_soon</a>'
+urbanacro_teachers_teacher4_name: "Nelson (PORTUGAL)"
+urbanacro_teachers_teacher4_about: "Originally from Portugal, Nelson has arrived to Zürich to coach competing Sport Acro teams all over Switzerland. Always with a smile he's our local serious tricks advisor. Great to have you with us amigo!"
+urbanacro_teachers_teacher4_team: '<a href="https://www.instagram.com/nelsonacro">@nelsonacro</a>'
 
 urbanacro_teachers_teacher5_name: "Coming Soon"
 urbanacro_teachers_teacher5_about: "We're excited to announce another amazing teacher soon! Stay tuned for more details."
@@ -122,6 +122,14 @@ urbanacro_teachers_teacher6_team: '<a href="#">@coming_soon</a>'
 
 # Urban Acro Registration Link
 urban_registration_link: "https://www.urbanacro.com/events/8th-urban-acro-festival/"
+
+# Urban Acro Teacher Instagram Links
+urbanacro_teacher1_instagram: '<li class="socials-nav-item"><a href="https://www.instagram.com/fernandomelki/"><span class="fa fa-instagram"></span></a></li><li class="socials-nav-item"><a href="https://www.instagram.com/fifirose7/"><span class="fa fa-instagram"></span></a></li>'
+urbanacro_teacher2_instagram: '<li class="socials-nav-item"><a href="https://www.instagram.com/saft.acro/"><span class="fa fa-instagram"></span></a></li>'
+urbanacro_teacher3_instagram: '<li class="socials-nav-item"><a href="https://www.instagram.com/manas_acro_addict/"><span class="fa fa-instagram"></span></a></li>'
+urbanacro_teacher4_instagram: '<li class="socials-nav-item"><a href="https://www.instagram.com/nelsonacro"><span class="fa fa-instagram"></span></a></li>'
+urbanacro_teacher5_instagram: '<li class="socials-nav-item"><a href="#"><span class="fa fa-question"></span></a></li>'
+urbanacro_teacher6_instagram: '<li class="socials-nav-item"><a href="#"><span class="fa fa-question"></span></a></li>'
 
 # Urban Acro Social Links
 urban_social_facebook: "https://www.facebook.com/events/745099830608019"

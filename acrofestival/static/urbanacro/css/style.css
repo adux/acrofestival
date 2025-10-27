@@ -7203,3 +7203,28 @@ button[type="submit"] .loading {
     width: 100%;
   }
 }
+
+/* Custom fixes for speaker social icons */
+.speaker .speaker-socials {
+  text-align: center;
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.speaker .speaker-socials > li a:not(:hover):not(:focus):not(:active) .fa {
+  background-color: #fe4918 !important;
+  border-color: #fe4918 !important;
+  color: #ffffff !important;
+}
+
+.speaker .speaker-socials > li a:hover .fa,
+.speaker .speaker-socials > li a:focus .fa,
+.speaker .speaker-socials > li a:active .fa {
+  background-color: #d63916 !important;
+  border-color: #d63916 !important;
+  color: #ffffff !important;
+}
