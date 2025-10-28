@@ -130,10 +130,10 @@ winter_prices_description: "Creating an Event like the Winter Acro is a real Org
 winter_prices_full: '6 Days Pass: CHF 730.- per Person in 3 pax Dorm'
 winter_prices_full_nosleep: '6 Days Pass: CHF 500.- per Person <b>without</b> Accommodation'
 winter_prices_refunds: "<strong>Cancellation Policy - In case <u>you</u> cancel.</strong><br>\r\
-  \nIn case of cancellation, the following costs are charged: <br>: \r\nUp to 30 days\
+  \nIn case of cancellation, the following costs are charged: <br> \r\nUp to 30 days\
   \ prior to the event: CHF 90.- fixed cost <br>\r\n30 to 15 days prior to the event:\
   \  50% Festival Ticket <br>\r\n14 to 1 day(s) prior to the event: 100%  Festival\
-  \ Ticket <br>\r\non the day of the Event or no-show:  100%  Festival Ticket<br><br>\
+  \ Ticket <br>\r\nOn the day of the Event or no-show:  100%  Festival Ticket<br><br>\
   \ \r\n\r\nIf you cannot join the event but have paid, consider the Ticket transfer\
   \ but let us know asap.<br><br>\r\n\r\n<strong>Cancellation Policy - In case <u>we</u>\
   \ cancel.</strong> <br>\r\nIf we have to cancel the Event there are different conditions\
@@ -145,9 +145,8 @@ winter_prices_short: '6 Days Pass: CHF 755.- per person in Double Room'
 winter_prices_single: '6 Day Pass: CHF 705.- in 4 pax Dorm'
 winter_prices_upgrade1: '6 Day Pass: CHF 680.- per person in 6 pax Dorm'
 winter_prices_upgrade2: "<strong>No day passes available this year</strong><br><br>\r\
-  \n<strong>Price reduction: </strong> <br>\r\n-You can apply for a Helper Ticket.\
-  \ (30% reduction on the regular Festival Ticket)<br>\r\n-You can apply to teach\
-  \ a Workshop at the Festival (Payout: CHF 70.- per Teacher/Workshop)<br><br>\r\n"
+  \n<strong>Price reduction: </strong> <br>\r\n-You can apply to teach a Workshop\
+  \ at the Festival (Payout: CHF 70.- per Teacher/Workshop)<br><br>\r\n"
 winter_transportation_car: "<p>Once you arrive in Zürich, take the A3 motorway toward\
   \ Chur, then follow the A13 to Landquart. From there, continue on route 28 toward\
   \ Klosters, where you’ll load your car onto the Vereina car train for a quick ride\
