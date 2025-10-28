@@ -18,15 +18,21 @@ winter_accomodation_dorms: "<b>Double rooms</b> <br>\r\nAccommodation in spaciou
   \ Shared bathrooms and showers.<br>\r\nPrice: 680 CHF per person<br><br>\r\n\r\n\
   <b>No Accomodation</b> <br>\r\nThere is space for a few vans to park in front of\
   \ the hall. \r\nReach out if you want a no-accomodation option, as there are limited\
-  \ slots only.  <br>Price: 500 CHF per person\r\n<br><br>\r\n\r\n<b>Extra Info</b>\
-  \ <br>\r\nWe'll place a sauna in front of the hall, facing some beautiful mountains.\
-  \ <br>There are free parking places for cars right outside Tschlin, 5 minutes walk\
-  \ to the hall. We recommend you to come by train and bus, as there can be a lot\
-  \ of snow in that season of the year. If you decide to come by car, make sure to\
-  \ bring some snow chains for the wheels.\r\n\r\n<br> Bring some house shoes for\
-  \ the hall and house. All the meals are in the main hall. \r\n"
+  \ slots only.  <br>Price: 500 CHF per person\r\n<br><br>\r\n\r\n<b>Early Arrival/\
+  \ Late Departure</b> <br>\r\nIf you wnat to make the most of the experience or just\
+  \ don't like the train connections, it is possible to arrive on the 1st of March\
+  \ and/or depart on the 8th of March. We will charge a minimal price for the bed\
+  \ and there will be no food provided, but there's a restaurant in the house too!\
+  \ Please reach out to us if you want to make use of that, limited spots only.\r\n\
+  \r\n<b>Extra Info</b> <br>\r\nWe'll place a sauna in front of the hall, facing some\
+  \ beautiful mountains. <br>There are free parking places for cars right outside\
+  \ Tschlin, 5 minutes walk to the hall. We recommend you to come by train and bus,\
+  \ as there can be a lot of snow in that season of the year. If you decide to come\
+  \ by car, make sure to bring some snow chains for the wheels.\r\n\r\n<br> Bring\
+  \ some house shoes for the hall and house. All the meals are in the main hall. \r\
+  \n"
 winter_accomodation_dorms_url: https://maps.app.goo.gl/LXpcALwMfqhxdJvXA
-winter_accomodation_extra: "\r\n"
+winter_accomodation_extra: ''
 winter_accomodation_hall_url: https://maps.app.goo.gl/wFy8K6gaSt7ojHde6
 winter_accomodation_title: 2026 Sleeping Options
 winter_accomodation_title_dorms: 🌄 <b>Get some good sleep in comfy beds!</b>
