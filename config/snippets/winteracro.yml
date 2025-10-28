@@ -36,25 +36,11 @@ winter_accomodation_extra: "We'll place a sauna in front of the hall, facing som
 winter_accomodation_hall_url: https://maps.app.goo.gl/wFy8K6gaSt7ojHde6
 winter_accomodation_title: 2026 Sleeping Options
 winter_accomodation_title_dorms: 🌄 <b>Get some good sleep in comfy beds!</b>
-winter_accomodation_title_upgrade1: 🏘️ <b>Pfadiheim, Arosa</b>
-winter_accomodation_title_upgrade2: 🏫 <b>The Training Hall, Arosa</b>
-winter_accomodation_upgrade1: "This location offers the benefit of being private,\
-  \ but close to our training location. It's 5 minutes walk from the hall, close to\
-  \ nature. The Pfadiheim Arosa has a cozy interior and big dormitories for people\
-  \ that want to be away from the hall at night, but still in walking distance, to\
-  \ be more flexible with their schedule. You don't mind to sleep with 11-13 other\
-  \ people in one room? Or you're a group and want to come together into one of the\
-  \ two rooms avaliable? Then this might be your best option.\r\n<br><br>\r\n<b>Dormitory\
-  \ 12-14 people</b>\r\n      There are mattresses, pillows and blankets. Shared bathrooms\
-  \ and showers. Two rooms avaliable.<Br>Price: 820 CHF per person<br>\r\n<br>\r\n"
-winter_accomodation_upgrade1_url: https://maps.app.goo.gl/wFy8K6gaSt7ojHde6
-winter_accomodation_upgrade2: "The training space offers enough room for some people\
-  \ to sleep there as well. If you choose that option, you'll need to bring a sleeping\
-  \ bag and pillow with you. We have military mattresses in case you prefer that to\
-  \ your own mat or want to travel light. Perfect for the acro addicts that want to\
-  \ train until late or people on a budget. We will do our best to make it cosy! Be\
-  \ aware that noise might be a factor to deal with.\r\n<br>\r\nPrice: 730 CHF per\
-  \ person\r\n<br><br>\r\n"
+winter_accomodation_title_upgrade1: ''
+winter_accomodation_title_upgrade2: ''
+winter_accomodation_upgrade1: ''
+winter_accomodation_upgrade1_url: ''
+winter_accomodation_upgrade2: ''
 winter_acro_header_location: <h2><b>Winter Acro Tschlin</b></h2>
 winter_general_date: 2. March - 7. March  2026
 winter_general_fb: https://www.facebook.com/events/684181852070040/
