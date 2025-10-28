@@ -67,8 +67,7 @@ winter_hall_description: "The beautifully renovated wooden Hall with a little st
   \nParking options are available just a 5-minute walk away, right in the entry to\
   \ the little mountain town Tschlin.<br><br>\r\nThe hall is equipped with showers\
   \ and changing rooms, available for use at any time.\r\n"
-winter_hall_spa: The hall will be equipped with a sauna. The maintenance will be organized
-  through helping tasks and adjusted according to our needs.
+winter_hall_spa: ''
 winter_hall_spa_description: The hall will be equipped with a sauna. The maintenance
   will be organized through helping tasks and adjusted according to our needs.
 winter_hall_title: Turnhalle Tschlin
