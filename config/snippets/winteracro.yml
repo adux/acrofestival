@@ -3,23 +3,28 @@ winter_accomodation_address_url: https://maps.app.goo.gl/LXpcALwMfqhxdJvXA
 winter_accomodation_description: This year we have different sleeping options for
   you. They are distributed into two facilities, all within 2 minutes of the training
   hall.
-winter_accomodation_dorms: "This beautiful Chalet is in the town of Tschlin, 2 Minutes\
-  \ walking distance from our hall. \r\n <b>Double rooms</b> <br>\r\nAccommodation\
-  \ in spacious rooms with 2 beds (together or separated). This option costs you a\
-  \ bit more but you'll have gueranteed good sleep and some privacy :-) Mattresses,\
-  \ pillows/comfy blankets & covers included. There are spacious and well-maintained\
-  \ sanitary facilities with shower/toilet cubicles in the corridor and through the\
-  \ whole buildings. <br>Price: 755 CHF per person\r\n<br><br>\r\n<b>Dormitories 3\
-  \ people</b><br>\r\nRight in the house of the training hall. Mattresses, pillows/comfy\
-  \ blankets & covers included. Shared bathrooms and showers.\r\n<br>Price: 730 CHF\
-  \ per person\r\n<br><br>\r\n<b>Dormitories 4 people</b><br>\r\nRight in the house\
-  \ of the training hall. Mattresses, pillows/comfy blankets & covers included. Shared\
-  \ bathrooms and showers.\r\n<br>Price: 705 CHF per person\r\n<br><br>\r\n<b>Dormitories\
-  \ 6 people</b><br>\r\nRight in the house of the training hall. Mattresses, pillows/comfy\
-  \ blankets & covers included. Shared bathrooms and showers.<br>\r\nPrice: 680 CHF\
-  \ per person<br><br>\r\nThere is space for a few vans to park in front of the hall.\
-  \ \r\nReach out if you want a no-accomodation option.  <br>Price: 500 CHF per person\r\
-  \n<br><br>\r\n"
+winter_accomodation_dorms: "<b>Double rooms</b> <br>\r\nAccommodation in spacious\
+  \ rooms with 2 beds (together or separated). This option costs you a bit more but\
+  \ you'll have gueranteed good sleep and some privacy :-) Mattresses, pillows/comfy\
+  \ blankets & covers included. There are spacious and well-maintained sanitary facilities\
+  \ with shower/toilet cubicles in the corridor and through the whole buildings. <br>Price:\
+  \ 755 CHF per person\r\n<br><br>\r\n<b>Dormitories 3 people</b><br>\r\nRight in\
+  \ the house of the training hall. Mattresses, pillows/comfy blankets & covers included.\
+  \ Shared bathrooms and showers.\r\n<br>Price: 730 CHF per person\r\n<br><br>\r\n\
+  <b>Dormitories 4 people</b><br>\r\nRight in the house of the training hall. Mattresses,\
+  \ pillows/comfy blankets & covers included. Shared bathrooms and showers.\r\n<br>Price:\
+  \ 705 CHF per person\r\n<br><br>\r\n<b>Dormitories 6 people</b><br>\r\nRight in\
+  \ the house of the training hall. Mattresses, pillows/comfy blankets & covers included.\
+  \ Shared bathrooms and showers.<br>\r\nPrice: 680 CHF per person<br><br>\r\n\r\n\
+  <b>No Accomodation</b> <br>\r\nThere is space for a few vans to park in front of\
+  \ the hall. \r\nReach out if you want a no-accomodation option, as there are limited\
+  \ slots only.  <br>Price: 500 CHF per person\r\n<br><br>\r\n\r\n<b>Extra Info</b>\
+  \ <br>\r\nWe'll place a sauna in front of the hall, facing some beautiful mountains.\
+  \ <br>There are free parking places for cars right outside Tschlin, 5 minutes walk\
+  \ to the hall. We recommend you to come by train and bus, as there can be a lot\
+  \ of snow in that season of the year. If you decide to come by car, make sure to\
+  \ bring some snow chains for the wheels.\r\n\r\n<br> Bring some house shoes for\
+  \ the hall and house. All the meals are in the main hall. \r\n"
 winter_accomodation_dorms_url: https://maps.app.goo.gl/LXpcALwMfqhxdJvXA
 winter_accomodation_extra: "We'll place a sauna in front of the hall, facing some\
   \ beautiful mountains. <br>There are free parking places for cars right outside\
@@ -29,8 +34,8 @@ winter_accomodation_extra: "We'll place a sauna in front of the hall, facing som
   \ some house shoes for the hall and house. All the meals are in the main hall. \r\
   \n\r\n"
 winter_accomodation_hall_url: https://maps.app.goo.gl/wFy8K6gaSt7ojHde6
-winter_accomodation_title: 2025 Sleeping Options
-winter_accomodation_title_dorms: 🌄 <b>House Strela, Langwies</b>
+winter_accomodation_title: 2026 Sleeping Options
+winter_accomodation_title_dorms: 🌄 <b>Get some good sleep in comfy beds!</b>
 winter_accomodation_title_upgrade1: 🏘️ <b>Pfadiheim, Arosa</b>
 winter_accomodation_title_upgrade2: 🏫 <b>The Training Hall, Arosa</b>
 winter_accomodation_upgrade1: "This location offers the benefit of being private,\
@@ -50,54 +55,48 @@ winter_accomodation_upgrade2: "The training space offers enough room for some pe
   \ train until late or people on a budget. We will do our best to make it cosy! Be\
   \ aware that noise might be a factor to deal with.\r\n<br>\r\nPrice: 730 CHF per\
   \ person\r\n<br><br>\r\n"
-winter_acro_header_location: <h2><b>Winter Acro Arosa</b></h2>
+winter_acro_header_location: <h2><b>Winter Acro Tschlin</b></h2>
 winter_general_date: 2. March - 7. March  2026
 winter_general_fb: https://www.facebook.com/events/684181852070040/
 winter_general_title: 8th Winter Acro Festival
 winter_general_whatsapp: <a href="https://chat.whatsapp.com/HFTYA44B5GmJljVFb7vwLG">Winteracro2024</a>
-winter_hall_address_url: https://maps.app.goo.gl/wFy8K6gaSt7ojHde6
-winter_hall_description: "TEST. The Halle Arosa is the main indoor venue, offering\
-  \ a spacious, heated \"triple hall\" with a stage, providing the perfect environment\
-  \ for all Winter Acro Festival activities. Lunch and dinner will be served here\
-  \ for all participants, creating a central space for both practice and socializing.<br><br>\r\
-  \nWhile parking at the hall is limited, paid parking options are available just\
-  \ a 5-minute walk away.<br><br>\r\nThe hall is equipped with showers and changing\
-  \ rooms, available for use at any time.\r\n"
-winter_hall_spa: While the Strela house has its own sauna, the hall will also be equipped
-  with a sauna. The maintenance will be organized through helping tasks and adjusted
-  according to our needs, but both are accessible at all times.
-winter_hall_spa_description: "While the Strela house has its own sauna, the hall will\
-  \ also be equipped with a sauna. The maintenance will be organized through helping\
-  \ tasks and adjusted according to our needs, but both are accessible at all times.\r\
-  \n"
-winter_hall_title: Merzweckhalle Arosa
+winter_hall_address_url: https://maps.app.goo.gl/LXpcALwMfqhxdJvXA
+winter_hall_description: "The beautifully renovated wooden Hall with a little stage\
+  \ will be our training space for a week. Lunch and dinner will be served here for\
+  \ all participants, creating a central space for both practice and socializing.<br><br>\r\
+  \nParking options are available just a 5-minute walk away, right in the entry to\
+  \ the little mountain town Tschlin.<br><br>\r\nThe hall is equipped with showers\
+  \ and changing rooms, available for use at any time.\r\n"
+winter_hall_spa: The hall will be equipped with a sauna. The maintenance will be organized
+  through helping tasks and adjusted according to our needs.
+winter_hall_spa_description: The hall will be equipped with a sauna. The maintenance
+  will be organized through helping tasks and adjusted according to our needs.
+winter_hall_title: Turnhalle Tschlin
 winter_home_accomodation: "This year we have different sleeping options for you. They\
-  \ are distributed into three facilities in different locations:<br>\r\n<br>- House\
-  \ Strela, Langwies<br>\r\n<br>- Pfadiheim, Arosa<br>\r\n<br>- Training Hall, Arosa<br>\r\
-  \n<br>\r\nCheck the price differences at \"Prices\".\r\n<br>More important details:\
-  \ <br><br>\r\n"
+  \ are distributed into two facilities in different locations:<br>\r\n<br>- Main\
+  \ House <br>\r\n<br>- Macun House<br>\r\n<br>\r\nCheck the price differences at\
+  \ \"Prices\".\r\n<br>More important details: <br><br>\r\n"
 winter_home_food: "<i>\"We are what we eat\"</i><br>\r\nMain dishes, healthy snacks\
-  \ and dessert are<strong> all organic, (mostly) local, vegan and cooked with love</strong>.<br>\
+  \ and desserts are<strong> all organic, (mostly) local, vegan and cooked with love</strong>.<br>\
   \ \r\n*<b>Everyone will be asked to colaborate by doing 2 tasks in the kitchen during\
-  \ 8 days.</b> <br>\r\nKitchen Team: Mira and her sous chef(fe)s! <br>\r\nLots of\
-  \ you know her, otherwise you'll not forget her after this week ;)  <br>\r\n"
-winter_home_hall: "The \"Mehrzweckhalle\" Arosa is the main indoor venue, offering\
-  \ a spacious, heated \"triple hall\" with a stage, providing the perfect environment\
-  \ for all Winter Acro Festival activities.<br> Lunch and dinner will be served here\
-  \ for all participants, creating a central space for both practice and socializing.\r\
-  \n<br>\r\nParking at the hall is limited, paid parking options are available a 5-minute\
-  \ walk away.\r\n<br>\r\nThe hall is equipped with showers and changing rooms, available\
-  \ for use at any time.\r\n<br>\r\n"
-winter_home_intro: "We're back—and this time, Winter Acro is making a grand return\
-  \ to the big leagues!\r\n\r\n<br><br> While we loved the intimacy of last year's\
-  \ mini edition (and definitely plan to bring something like that again in the future),\
-  \ we can't wait to return to what makes this festival truly special. We're talking\
-  \ 100 participants, 8 days, a spectacular show, and many of our favorite acrobatics\
-  \ teachers and friends from all over the world gathered in one spot!\r\n\r\n<br><br>\
-  \ Expect a week of high-level partner acrobatics, Icarian, Acroyoga and dynamic\
-  \ acrobatics workshops in beautiful Arosa. With awesome food,  the snow, and the\
-  \ sun, we're going big this year, and we hope to see many of you for the 6th edition\
-  \ of the Winter Acro Festival!\r\n"
+  \ the festival.</b> <br>\r\nKitchen Team: Rosy and her sous chef(fe)s under Mira's\
+  \ supervision! <br>\r\n  <br>\r\n"
+winter_home_hall: "The beautifully renovated wooden Hall with a little stage will\
+  \ be our training space for a week. Lunch and dinner will be served here for all\
+  \ participants, creating a central space for both practice and socializing.<br><br>\r\
+  \nParking options are available just a 5-minute walk away, right in the entry to\
+  \ the little mountain town Tschlin.<br><br>\r\nThe hall is equipped with showers\
+  \ and changing rooms, available for use at any time.\r\n"
+winter_home_intro: "We're back—and this time, Winter Acro is making a return to the\
+  \ cozy corner!\r\n\r\n<br><br> While we loved the site of last year's edition (and\
+  \ definitely plan to bring something like that again in the future), we adapted\
+  \ this year's edition to our recent private situation of having a son. Like always\
+  \ you can count on many of our favorite acrobatics teachers and friends from all\
+  \ over the world gathered in one spot!\r\n\r\n<br><br> Expect a week of high-level\
+  \ partner acrobatics, Icarian, Acroyoga and dynamic acrobatics workshops in beautiful\
+  \ Arosa. With awesome food,  the snow, and the sun, we're going to have so much\
+  \ fun this year, and we hope to see many of you for the 8th edition of the Winter\
+  \ Acro Festival!\r\n"
 winter_home_location: "Arosa is located in the Plessur Range of the Swiss Alps, within\
   \ the canton of Graubünden. The area is known for its scenic alpine landscapes and\
   \ is surrounded by peaks like the Weisshorn (2,653 meters) and Parpaner Rothorn\
