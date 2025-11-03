@@ -126,7 +126,7 @@ winter_prices_description: "Creating an Event like the Winter Acro is a real Org
   \ to give it preference.<br><br>\r\n\r\n<h2><b>1 CHF = 1€</b></h2><b>To make it\
   \ easier for our European friends please consider 1 CHF = 1€ </b><br>\r\n"
 winter_prices_full: '6 Day Pass: CHF 660.- in 3 or 4 pax Dorm'
-winter_prices_full_nosleep: '6 Days Pass: CHF 485.- per Person <b>without</b> Accommodation'
+winter_prices_full_nosleep: '6 Day Pass: CHF 600.- per person in 6 pax Dorm '
 winter_prices_refunds: "<strong>Cancellation Policy - In case <u>you</u> cancel.</strong><br>\r\
   \nIn case of cancellation, the following costs are charged: <br> \r\nUp to 30 days\
   \ prior to the event: CHF 90.- fixed cost <br>\r\n30 to 15 days prior to the event:\
@@ -140,7 +140,7 @@ winter_prices_refunds: "<strong>Cancellation Policy - In case <u>you</u> cancel.
   \ with accommodation in Dorms: Fixed fee CHF 90.-  per Person (non-refundable) <br>\
   \ <br>"
 winter_prices_short: '6 Days Pass: CHF 740.- per person in Double Room'
-winter_prices_single: '6 Day Pass: CHF 600.- per person in 6 pax Dorm'
+winter_prices_single: '6 Days Pass: CHF 485.- per Person <b>without</b> Accommodation'
 winter_prices_upgrade1: 'Extra night on the 1st or 7th of March: + CHF 30 (limited
   spots - reach out if you want one)'
 winter_prices_upgrade2: "<strong>No day passes available this year</strong><br><br>\r\
