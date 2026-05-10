@@ -3,12 +3,16 @@ from typing import Any, Dict
 
 import yaml
 from django.conf import settings
+from django.core.cache import cache
 from django.core.exceptions import ImproperlyConfigured
+
+CACHE_VERSION_KEY = "content_snippets:version"
+CACHE_MERGED_KEY = "content_snippets:merged"
 
 
 class ContentSnippets:
     _instance = None
-    _snippets: Dict[str, Any] = {}
+    _yaml_defaults: Dict[str, Any] = {}
 
     def __new__(cls):
         if cls._instance is None:
@@ -16,50 +20,87 @@ class ContentSnippets:
         return cls._instance
 
     def __init__(self):
-        if not self._snippets:
-            self.load_snippets()
+        if not self._yaml_defaults:
+            self._load_yaml_defaults()
 
-    def load_snippets(self) -> None:
-        """Load snippets from multiple YAML files based on environment"""
+    def _load_yaml_defaults(self) -> None:
         env = os.getenv("DJANGO_ENV", "development")
         snippets_dir = os.path.join(settings.ROOT_DIR, "config", "snippets")
-        
-        # Define the files to load in order
         snippet_filenames = [
             "general.yml",
-            "winteracro.yml", 
+            "winteracro.yml",
             "urbanacro.yml",
             "dap.yml",
-            "snippets.yml",  # Legacy file - keep for backward compatibility
-            f"snippets_{env}.yml"  # Environment-specific overrides
+            "snippets.yml",
+            f"snippets_{env}.yml",
         ]
-        
-        self._snippets = {}
-        
+
+        defaults: Dict[str, Any] = {}
         for filename in snippet_filenames:
             file_path = os.path.join(snippets_dir, filename)
             if os.path.exists(file_path):
                 with open(file_path, "r", encoding="utf-8") as f:
                     file_snippets = yaml.safe_load(f) or {}
-                    # Merge snippets, later files override earlier ones
-                    self._snippets.update(file_snippets)
-        
-        if not self._snippets:
+                    defaults.update(file_snippets)
+
+        if not defaults:
             raise ImproperlyConfigured(
-                "No snippets files found in config/snippets directory. "
-                "Create at least one of: general.yml, winteracro.yml, urbanacro.yml, dap.yml, or snippets.yml"
+                "No snippets files found in config/snippets directory."
             )
 
+        self._yaml_defaults = defaults
+
+    def _get_merged(self) -> Dict[str, Any]:
+        version = cache.get(CACHE_VERSION_KEY, 0)
+        cache_key = f"{CACHE_MERGED_KEY}:v{version}"
+        merged = cache.get(cache_key)
+        if merged is not None:
+            return merged
+
+        merged = dict(self._yaml_defaults)
+
+        # Local import to avoid AppRegistryNotReady at process start.
+        from acrofestival.content.models import ContentSnippet
+
+        for key, value in ContentSnippet.objects.values_list("key", "value"):
+            merged[key] = value
+
+        cache.set(cache_key, merged, timeout=None)
+        return merged
+
     def get_snippet(self, key: str, default: str = "") -> str:
-        """Get a snippet by key with optional default value"""
-        return str(self._snippets.get(key, default))
+        return str(self._get_merged().get(key, default))
+
+    def yaml_default(self, key: str, default: str = "") -> str:
+        return str(self._yaml_defaults.get(key, default))
+
+    def yaml_keys_for_files(self, filenames):
+        """Return the set of keys defined in the given YAML filenames."""
+        snippets_dir = os.path.join(settings.ROOT_DIR, "config", "snippets")
+        keys = set()
+        for filename in filenames:
+            file_path = os.path.join(snippets_dir, filename)
+            if not os.path.exists(file_path):
+                continue
+            with open(file_path, "r", encoding="utf-8") as f:
+                data = yaml.safe_load(f) or {}
+                keys.update(data.keys())
+        return keys
+
+    @staticmethod
+    def bump_version() -> None:
+        """Invalidate the merged cache for all workers."""
+        try:
+            cache.incr(CACHE_VERSION_KEY)
+        except ValueError:
+            cache.set(CACHE_VERSION_KEY, 1)
 
     def reload(self) -> None:
-        """Force reload snippets from file"""
-        self._snippets = {}
-        self.load_snippets()
+        """Reload YAML defaults from disk and invalidate the cache."""
+        self._yaml_defaults = {}
+        self._load_yaml_defaults()
+        self.bump_version()
 
 
 def get_snippet(key: str, default: str = "") -> str:
-    """Helper function for template tag to retrieve a content snippet."""
     return ContentSnippets().get_snippet(key, default)

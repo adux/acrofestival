@@ -162,13 +162,60 @@
             border-radius: 6px;
             font-size: 1rem;
         }
+        .badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.15rem 0.5rem;
+            border-radius: 999px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .badge-overridden {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        .badge-default {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        .row-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #718096;
+            margin-top: 0.25rem;
+        }
+        .row-actions a {
+            color: #667eea;
+            text-decoration: none;
+            margin-left: 0.5rem;
+        }
+        .row-actions a:hover {
+            text-decoration: underline;
+        }
+        .row-actions-line {
+            margin-top: 0.5rem;
+        }
+        .btn-link-danger {
+            background: none;
+            border: none;
+            color: #c53030;
+            font-size: 0.85rem;
+            cursor: pointer;
+            padding: 0;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="{% url 'content:editor_list' %}" class="back-link">&larr; Back to Content Editor</a>
         <h1>{{ festival_name }}</h1>
-        <p class="subtitle">Edit content snippets below. Changes will be committed to git automatically.</p>
+        <p class="subtitle">Edit content snippets below. Changes go live immediately. Defaults come from YAML; edits are stored as overrides.</p>
+        <p class="subtitle"><a href="{% url 'content:editor_history' festival %}" style="color:white;text-decoration:underline;">View change history</a></p>
 
         {% if messages %}
         <div class="messages">
@@ -186,27 +233,51 @@
             <form method="post">
                 {% csrf_token %}
                 <div id="content-fields">
-                    {% for key, value in content %}
-                    <div class="form-group" data-key="{{ key }}">
+                    {% for row in rows %}
+                    <div class="form-group" data-key="{{ row.key }}">
                         <label>
-                            {{ key|title }}
-                            <span class="key-name">{{ key }}</span>
+                            {{ row.key|title }}
+                            <span class="key-name">{{ row.key }}</span>
+                            {% if row.is_overridden %}
+                            <span class="badge badge-overridden" title="Edited via web; differs from YAML default">overridden{% if row.updated_at %} · {{ row.updated_at|date:"Y-m-d H:i" }}{% if row.updated_by %} by {{ row.updated_by }}{% endif %}{% endif %}</span>
+                            {% else %}
+                            <span class="badge badge-default" title="Value comes from YAML default">default</span>
+                            {% endif %}
                         </label>
-                        {% if value|length > 100 or '\n' in value or '<' in value %}
-                        <textarea name="content_{{ key }}" rows="8">{{ value }}</textarea>
+                        {% if row.value|length > 100 or '\n' in row.value or '<' in row.value %}
+                        <textarea name="content_{{ row.key }}" rows="8">{{ row.value }}</textarea>
                         {% else %}
-                        <input type="text" name="content_{{ key }}" value="{{ value }}">
+                        <input type="text" name="content_{{ row.key }}" value="{{ row.value }}">
                         {% endif %}
-                        <div class="char-count">{{ value|length }} characters</div>
+                        <div class="row-meta">
+                            <span class="char-count">{{ row.value|length }} characters</span>
+                            <span class="row-actions">
+                                <a href="{% url 'content:editor_history_key' festival row.key %}">history</a>
+                            </span>
+                        </div>
+                        {% if row.is_overridden %}
+                        <div class="row-actions-line">
+                            <button type="submit" form="reset-{{ row.key }}" class="btn-link-danger">Reset to default</button>
+                        </div>
+                        {% endif %}
                     </div>
                     {% endfor %}
                 </div>
 
                 <div class="form-actions">
-                    <button type="submit" class="btn btn-primary">Save & Commit Changes</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
                     <a href="{% url 'content:editor_list' %}" class="btn btn-secondary">Cancel</a>
                 </div>
             </form>
+
+            {# Per-key reset forms — separate so they can't be submitted by the main Save button #}
+            {% for row in rows %}
+                {% if row.is_overridden %}
+                <form id="reset-{{ row.key }}" method="post" action="{% url 'content:editor_reset' festival row.key %}" style="display:none">
+                    {% csrf_token %}
+                </form>
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
 

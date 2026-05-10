@@ -83,6 +83,12 @@
             <div class="festival-card">
                 <h2>{{ festival.name }}</h2>
                 <a href="{% url 'content:editor_edit' festival.key %}" class="btn">Edit Content</a>
+                <p style="margin-top:0.75rem">
+                    {% if festival.key == 'urbanacro' %}
+                    <a href="{% url 'content:teachers_list' festival.key %}" style="color:#667eea;font-size:0.9rem">Teachers &rarr;</a> &nbsp;
+                    {% endif %}
+                    <a href="{% url 'content:editor_history' festival.key %}" style="color:#667eea;font-size:0.9rem">History &rarr;</a>
+                </p>
             </div>
             {% endfor %}
         </div>

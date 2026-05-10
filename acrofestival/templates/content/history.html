@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ festival_name }} History - Content Editor</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+        h1 { color: white; margin-bottom: 0.5rem; font-size: 2rem; }
+        .subtitle { color: rgba(255,255,255,0.9); margin-bottom: 1.5rem; }
+        .back-link { display: inline-block; color: white; text-decoration: none; margin-bottom: 1rem; font-size: 0.9rem; }
+        .back-link:hover { text-decoration: underline; }
+        .messages { margin-bottom: 1rem; }
+        .message { padding: 0.75rem 1rem; border-radius: 6px; margin-bottom: 0.5rem; color: white; }
+        .message.success { background: rgba(72, 187, 120, 0.9); }
+        .message.error { background: rgba(245, 101, 101, 0.9); }
+        .message.info, .message.warning { background: rgba(237, 137, 54, 0.9); }
+        .panel {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        .filter-bar {
+            background: #f7fafc;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        .entry {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 1rem 0;
+        }
+        .entry:last-child { border-bottom: none; }
+        .entry-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .entry-key {
+            font-family: 'Courier New', monospace;
+            color: #667eea;
+            font-weight: 600;
+        }
+        .entry-meta {
+            font-size: 0.85rem;
+            color: #718096;
+        }
+        .entry-note {
+            font-size: 0.8rem;
+            color: #c05621;
+            font-style: italic;
+            margin-left: 0.5rem;
+        }
+        .entry-value {
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 0.75rem;
+            margin-top: 0.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            white-space: pre-wrap;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .entry-actions { margin-top: 0.5rem; }
+        .restore-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+        .restore-btn:hover { opacity: 0.9; }
+        .empty { color: #718096; padding: 2rem; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="{% url 'content:editor_edit' festival %}" class="back-link">&larr; Back to {{ festival_name }} editor</a>
+        <h1>{{ festival_name }} — History</h1>
+        <p class="subtitle">Most recent 200 changes shown.</p>
+
+        {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+            <div class="message {{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="panel">
+            <div class="filter-bar">
+                {% if filtered_key %}
+                Filtered by key: <strong>{{ filtered_key }}</strong> &nbsp;
+                <a href="{% url 'content:editor_history' festival %}">show all</a>
+                {% else %}
+                Showing all keys for this festival.
+                {% endif %}
+            </div>
+
+            {% for entry in history %}
+            <div class="entry">
+                <div class="entry-head">
+                    <div>
+                        <span class="entry-key">{{ entry.key }}</span>
+                        {% if entry.note %}<span class="entry-note">{{ entry.note }}</span>{% endif %}
+                    </div>
+                    <div class="entry-meta">
+                        {{ entry.edited_at|date:"Y-m-d H:i" }}
+                        {% if entry.edited_by_name %} · {{ entry.edited_by_name }}{% endif %}
+                    </div>
+                </div>
+                <div class="entry-value">{{ entry.value }}</div>
+                <div class="entry-actions">
+                    <form method="post" action="{% url 'content:editor_restore' entry.id %}" style="display:inline">
+                        {% csrf_token %}
+                        <input type="hidden" name="festival" value="{{ festival }}">
+                        <button type="submit" class="restore-btn"
+                                onclick="return confirm('Restore {{ entry.key }} to this value?')">Restore this version</button>
+                    </form>
+                </div>
+            </div>
+            {% empty %}
+            <div class="empty">No history yet.</div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

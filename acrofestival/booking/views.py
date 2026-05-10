@@ -1,8 +1,12 @@
+from datetime import date
+
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.core.mail import send_mail
 from .forms import UrbanAcroForm, WinterAcroForm
 from .models import UrbanAcroBooking, WinterAcroBooking
+from acrofestival.content.models import TeacherAppearance
+from acrofestival.content.snippets import ContentSnippets
 
 
 # Create your views here.
@@ -33,8 +37,17 @@ def urbanacro_view(request):
         if form.errors:
             print(form.errors)
 
+    year_raw = ContentSnippets().get_snippet("urbanacro_teachers_year", "")
+    year = int(year_raw) if year_raw.isdigit() else date.today().year
+    teachers = (
+        TeacherAppearance.objects
+        .filter(festival_key="urbanacro", year=year, is_published=True)
+        .select_related("teacher")
+        .order_by("order", "id")
+    )
+
     template_name = "pages/urbanacro/home.html"
-    context = {}
+    context = {"teachers": teachers}
 
     return render(request, template_name, context)
 

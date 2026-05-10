@@ -1,0 +1,202 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachers — {{ festival_name }}</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { color: white; margin-bottom: 0.5rem; font-size: 2rem; }
+        .subtitle { color: rgba(255,255,255,0.9); margin-bottom: 1.5rem; }
+        .back-link { display: inline-block; color: white; text-decoration: none; margin-bottom: 1rem; font-size: 0.9rem; }
+        .back-link:hover { text-decoration: underline; }
+        .messages { margin-bottom: 1rem; }
+        .message { padding: 0.75rem 1rem; border-radius: 6px; margin-bottom: 0.5rem; color: white; }
+        .message.success { background: rgba(72, 187, 120, 0.9); }
+        .message.error   { background: rgba(245, 101, 101, 0.9); }
+        .message.info, .message.warning { background: rgba(237, 137, 54, 0.9); }
+        .toolbar {
+            background: white;
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .toolbar form { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+        .toolbar label { font-weight: 600; color: #2d3748; font-size: 0.9rem; }
+        .toolbar select, .toolbar input[type="text"] {
+            padding: 0.4rem 0.6rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .btn:hover { opacity: 0.9; }
+        .btn-light { background: #e2e8f0; color: #2d3748; }
+        .btn-danger { background: #c53030; }
+        .grid {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1rem;
+        }
+        .card {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .card.unpublished { opacity: 0.6; }
+        .card-photo {
+            width: 100%;
+            height: 180px;
+            background: #f7fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a0aec0;
+            font-size: 0.85rem;
+            overflow: hidden;
+        }
+        .card-photo img { width: 100%; height: 100%; object-fit: cover; }
+        .card-body { padding: 0.75rem 1rem; flex: 1; }
+        .card-name { font-weight: 600; font-size: 1rem; color: #2d3748; }
+        .card-country { color: #718096; font-size: 0.85rem; margin-top: 0.15rem; }
+        .card-actions {
+            display: flex;
+            gap: 0.25rem;
+            padding: 0.5rem;
+            border-top: 1px solid #e2e8f0;
+            background: #f7fafc;
+        }
+        .card-actions form { margin: 0; }
+        .icon-btn {
+            background: none;
+            border: 1px solid #cbd5e0;
+            color: #4a5568;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            text-decoration: none;
+        }
+        .icon-btn:hover { background: white; }
+        .icon-btn.danger { color: #c53030; border-color: #fc8181; }
+        .empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            color: #718096;
+            padding: 3rem;
+        }
+        .add-existing {
+            background: white;
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .add-existing label { font-weight: 600; color: #2d3748; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="{% url 'content:editor_list' %}" class="back-link">&larr; Back to Content Editor</a>
+    <h1>{{ festival_name }} — Teachers</h1>
+    <p class="subtitle">The public site shows teachers for the year set in the <code style="color:#fbd38d">{{ festival }}_teachers_year</code> snippet.</p>
+
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}<div class="message {{ message.tags }}">{{ message }}</div>{% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="toolbar">
+        <form method="get">
+            <label for="year">Year:</label>
+            <select id="year" name="year" onchange="this.form.submit()">
+                {% for y in years %}<option value="{{ y }}" {% if y == year %}selected{% endif %}>{{ y }}</option>{% endfor %}
+            </select>
+        </form>
+        <form method="get" style="margin-left:auto">
+            <input type="hidden" name="year" value="{{ year|add:1 }}">
+            <button class="btn btn-light" type="submit">Plan {{ year|add:1 }} &rarr;</button>
+        </form>
+        <a href="{% url 'content:teacher_create' festival %}?year={{ year }}" class="btn">+ New teacher</a>
+    </div>
+
+    <div class="grid">
+        {% for app in appearances %}
+        <div class="card {% if not app.is_published %}unpublished{% endif %}">
+            <div class="card-photo">
+                {% if app.teacher.photo %}<img src="{{ app.teacher.photo.url }}" alt="{{ app.teacher.name }}">{% else %}no photo{% endif %}
+            </div>
+            <div class="card-body">
+                <div class="card-name">{{ app.teacher.name }}</div>
+                <div class="card-country">{{ app.teacher.country }}</div>
+            </div>
+            <div class="card-actions">
+                <a class="icon-btn" href="{% url 'content:teacher_edit' festival app.teacher.id %}?year={{ year }}">Edit</a>
+                <form method="post" action="{% url 'content:appearance_move' app.id 'up' %}">{% csrf_token %}
+                    <button class="icon-btn" type="submit" title="Move up">↑</button>
+                </form>
+                <form method="post" action="{% url 'content:appearance_move' app.id 'down' %}">{% csrf_token %}
+                    <button class="icon-btn" type="submit" title="Move down">↓</button>
+                </form>
+                <form method="post" action="{% url 'content:appearance_toggle_published' app.id %}">{% csrf_token %}
+                    <button class="icon-btn" type="submit" title="{% if app.is_published %}Hide{% else %}Show{% endif %}">{% if app.is_published %}👁{% else %}∅{% endif %}</button>
+                </form>
+                <form method="post" action="{% url 'content:appearance_remove' app.id %}" style="margin-left:auto"
+                      onsubmit="return confirm('Remove {{ app.teacher.name|escapejs }} from {{ year }}? (Teacher record stays.)')">
+                    {% csrf_token %}
+                    <button class="icon-btn danger" type="submit">Remove</button>
+                </form>
+            </div>
+        </div>
+        {% empty %}
+        <div class="empty">No teachers assigned to {{ year }} yet. Add an existing teacher below or create a new one.</div>
+        {% endfor %}
+    </div>
+
+    {% if candidates %}
+    <form method="post" action="{% url 'content:appearance_add' festival %}" class="add-existing">
+        {% csrf_token %}
+        <input type="hidden" name="year" value="{{ year }}">
+        <label for="teacher_id">Recycle existing teacher:</label>
+        <select name="teacher_id" id="teacher_id" required>
+            <option value="">— pick one —</option>
+            {% for t in candidates %}<option value="{{ t.id }}">{{ t.name }}{% if t.country %} ({{ t.country }}){% endif %}</option>{% endfor %}
+        </select>
+        <button class="btn" type="submit">Add to {{ year }}</button>
+    </form>
+    {% endif %}
+</div>
+</body>
+</html>
