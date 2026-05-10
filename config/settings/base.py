@@ -69,7 +69,6 @@ THIRD_PARTY_APPS = [
     "allauth",
     "allauth.account",
     # 'allauth.socialaccount',
-    "tinycontent",
 ]
 LOCAL_APPS = [
     "acrofestival.users.apps.UsersConfig",
