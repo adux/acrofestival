@@ -2,18 +2,25 @@
 <html lang="en">
     <head>
         {% analytical_head_top %}
-        <title>Winter Acro Festival - Acrobatic festival in the swiss alps.</title>
-        <meta name="Description" content="The Winter Acro Festival based Switzerland includes many acrobatic, acroyoga, yoga and movement workshops. We have teachers form all around the world, sauna, the best vegan food and a special attention to quality.">
-        <meta name="Keywords" content="acrobatic, acroyoga, swiss acro, acroyoga switzerland, suisse acrobatics, akrobatik schweizx">
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:url" content="https://acrofestival.ch/winteracro/" />
-        <meta property="og:site_name" content="acrofestival.ch/winteracro" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Winter Acro Festival" />
-        <meta property="og:image" content="https://acrofestival.ch{% static 'winteracro/images/BANNER.JPG' %}" />
-        <meta property="og:description" content="Winter Acro Festival takes place each year in the Swiss Alps. With a selection of top teachers from all over the world and a special attention to quality, they are a perfect acrobatic holiday experience for acro and snow lovers!" />
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow">
+        <title>{% block title %}Winter Acro Festival — Acroyoga & Partner Acrobatics in the Swiss Alps{% endblock title %}</title>
+        <meta name="description" content="{% block meta_description %}Winter Acro Festival in Switzerland — a week of acroyoga, partner acrobatics, yoga and movement workshops with international teachers, sauna, snow, and vegan food in the Swiss Alps.{% endblock meta_description %}">
+        <meta name="author" content="Adrian Garate">
+        <link rel="canonical" href="{% block canonical_url %}{{ request.scheme }}://{{ request.get_host }}{{ request.path }}{% endblock canonical_url %}">
+        <meta property="og:url" content="{% block og_url %}{{ request.scheme }}://{{ request.get_host }}{{ request.path }}{% endblock og_url %}" />
+        <meta property="og:site_name" content="Acrofestival Switzerland" />
+        <meta property="og:type" content="{% block og_type %}website{% endblock og_type %}" />
+        <meta property="og:title" content="{% block og_title %}Winter Acro Festival{% endblock og_title %}" />
+        <meta property="og:image" content="{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'urbanacro/images/frontpage/winteracro.jpg' %}{% endblock og_image %}" />
+        <meta property="og:description" content="{% block og_description %}Winter Acro Festival in Switzerland — a week of acroyoga, partner acrobatics, yoga and movement workshops with international teachers in the Swiss Alps.{% endblock og_description %}" />
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="{% block twitter_title %}Winter Acro Festival{% endblock twitter_title %}">
+        <meta name="twitter:description" content="{% block twitter_description %}Winter Acro Festival — acroyoga, partner acrobatics, movement workshops in the Swiss Alps.{% endblock twitter_description %}">
+        <meta name="twitter:image" content="{% block twitter_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'urbanacro/images/frontpage/winteracro.jpg' %}{% endblock twitter_image %}">
         <meta property="fb:app_id" content="2581322572097954" />
+        {% block structured_data %}{% endblock structured_data %}
 		    {% include 'pages/winteracro/snippets/cssfest.html' %}
             {% analytical_head_bottom %}
 	</head>

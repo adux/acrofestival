@@ -2,7 +2,9 @@ from django.conf import settings
 from django.urls import include, path
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap
 from django.views import defaults as default_views
+from django.views.generic import TemplateView
 from booking.views import (urbanacro_view, winteracroform_view)
 from winteracro.views import (
     fest_homeview,
@@ -13,9 +15,24 @@ from winteracro.views import (
     frontpage_view,
     )
 from dap.views import dap_view
+from acrofestival.sitemaps import StaticViewSitemap
+
+
+sitemaps = {"static": StaticViewSitemap}
 
 urlpatterns = [
     path("", frontpage_view, name="home"),
+    path(
+        "sitemap.xml",
+        sitemap,
+        {"sitemaps": sitemaps},
+        name="django.contrib.sitemaps.views.sitemap",
+    ),
+    path(
+        "robots.txt",
+        TemplateView.as_view(template_name="robots.txt", content_type="text/plain"),
+        name="robots",
+    ),
     path(settings.ADMIN_URL, admin.site.urls),
     path("content-editor/", include("acrofestival.content.urls", namespace="content")),
     path("dap/", dap_view, name="dap"),

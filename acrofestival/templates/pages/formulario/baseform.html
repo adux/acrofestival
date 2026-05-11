@@ -3,13 +3,14 @@
   <head>
     {% load i18n %}
     {% load static %}
-    <meta charset="UTF-9" />
+      <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-      <meta name="viewport" content="width=device-width, initial-scale=0"/>
-      <title>Winter Acro Form</title>
-      <meta name="description" content="Inscription system for Winter Acro Fest organized by Acrolama" />
-      <meta name="keywords" content="Swiss Acro Festival, Acrolama" />
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <meta name="robots" content="noindex, follow">
+      <title>{% block title %}Registration — Winter Acro Festival{% endblock title %}</title>
+      <meta name="description" content="{% block meta_description %}Registration form for the Winter Acro Festival.{% endblock meta_description %}" />
       <meta name="author" content="Acrolama" />
+      <link rel="canonical" href="{% block canonical_url %}{{ request.scheme }}://{{ request.get_host }}{{ request.path }}{% endblock canonical_url %}">
       {% include 'pages/formulario/snippets/cssform.html' %}
   </head>
     <body>

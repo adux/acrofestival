@@ -23,6 +23,7 @@ django-allauth = "==65.16.1"
 django-environ = "==0.13.0"
 pyyaml = "==6.0.3"
 pytz = "==2026.2"
+django-crispy-forms = "==2.4"
 
 [dev-packages]
 ipdb = ">=0.13.13"

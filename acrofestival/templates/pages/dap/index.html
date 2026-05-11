@@ -6,21 +6,28 @@
 	<head>
     {% analytical_head_top %}
 
-        <title>DAP - Dynamic Acro Program</title>
+        <title>Dynamic Acro Program (DAP) — Intensive Acro & Acroyoga Training</title>
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="Dynamic Acrobatic Programm - Intesive Acro and Acroyoga programm teaching the best of Whips, Icarian Games and Standing Acro in Europe hosted by Acrolama, Pri and Jenn, Alfonso Sabaidee and Bet Sinlao">
-        <meta name="author" content="DAP - AcroFestival - Acrolama">
+        <meta name="description" content="Dynamic Acro Program (DAP) — multi-week intensive in partner acrobatics and acroyoga, covering whips, icarian games and standing acro. Hosted by Acrolama and international teachers.">
+        <meta name="author" content="Adrian Garate">
+        <meta name="robots" content="index, follow">
 
-        <!-- viewport settings -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <!-- viewport: allow zoom for accessibility -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <meta property="og:url"                content="https://acrofestival.ch/dap" />
-        <meta property="og:type"               content="article" />
-        <meta property="og:title"              content="Dynamic Acro Program" />
-        <meta property="og:description"        content="21 Days - Intesive Acro and Acroyoga programm collecting the best of Whips, Icarian Games and Standing Acrobatics we know of... From 6 till 26 of September hosted by Acrolama, Pri and Jenn, Alfonso Sabaidee and Bet Sinlao in Belgium." />
-        <meta property="og:image"              content="{% static "dap/img/flyer.jpg" %}" />
+        <link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+        <meta property="og:url"                content="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}" />
+        <meta property="og:type"               content="website" />
+        <meta property="og:site_name"          content="Acrofestival Switzerland" />
+        <meta property="og:title"              content="Dynamic Acro Program (DAP)" />
+        <meta property="og:description"        content="Multi-week intensive in partner acrobatics and acroyoga — whips, icarian games and standing acro with international teachers." />
+        <meta property="og:image"              content="{{ request.scheme }}://{{ request.get_host }}{% static 'dap/img/flyer.jpg' %}" />
+        <meta name="twitter:card"              content="summary_large_image">
+        <meta name="twitter:title"             content="Dynamic Acro Program (DAP)">
+        <meta name="twitter:description"       content="Multi-week intensive in partner acrobatics and acroyoga.">
+        <meta name="twitter:image"             content="{{ request.scheme }}://{{ request.get_host }}{% static 'dap/img/flyer.jpg' %}">
 
 
         <!-- CSS -->

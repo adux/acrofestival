@@ -7,15 +7,14 @@
 
 {% block meta_keywords %}Urban Acro Festival 2026, Acroyoga Zürich, Partner Acrobatics Zürich, Handstand Workshop Zürich, Acro Festival Switzerland, August 2026 Events Zürich, Acrobatics Workshop, Movement Festival{% endblock meta_keywords %}
 
-{% block canonical_url %}https://www.acrofestival.ch/urbanacro/{% endblock canonical_url %}
-
 {% block og_title %}Urban Acro Festival Zürich 2026 | July 31 - August 2{% endblock og_title %}
 {% block og_description %}Join us for 3 days of acroyoga, partner acrobatics, handstands, and healing arts in Zürich. International teachers, workshops, and community jam sessions.{% endblock og_description %}
-{% block og_url %}https://www.acrofestival.ch/urbanacro/{% endblock og_url %}
 {% block og_type %}event{% endblock og_type %}
 
 {% block twitter_title %}Urban Acro Festival Zürich 2026 | July 31 - August 2{% endblock twitter_title %}
 {% block twitter_description %}Join us for 3 days of acroyoga, partner acrobatics, handstands, and healing arts in Zürich. International teachers, workshops, and community jam sessions.{% endblock twitter_description %}
+{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'urbanacro/images/frontpage/urbanacro.jpg' %}{% endblock og_image %}
+{% block twitter_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'urbanacro/images/frontpage/urbanacro.jpg' %}{% endblock twitter_image %}
 
 {% block structured_data %}
 <script type="application/ld+json">
