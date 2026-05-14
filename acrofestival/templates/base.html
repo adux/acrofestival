@@ -14,6 +14,7 @@
     <meta property="og:title" content="{% block og_title %}Acrofestival Switzerland{% endblock og_title %}" />
     <meta property="og:description" content="{% block og_description %}Acrofestival hosts the Urban Acro Festival in Zürich and the Winter Acro Festival in the Swiss Alps, plus the Dynamic Acro Program — international acro, acroyoga, and partner acrobatics gatherings in Switzerland.{% endblock og_description %}" />
     <meta property="og:image" content="{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'urbanacro/images/logo_acrofestival.jpg' %}{% endblock og_image %}">
+    {% block og_image_meta %}{% endblock og_image_meta %}
     <meta property="og:type" content="{% block og_type %}website{% endblock og_type %}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{% block twitter_title %}Acrofestival Switzerland{% endblock twitter_title %}">
